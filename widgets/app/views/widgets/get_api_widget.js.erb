@@ -1,0 +1,6 @@
+function createirfame() {
+     window.open('http://<%= @widget.partner.name.downcase %>.widgets.quizresearch.com:3003/widgets/<%= @widget.id %>/get_survey', '', 'height=<%= @widget.height %>,width=<%= @widget.width %>,top=140,left=500,status=no,menubar=no,location=no,toolbar=no,scrollbars=no,addressbar=no');
+    return false;
+};
+
+document.write("<%= escape_javascript(render(:partial => "embed")).html_safe %>");
