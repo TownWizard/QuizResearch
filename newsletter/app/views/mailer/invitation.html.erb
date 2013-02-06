@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div style="width: 725px;">
+    <div style="">
+      <%= image_tag("http://newsletter.quizresearch.com/images/header.png") %>
+    </div>
+    <div style="float: left; font-family: verdana; font-weight: 600; font-size: 16px; width: 495px;">
+      <%= image_tag("http://newsletter.quizresearch.com/images/shhh.png") %><br />
+      <div style="padding-bottom: 23px; padding-top: 30px; padding-left: 50px;">
+        Your friend,  &nbsp;&nbsp;<%= "#{@invitation.sender.first_name} #{@invitation.sender.last_name}" %> &nbsp;&nbsp; has signed up for On<span style="color: red;">5</span>th Fashion News and just invited you to join.
+      </div>
+      <div style="padding-bottom: 23px; padding-left: 50px;">
+        On<span style="color: red;">5</span>th Fashion News is your fast track to the latest news in fashion. Be the first to know about the latest friends, new deigners, exclusive collections as well as latest stories from our monthly online magazine.
+      </div>
+      <div style="padding-bottom: 23px; padding-left: 50px;">
+        Find out what you are missing ....
+      </div>
+      <div style="padding-left: 50px;">
+        <%= link_to image_tag("http://newsletter.quizresearch.com/images/take.png"), newsletter_url(:newsletter => @newsletter.title, :invite => @invitation.token) %>
+      </div>
+    </div>
+    <div style="float: right;margin-left: 1%; width: 221px;">
+      <%= image_tag("http://newsletter.quizresearch.com/images/pink_girl.png") %>
+    </div>
+      <div>
+        <%= image_tag("http://newsletter.quizresearch.com/images/black_border.png") %>
+      </div>
+    </div>
+  </body>
+</html>

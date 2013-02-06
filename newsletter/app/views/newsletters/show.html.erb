@@ -1,0 +1,50 @@
+<div class="clear"></div>
+
+<div class="registrationLeftRail">
+  <!--p>Subscribe to On 5th Fashion News! On 5th Fashion News is your fast track to the latest news in fashion. Be the first to know about the latest trends, new designers, exclusive collections as well as the latest stories from our monthly online magazine.</p-->
+<div style="text-align: center;">
+<% form_for :subscriber, :url => subscribers_url, :html => {:class => "frm_basicRegister"} do |f| %>
+  
+  <%#*<fieldset style="border: none;">%>
+  <div style="border: none; position: absolute; top: 485px; left: 495px; width: 500px;">
+  <%#*<ul style="margin-left: 28.8%; margin-top: 35%; width: 52%;">%>
+  <ul style="width: 100%; margin: 0; padding: 0;">
+    <li>
+      <%= f.error_messages :message => nil, :header_message => nil %>
+    </li>
+    <li>
+      <label for="subscriber_email"> E-mail address <span style="color: red;">*</span> : </label>
+      <% if @invitation %>
+        <%= f.text_field :email, :size => "20", :value => @invitation.recipient_email, :readonly => true, :class => "text_class" %>
+      <% else %>
+        <%= f.text_field :email, :size => "20", :class => "text_class" %>
+      <% end %>
+    </li>
+    <li>
+      <label for="subscriber_first_name"> First Name <span style="color: red;">*</span> : </label>
+      <%= f.text_field :first_name, :size => "20", :class => "text_class" %>
+    </li>
+    <li>
+      <label for="subscriber_last_name"> Last Name <span style="color: red;">*</span> : </label>
+      <%= f.text_field :last_name, :size => "20", :class => "text_class" %>
+    </li>
+    <li>
+      <label for="subscriber_country"> Country : </label>
+    <%= f.text_field :country, :size => "20", :class => "text_class" %>
+    </li>
+    <li>
+      <label for="subscriber_age"> Age : </label>
+    <%= f.text_field :age, :size => "10", :class => "text_class", :style => "width: 30px;" %>
+    </li>
+    <li style="margin-top: 4.5%;">
+      <label style="font-style: italic; margin-left: 21%;"><span style="color: red;">*</span>required</label>
+      <%= f.submit "", :type => :image, :src => "/images/but_r3_c2.png", :style => "margin-left: 21%;" %>
+    </li>
+  </ul>
+  </div>
+  <%#*</fieldset>%>
+  <%#*<span class="genericFatBtn"></span>%>
+  
+<% end %>
+  </div>
+  </div>

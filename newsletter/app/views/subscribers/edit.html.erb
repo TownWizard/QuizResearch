@@ -1,0 +1,71 @@
+<div class="registrationLeftRail">
+  <!--div class="introText">
+    <p>Thank you! You have successfully signed up for On 5th Fashion News mailing list. We will be sending you the latest trends, new designers, exclusive collections as well as the latest stories from our monthly online magazine.</p>
+  </div-->
+
+  <div class="clear"></div>
+
+<% form_for @subscriber, :url => subscriber_url(:id => @subscriber), :html => {:class => "frm_basicRegister"} do |f| %>
+  <%= f.error_messages :header_message => "" %>
+
+  <fieldset style="border: none;">
+  <ul>
+    <li>
+      <%= f.label :first_name, "First Name", :class => "subscriber_edit_label" %> <br />
+      <%= f.text_field :first_name, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :last_name, "Last Name", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :last_name, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :age, "Age", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :age, :maxlength => 3, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :gender, "Gender", :class => "subscriber_edit_label" %><br />
+      <%= f.select :gender, options_for_select([["Male", "M"], ["Female", "F"]]), :include_blank => true %>
+    </li>
+    <li>
+      <%= f.label :address1, "Address Line 1", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :address1, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :address2, "Address Line 2", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :address2, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :city, "City", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :city, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :state, "State", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :state, :maxlength => 2, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :zipcode, "Zipcode", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :zipcode, :maxlength => 10, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :country, "Country", :class => "subscriber_edit_label" %><br />
+      <%= f.text_field :country, :class => "text_class" %>
+    </li>
+    <li>
+      <%= f.label :phone_no, "Contact No.", :class => "subscriber_edit_label", :style => "color: white;" %><br />
+      <%= f.text_field :phone_no, :class => "text_class" %>
+    </li>
+
+  </ul>
+    </fieldset>
+
+  <div class="buttonBar registration">
+    <%#= link_to "No Thanks", newsletter_url, :class => "noThanks" %>
+    <span class="genericFatBtn"><%= f.submit "", :type => :image, :src => "/images/invite_but.png" %></span>
+  </div>
+
+  
+
+
+<% end %>
+
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <div style="">
+      <%= image_tag("http://newsletter.quizresearch.com/images/header.png") %>
+    </div>
+    <div style="float: left;margin-left: 1%; width: 221px;">
+      <%= image_tag("http://newsletter.quizresearch.com/images/girl.png") %>
+    </div>
+    <div style="float: left; width: 470px;">
+      <%= image_tag("http://newsletter.quizresearch.com/images/thanks.png") %>
+      <div style="text-align: left; color: #7A7A7A; padding-left: 4.4%; font-family: arial; font-size: 14px;">
+        <div style="padding-bottom: 15px;">
+          <span>First Name:</span> &nbsp; <%= @subscriber.first_name %>
+        </div>
+        <div style="padding-bottom: 15px;">
+          Last Name: &nbsp;   <%= @subscriber.last_name %>
+        </div>
+        <div style="padding-bottom: 15px;">
+          Email:   &nbsp;     <%= @subscriber.email %>
+        </div>
+        <div style="padding-bottom: 15px;">
+          Country:   &nbsp;   <%= @subscriber.country %>
+        </div>
+        <div style="padding-bottom: 12px;">
+          Age:  &nbsp;        <%= @subscriber.age %>
+        </div>
+      </div>
+      <div style="font-family: verdana; color: #777777; font-size: 10px; padding-top: 52px;">
+          If at any time you wish to stop receiving our emails, you can simply unsubscribe
+          <%= link_to "here", "#{root_url}#{@newsletter.title}/subscribers/unsubscribe?email=#{@subscriber.email}" %>
+        </div>
+    </div>
+    <div style="">
+      <%= image_tag("http://newsletter.quizresearch.com/images/black_border.png") %>
+    </div>
+  </body>
+</html>

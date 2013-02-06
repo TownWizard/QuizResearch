@@ -1,0 +1,207 @@
+body {
+  font-family: trebuchet MS, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.newsletters {
+    background:url("../images/subscribe.png") no-repeat scroll 0 0 transparent;
+    height: 975px;
+    width: 1300px;
+    margin: auto;
+}
+
+.subscribers {
+    background:url("../images/invite.png") no-repeat scroll 0 0 transparent;
+    height: 975px;
+    width: 1300px;
+    margin: auto;
+}
+
+.unsubscribe {
+    background:url("../images/unsubscribe_page.png") no-repeat scroll 0 0 transparent;
+    height: 975px;
+    width: 1300px;
+    margin: auto;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+/*  width: 75%;*/
+  position: relative;
+/*  margin: 0 auto;*/
+  padding: 20px 40px;
+/*  border: solid 1px black;*/
+/*  margin-top: 20px;*/
+}
+
+#flash_notice, #flash_error {
+  margin: 8.5% 0 10px 4%;
+    padding: 5px 8px;
+    text-align: center;
+    width: 55%;
+}
+
+#flash_notice {
+  background-color: #DADBDD;
+    border: 1px solid #F0F0EE;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  padding: 0px;
+  padding-bottom: 25px;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+  text-align: left;
+  width: 50%;
+  padding-left: 50px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+  color: red;
+}
+
+span.genericFatBtn {
+    margin-left: 15%;
+}
+
+#registrationWrapper .registrationLeftRail {
+float: left;
+width: 585px;
+padding-left: 5px;
+margin-top: 25px;
+padding-bottom: 23px;
+}
+
+#registrationWrapper .introText {
+padding-right: 21px;
+padding-left: 1px;
+}
+
+#registrationWrapper .registrationLeftRail form {
+margin-top: 20px;
+margin-right: 29px;
+}
+
+form.frm_basicRegister ul {
+margin-top: 36%;
+float: left;
+margin-left: 5%;
+margin-bottom: 0;
+}
+
+ul, ol {
+list-style-type: none;
+}
+
+#registrationWrapper input {
+float: left;
+}
+
+form.frm_basicRegister ul li {
+margin-bottom: 8px;
+clear: both;
+overflow: hidden;
+_height: 1%;
+text-align: -webkit-match-parent;
+}
+
+form.frm_basicRegister label {
+text-align: right;
+float: left;
+margin-left: 10%;
+width: 26%;
+line-height: 25px;
+}
+
+form.frm_basicRegister li input {
+float: left;
+margin-left: 5px;
+}
+
+form.frm_basicRegister .subscriber_edit_label {
+    margin: 0;
+    width: 44%;
+    line-height: 15px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.text_class {
+   padding: 2px 0 3px 3px;
+font-size: .82em;
+vertical-align: middle;
+border: 1px solid #B4B4B4;
+border-top: 1px solid #717171;
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: #717171;
+width: 250px;
+}
+
+form.frm_basicRegister input.text, form.frm_basicRegister select {
+font-size: .82em;
+}
+
+select {
+margin-right: 3px;
+vertical-align: middle;
+border: 1px solid #B4B4B4;
+border-top: 1px solid #717171;
+}
+
+form.frm_basicRegister .buttonBar {
+margin-left: 150px;
+}
+
+.noThanks {
+    margin-left: 73px!important;
+    margin-right: 12px!important;
+    margin-top: 8px!important;
+    color: #666;
+text-decoration: underline;
+float: left;
+font-size: .9em;
+}
+
+

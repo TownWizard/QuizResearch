@@ -1,0 +1,37 @@
+<div class="registrationLeftRail">
+  <div class="clear"></div>
+  
+</div>
+<% form_for @invitation, :html => {:class => "frm_basicRegister"} do |f| %>
+  
+  <fieldset style="border: none;">
+    
+    <ul style="left: 75px;
+    margin: 0;
+    position: absolute;
+    top: 430px;
+    width: 268px;">
+      <li style="">
+        <%= f.error_messages :header_message => "" %>
+      </li>
+      <li>
+        <%= f.hidden_field :sender_id, :value => params[:id] %>
+      </li>
+      <li>
+        <%= f.label :recipient_email, "Email Addresses", :class => "subscriber_edit_label" %><br />
+      </li>
+      <% 5.times do |i| %>
+        <li>
+          <%= f.text_field :"recipient_email#{i+1}", :class => "text_class" %>
+        </li>
+      <% end %>
+      <li>
+        <%= f.submit "", :type => :image, :src => "/images/invite_but.png", :style => "margin-left: 60%; margin-top: 3%;" %>
+      </li>
+    </ul>
+  </fieldset>
+
+  <%#*<div class="buttonBar registration">%>
+    <%#*<span class="genericFatBtn" style="margin-left: 10%;"></span>%>
+  <%#*</div>%>
+<% end %>
