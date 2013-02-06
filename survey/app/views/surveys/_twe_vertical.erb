@@ -1,0 +1,90 @@
+
+<table cellspacing="10" style="width: 85%; margin-top: 20px;">
+
+    <%
+        table_test = false
+        @xml.xpath( "/#{x}/quiz_phase/quiz_question" ).each do |table|
+          if table.xpath("question_text")[ 0 ].content == phase_description
+            table_test = true
+          end
+        end
+    %>
+
+    <% answer_row = @xml.xpath("/#{x}/quiz_phase/quiz_question")[ 0 ] %>
+    <%#*<tr style="vertical-align: bottom; text-align: left; font-size: 11px; font-family: verdana, sans-serif; color: #666;">%>
+      <% if !table_test %><td>&nbsp;</td><% end %>
+    <!--  <%# answer_row.xpath("answer_option").sort_by{|b| b.xpath('position')[ 0 ].content.to_i}.each do |a| %>
+        <%#*<td><%= a.xpath("answer_option_text")[ 0 ].content %></td>%>
+      <%# end %>-->
+    <% n=0 %>
+
+   <% questions = @xml.xpath( "/#{x}/quiz_phase/quiz_question" ).each do |q| %>
+     <% missed = true %>
+     <% if @submitted_answers %>
+       <% q.xpath("answer_option").each do |a| %>
+         <%
+            input_value = a.xpath("post_parameter/value")[ 0 ].content
+            if @submitted_answers.member?( input_value )
+              missed = false
+            end
+         %>
+       <% end %>
+     <% end %>
+     <% missed = @submitted_answers && missed %>
+      <tr style="vertical-align: center; font-weight: bold; font-size: 14px; text-align: left;">
+        <% if !table_test %>
+        <td style="font-family: 16pt/22px Georgia,Times New Roman,Times,serif; <%= ( missed ) ? "background-color: #f99;" : "" %>" colspan="2">
+
+              <%= n = n+1 %>. <%= q.xpath("question_text")[ 0 ].content %>
+         </td>
+        <% end %>
+      </tr>
+
+       <% q.xpath("answer_option").sort_by{|b| b.xpath('position')[ 0 ].content.to_i}.each do |a| %>
+         <%
+           input_type = a.xpath("post_parameter/type")[ 0 ].content
+           input_name = a.xpath("post_parameter/name")[ 0 ].content
+           input_value = a.xpath("post_parameter/value")[ 0 ].content
+           answer_text = a.xpath("answer_option_text")[ 0 ].content
+           is_free_text_answer = a.xpath("post_parameter/text_post_parameter_suboption").size > 0
+           if is_free_text_answer
+              free_answer_type = a.xpath("post_parameter/text_post_parameter_suboption/type")[ 0 ].content
+              free_answer_name = a.xpath("post_parameter/text_post_parameter_suboption/name")[ 0 ].content
+              free_answer_size = a.xpath("post_parameter/text_post_parameter_suboption/size")[ 0 ].content
+              free_answer_maxlength = a.xpath("post_parameter/text_post_parameter_suboption/maxlength")[ 0 ].content
+              free_answer_rows = a.xpath("post_parameter/text_post_parameter_suboption/rows")[ 0 ].content
+              free_answer_col = a.xpath("post_parameter/text_post_parameter_suboption/cols")[ 0 ].content
+           end
+           if missed
+             bg_string = "#f99;"
+           else
+             bg_string = cycle("#e6f6db", "#dff6f6", "#fef6dd", "#fee5dc", "#f5d9db")
+           end
+         %>
+        <tr style="font-weight: normal; font-size: 14px; text-align: left; ">
+          <td style="width: 2px;text-align: left; padding-left: 15px;">
+          <!--<%#*<td style="width: <%#= !table_test ? percentage_per_answer : percentage_per_answer + (50 / number_of_answers) %>; text-align: center; padding: 15px; background-color: <%#= bg_string %>;">%>-->
+          <input type="<%= input_type %>" name="<%= input_name %>[]" value="<%= input_value %>"
+            <%= ( @submitted_answers && @submitted_answers.member?( input_value ) ) ? "checked=\"checked\"" : "" %> />
+         </td>
+         <td style="text-align: left;"><%= a.xpath("answer_option_text")[ 0 ].content %></td>
+        </tr>
+
+        <% if is_free_text_answer %>
+        <tr>
+          <td />
+          <td>
+            <% if free_answer_type == 'textarea' %>
+              <TEXTAREA name="<%= free_answer_name %>" rows="<%= free_answer_rows %>" cols="<%= free_answer_col %>" ><%= (@free_text_answers[input_value.to_s].nil?)?'':@free_text_answers[input_value.to_s] %></TEXTAREA>
+            <% else %>
+              <input type="<%= free_answer_type %>" name="<%= free_answer_name %>" size="<%= free_answer_size %>" maxlength="<%= free_answer_maxlength %>" value="<%= (@free_text_answers[input_value.to_s].nil?)?'':@free_text_answers[input_value.to_s] %>"/>
+            <% end %>
+          </td>
+        </tr>
+
+          <% end %>
+       <% end %>
+
+  <% end %>
+
+  </table>

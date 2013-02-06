@@ -1,0 +1,149 @@
+<%
+  if @xml.xpath("/quiz").size > 0
+    x = "quiz"
+    y = "/#{x}/quiz_request_metadata/"
+  elsif @xml.xpath("/quiz_request/completed_quiz_result").size > 0
+    x = "quiz_request/completed_quiz_result"
+    y = "/#{x}/quiz_recommendation_title"
+  else
+    x = "quiz_request"
+    y = "/#{x}/quiz_request_metadata/"
+  end
+
+
+  @free_text_answers = Hash.new
+  if flash[ :submitted_answers ]
+    @submitted_answers = flash[ :submitted_answers ].split( ',' )
+    @free_text_answers = flash[ :free_text_answers ]
+  end
+
+
+  
+  pd = @xml.xpath("/#{x}/quiz_phase/description")
+  if pd.size > 0
+    phase_description = pd[ 0 ].content
+  end
+
+  first_answer = @xml.xpath("/#{x}/quiz_phase/quiz_question/answer_option/answer_option_text")[ 0 ].content
+  number_of_answers = @xml.xpath("/#{x}/quiz_phase/quiz_question[position=1]/answer_option").size
+  percentage_per_answer = (50/number_of_answers).floor
+
+  if @survey.id  == 32
+    imgpath = "dressbarn"
+  elsif @survey.id == 33
+    imgpath = "petco"
+  elsif @survey.id == 35
+    imgpath = "signatureHomestyle"
+  elsif @survey.id == 36
+    imgpath = "pamperedChef"
+  elsif @survey.id == 37
+    imgpath = "tomboyTools"
+  elsif @survey.id == 38
+    imgpath = "redrobin"
+  elsif @survey.id == 39
+    imgpath = "twe"
+  elsif @survey.id == 40
+    imgpath = "maryKay"
+  elsif @survey.id == 41
+    imgpath = "jafra"
+  elsif @survey.id == 42
+    imgpath = "scentsy"
+  elsif @survey.id == 43
+    imgpath = "fbm"
+  elsif @survey.id == 46
+    imgpath = "amfam"
+  else
+    imgpath = "generic"
+  end
+%>
+
+<%# form_tag "#{@base_request_uri.gsub('http://', 'http://survey.')}#{ENV[ 'sport' ]}/surveys/#{@survey.id}/#{params[ :position ]}" do %>
+<% form_tag "/surveys/#{@survey.id}/#{params[ :position ]}" do %>
+  <input type="hidden" name="quiz_id" value="<%= @quiz.id %>" />
+  <% if params[ :position ] %>
+    <input type="hidden" name="quiz_page" value="<%= params[ :position ] %>" />
+  <% end %>
+
+  <% @xml.xpath( "/#{x}/quiz_request_metadata/post_parameter" ).each do |pp| %>
+    <input type="hidden" name="<%= pp.xpath( "name" )[ 0 ].content %>" value="<%= pp.xpath( "value" )[ 0 ].content %>" />
+  <% end %>
+
+  <% if( session[ :qiid ] && params[ :position ] ) %>
+    <input type="hidden" name="qiid" value="<%= session[ :qiid] %>" />
+  <% end %>
+
+  <% if session[ :user_id ] %>
+    <input type="hidden" name="user_id" value="<%= session[ :user_id ] %>" />
+  <% end %>
+
+  <% if !params[ :position ] %>
+    <input type="hidden" name="partner_site_id" value="<%= @partner_site.id %>" />
+    <!--<input type="hidden" name="user[email]" value="sample@maxwelldaily.com" />-->
+  <% end %>
+
+
+  <div style="width: 85%; margin: 0 auto;">
+    <div style="text-align: left;">
+      <img src="/images/surveys/synapse/<%= imgpath %>/arrow.gif" alt="" style="vertical-align: bottom; float: left; margin: 0 15px 150px 0;" />
+
+      <% if @survey.id == 48 %>
+        <h1 style="font-size: 1.6em;">Give us your feedback. Let us reward you!</h1>
+        <br /><br />
+      <% end %>
+
+      <h2><%= phase_description %></h2>
+
+      <% if @errors.size > 0 || flash[ :errors ] %>
+        <div class="errorExplanation" id="errorExplanation" style="color: #600;">
+          <h4>Please correct the following problems:</h4>
+          <ul style="margin-left: 25px;">
+            <% flash[ :errors ].each do |error| %>
+            <li><%= error %></li>
+            <% end %>
+            <% @errors.each do |error| %>
+              <li><%= error %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+
+    <center>
+      <% if @survey.id == 39 || @survey.id == 48 || @survey.id == 49 %>
+        <%= render :partial => 'twe_vertical', :locals => {:x => x, :phase_description => phase_description, :first_answer => first_answer, :number_of_answers => number_of_answers, :percentage_per_answer => percentage_per_answer, :imgpath => imgpath} -%>
+      <% else %>
+        <%= render :partial => 'fbm_horizontal', :locals => {:x => x, :phase_description => phase_description, :first_answer => first_answer, :number_of_answers => number_of_answers, :percentage_per_answer => percentage_per_answer, :imgpath => imgpath} -%>
+      <% end %>
+    </center>
+
+  <div style="text-align: right; margin: 30px 10px;">
+    <input type="image" src="/images/surveys/synapse/<%= imgpath %>/button_next.gif" alt="Next" />
+  </div>
+
+  </div>
+  <%
+    if @xml.xpath("/#{x}/quiz_request_metadata/total_quiz_phases")
+        completion_percentage = ((@xml.xpath("/#{x}/quiz_phase/position")[ 0 ].content.to_f / @xml.xpath("/#{x}/quiz_request_metadata/total_quiz_phases")[ 0 ].content.to_f) * 100).floor
+    else
+        completion_percentage = 0
+    end
+  %>
+  <div class="progress_bar_wrapper">
+    <%
+        w = (610/100 * completion_percentage) + 15
+        if w > 610
+          w = 610
+        elsif w <= 50
+          w = 50;
+        end
+    %>
+    <div class="progress_bar" style="width: <%= w %>px;">
+        &nbsp;&nbsp;<%= completion_percentage %>%
+        <img src="/images/surveys/synapse/<%= imgpath %>/progress_bar_on.gif" alt="" />
+    </div>
+  </div>
+
+  <%#= debug @xml  %>
+ <% end %>
+
+

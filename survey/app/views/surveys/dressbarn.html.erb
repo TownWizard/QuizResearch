@@ -1,0 +1,40 @@
+<% content_for :bodycol do %>
+
+  <center>
+    <div style="width: 85%; margin: 0 auto;">
+      <div style="text-align: left;">
+        <img src="/images/surveys/synapse/dressbarn/arrow.gif" alt="" style="vertical-align: bottom;" />
+        <h2 style="margin-left: 15px;">Dressbarn Customer Survey</h2>
+        <div style="margin: 10px 0 25px 38px;">
+          Thank you for accepting our survey invitation. We value your feedback. At the end of this very
+          brief survey you will receive a specially-priced offer as a thank you for your participation!
+          <% if flash[:errors] && flash[:errors].size > 0 %>
+            <div class="color: #f00; font-weight: bold; margin-top: 15px; ">
+              Please complete all required fields.
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+     <% form_tag('/surveys/' + @survey.id.to_s + '/start') do -%>
+      <table>
+        <tr class="missed">
+          <td><label for="user[email]">Email Address</label></td>
+          <td style="text-align: right;"><input type="text" name="user[email]" /></td>
+        <tr class="missed">
+          <td><label for="user[store_id]">Store Id</label></td>
+          <td style="text-align: right;"><input type="text" name="user[store_id]" /></td>
+        </tr>
+        <tr class="missed">
+          <td><label for="user[survey_code]">Survey Code</label></td>
+          <td style="text-align: right;"><input type="text" name="user[survey_code]" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: right; padding-top: 20px;">
+            <input type="image" src="/images/surveys/synapse/dressbarn/button_next.gif" alt="Next" style="border: 0;" />
+          </td>
+        </tr>
+      </table>
+    <% end -%>
+  </center>
+<% end %>

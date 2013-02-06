@@ -1,0 +1,7 @@
+<% content_for :bodycol do %>
+  <% if @survey.id == 31 %>
+    <%= render :partial => 'show_template_1' %>
+  <% else %>
+    <%= render :partial => 'show_template_2' %>
+  <% end %>
+<% end %>
