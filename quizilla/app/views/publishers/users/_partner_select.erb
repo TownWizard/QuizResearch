@@ -1,0 +1,2 @@
+<%= select( :partner_site_user, :partner_id, Partner.all.collect{ |p| [ p.name, p.id ] },  :selected  => @partner_site_user[:partner_id].to_i) %>
+<%= observe_field "partner_site_user_partner_id", :url => { :action => 'select_partner_site_list' },:with => "'current_partner_id='+encodeURIComponent(value)", :update => 'update_list' %>

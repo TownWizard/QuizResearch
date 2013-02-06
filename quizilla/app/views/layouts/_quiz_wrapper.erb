@@ -1,0 +1,37 @@
+<%
+  # save a cycle, save the world.  The cheerleader is on her own.
+  prev_ans = @previous_quiz_answers && @previous_quiz_answers.size > 0 && @affiliate_products != nil
+%>
+<% content_for :bodycol do %>
+  <table id="quiz_table">
+    <tr>
+      <td class="left">
+        <h4><img src="<%= @quiz.quiz_photo_path %>" alt="" style="float: left; margin-right: 3px;" /><%= @quiz.name %></h4>
+        <br style="clear: both;" />
+        <div id="learning_blurb">
+          <%# debugger %>
+          <% if !@prev_ans %>
+            <%= @qla.learning_blurb unless @qla == nil %>
+          <% else %>
+            <%= render :partial => 'previous_answers' %>
+          <% end %>
+        </div>
+        <br />
+        <!--<img src="/images/demo/img_quiz_action_call.gif" alt="" />-->
+        </td>
+        <td class="right">
+          <h4><div id="progress_meter"><%= render :partial => 'quiz_instances/progress_meter' %></div></h4>
+        <hr noshade="noshade" />
+        <div id="messages" class="messages">
+          <%= "<div id=\"messages-notice\">#{flash[ :now ]}</div>"  if flash[ :now ] %>
+          <%= "<div id=\"messages-notice\">#{flash[ :notice ]}</div>"  if flash[ :notice ] %>
+          <%= "<div id=\"messages-warn\">#{flash[ :warning ]}</div>" if flash[ :warning ] %>
+          <%= "<div id=\"messages-error\">#{flash[ :error ]}</div>"  if flash[ :error ] %>
+        </div>
+        <div id="quiz-form-main">
+          <%= yield %>
+        </div>
+      </td>
+    </tr>
+  </table>
+<% end %>

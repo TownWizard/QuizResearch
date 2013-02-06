@@ -1,0 +1,222 @@
+quiz:
+  quiz_category_id: 5
+  name: How Happy Are You?
+  quiz_photo_path: "Happy_Are_You.jpg"
+  description: "How content are you with your life? Happiness is more than just the absence of stress. Take this quiz to find out how happy you really are and how happy you can be."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "Poor"
+      recommendation: "Based on your responses to the preceding questions, your emotional state appears to be FAIR. The good news is that there is a lot of room for improvement. And, often, taking some simple steps can help you move from a fair state of emotional health to a good one. In addition, if you would like to consider your health from a broader, more holistic perspective, consider answering one of the following two questions to gain further insight into how you might achieve the state of health and vitality that you desire."
+      value_floor: 1
+      value_ceiling: 7
+    quiz_recommendation_1:
+      name: "Fair"
+      recommendation: "Based on your responses to the preceding questions, your emotional state appears to be GOOD. This is a good place to be, but you realize you could be even better. Clearly, you have several things working and the idea now is to identify those areas that are still somewhat out of balance and take some initial steps to make the necessary adjustments so that you can incrementally improve the quality of your life. In fact, if you would like to consider your health from a broader, more holistic perspective, consider answering one of the following two questions to gain further insight into how you might achieve a state of health and vitality that you desire."
+      value_floor: 8
+      value_ceiling: 15
+    quiz_recommendation_2:
+      name: "Excellent"
+      recommendation: "Based on your responses to the preceding questions, your emotional state appears to be EXCELLENT! This is a very good place to be, but you realize you might be even better. Clearly, you have many things working and the idea now is to identify those areas that are still somewhat out of balance and take some initial steps to make the necessary adjustments so that you can incrementally improve the quality of your life. In fact, if you would like to consider your health from a broader, more holistic perspective, consider answering one of the following two questions to gain further insight into how you might achieve a state of health and vitality that you desire."
+      value_floor: 16
+      value_ceiling: 24
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: How Happy Are You?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "How Happy are you?"
+      description: "How Happy are you?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "How Happy are you?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "I'm on a path to my dreams"
+              value: 1
+              position: 1
+            quiz_answer_1:
+              answer: "Somewhat happy"
+              value: 1
+              position: 2
+            quiz_answer_2:
+              answer: "Not really happy"
+              value: 1
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "Do you have specific goals in your personal and professional life?"
+      description: "Do you have specific goals in your personal and professional life?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you have specific goals in your personal and professional life?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Somewhat"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Not Really"
+              value: 1
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "Do you believe it is possible to change?"
+      description: "Do you believe it is possible to change?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you believe it is possible to change?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Somewhat"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "Do you have the ability to concentrate for extended periods of time?"
+      description: "Do you have the ability to concentrate for extended periods of time?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you have the ability to concentrate for extended periods of time?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Occasionally"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "Is your outlook basically optimistic?"
+      description: "Is your outlook basically optimistic?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Is your outlook basically optimistic?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Occasionally"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "Are you able to adjust beliefs and attitudes as a result of learning from painful experiences?"
+      description: "Are you able to adjust beliefs and attitudes as a result of learning from painful experiences?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Are you able to adjust beliefs and attitudes as a result of learning from painful experiences?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Occasionally"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "Are you able to fully experience (feel) your painful feelings such as fear, anger, sadness, and hopelessness?"
+      description: "Are you able to fully experience (feel) your painful feelings such as fear, anger, sadness, and hopelessness?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Are you able to fully experience (feel) your painful feelings such as fear, anger, sadness, and hopelessness?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Occasionally"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "Do you take the time to let down and relax, or make time for play?"
+      description: "Do you take the time to let down and relax, or make time for play?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you take the time to let down and relax, or make time for play?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Occasionally"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "Are you free from a strong need for control or the need to be right?"
+      description: "Are you free from a strong need for control or the need to be right?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Are you free from a strong need for control or the need to be right?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 3
+              position: 1
+            quiz_answer_1:
+              answer: "Occasionally"
+              value: 2
+              position: 2
+            quiz_answer_2:
+              answer: "Really"
+              value: 1
+              position: 3

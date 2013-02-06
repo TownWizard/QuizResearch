@@ -1,0 +1,136 @@
+<%# form_for :quiz_answer, :url => '/publishers/quiz_answers', :method => 'POST' do |f| %>
+<% form_for [ :publishers, @quiz_answer ] do |f| %>
+  <input type="hidden" name="quiz_answer[quiz_question_id]" value="<%=  params[ :quiz_question_id ] %>" />
+  <table>
+    <tr>
+      <td><%= f.label :answer, "Answer" %></td>
+      <td><%= f.text_field :answer %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :value, "Value" %></td>
+      <td><%= f.text_field :value %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :position, "Position" %></td>
+      <td><%= f.text_field :position, :value => @default_position %></td>
+    </tr>
+    <% if @quiz_answer.quiz_question.answer_display_type.display_type.eql?("RADIO") || @quiz_answer.quiz_question.answer_display_type.display_type.eql?("CHECKBOX") %>
+      <% answer_id = @quiz_answer.new_record? ? "new" : @quiz_answer.id %>
+      <tr>
+        <td><%= f.label :answer_response_type_id %></td>
+        <td><%= f.select :answer_response_type_id, AnswerResponseType.all.collect {|type| [type.response_type, type.id]}, {}, 
+                    {:data_answer_id => answer_id, :class => "fixwidthselect quiz_answer_response_type"} %>
+        </td>
+      </tr>      
+      <tr id="<%= answer_id %>_answer_type_size">
+        <td><%= f.label :size %></td>
+        <td><%= f.text_field :size %></td>
+      </tr>
+      <tr id="<%= answer_id %>_answer_type_maxlength">
+        <td><%= f.label :maxlength %></td>
+        <td><%= f.text_field :maxlength %></td>
+      </tr>
+      <tr id="<%= answer_id %>_answer_type_rows">
+        <td><%= f.label :rows %></td>
+        <td><%= f.text_field :rows %></td>
+      </tr>
+      <tr id="<%= answer_id %>_answer_type_cols">
+        <td><%= f.label :cols %></td>
+        <td><%= f.text_field :cols %></td>
+      </tr>
+    <% elsif @quiz_answer.quiz_question.answer_display_type.display_type.eql?("TEXT") %>
+      <tr>
+        <td><%= f.label :size %></td>
+        <td><%= f.text_field :size %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :maxlength %></td>
+        <td><%= f.text_field :maxlength %></td>
+      </tr>
+    <% elsif @quiz_answer.quiz_question.answer_display_type.display_type.eql?("TEXTAREA") %>
+      <tr>
+        <td><%= f.label :rows %></td>
+        <td><%= f.text_field :rows %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :cols %></td>
+        <td><%= f.text_field :cols %></td>
+      </tr>
+    <% end %>
+    <% if @quiz_answer.can_decide_next_phase? %>
+      <tr>
+        <td><%= f.label :next_quiz_phase_id %></td>
+        <td><%= f.select :next_quiz_phase_id, @quiz_answer.quiz_phase.next_siblings.collect {|phase| [phase.name, phase.id]}, {:include_blank => "Select branching quiz phase"}, {:style => "width: 50%"} %></td>
+      </tr>
+    <% end %>
+    <% fields_for :quiz_learning_blurb do |fl| %>
+      <%#*<tr>%>
+        <%#*<td>%>
+          <%#= fl.label :name, "Name" %>
+        <%#*</td>%>
+        <%#*<td>%>
+          <%#= fl.text_field :name %>
+        <%#*</td>%>
+      <%#*</tr>%>
+      <tr>
+        <td colspan="2"><small>This is a label for your own use, and will not appear on the quiz.</small></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <%= fl.label :blurb, "Learning Blurb" %><br />
+          <small>This text will be displayed to the user if they select this answer.</small><br />
+          <div id="<%= fckeditor_div_id( "quiz_learning_blurb", 'blurb' ) %>">
+          <%= fckeditor_textarea(
+            "quiz_learning_blurb",
+            'blurb',
+            {
+              :rows => "40",
+              :cols => "80",
+              :width => "600",
+              :height => "400",
+              :toolbarSet => "Publishers"
+            } ) %>
+          </div>
+          <%#= fl.text_area :blurb %>
+        </td>
+      </tr>
+    <% end %>
+    <tr>
+      <td colspan="2" style="text-align: right;">
+        <input type="submit" name="submit" value="Submit Answer"/>
+      </td>
+    </tr>
+  </table>
+<% end %>
+
+<script type="text/javascript">
+  var answer_type_selectmenu = document.getElementsByName("quiz_answer[answer_response_type_id]");
+
+  for(var i=0; i<answer_type_selectmenu.length; i++) {
+    var answer_type = answer_type_selectmenu[i];
+    var answer_id = answer_type.getAttribute("data_answer_id");
+    toggle_secondary_fields(answer_type.options[answer_type.selectedIndex].text, answer_id);
+
+    answer_type.onchange = function(){
+      toggle_secondary_fields(this.options[this.selectedIndex].text, answer_id);
+    }
+  }  
+
+  function toggle_secondary_fields(value, answer_id)
+  {
+    document.getElementById(answer_id + "_answer_type_size").hide();
+    document.getElementById(answer_id + "_answer_type_maxlength").hide();
+    document.getElementById(answer_id + "_answer_type_rows").hide();
+    document.getElementById(answer_id + "_answer_type_cols").hide();
+    if (value == "TEXT")
+    {
+      document.getElementById(answer_id + "_answer_type_size").show();
+      document.getElementById(answer_id + "_answer_type_maxlength").show();
+    }
+    else if (value == "TEXTAREA")
+    {
+      document.getElementById(answer_id + "_answer_type_rows").show();
+      document.getElementById(answer_id + "_answer_type_cols").show();
+    }
+  }
+</script>

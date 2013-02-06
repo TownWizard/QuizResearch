@@ -1,0 +1,36 @@
+<div id="quiz">
+  
+  <div id="quiz-name">
+    
+    <h3 style="display:inline">Quiz Name: <%= @quiz.name %></h3>
+    <span>
+      <%= link_to_remote( "Edit Quiz.", :url => edit_publishers_quiz_path( :quiz_id => @quiz.id ), :method => 'GET', :update => "quiz-form-container" ) %>
+      | <a href="#recommendations">Jump to Quiz Recommendations</a><br/>
+      ( This quiz is: <%= @quiz.active ? "<span style='color:green;'>ACTIVE</span>" : "<span style='color:red;'>NOT ACTIVE</span>" %> )
+    </span>
+    
+    <p>
+      Phases represent pages of questions that are posed to the user.  Each phase
+      is a single page of questions.  You may add as many phases as you wish, but each
+      quiz must have at least one.
+    </p>
+    <div id="quiz-form-container"></div>
+  </div>
+  <h2>Quiz Phases</h2>
+  <div id="quiz-phases" style="margin: 5px">
+    <%= render :partial => 'publishers/quiz_phases/list' %>
+  </div>
+  <a name="recommendations"></a>
+  <h2>Quiz Recommendations</h2>
+  <%= link_to_remote 'Add Recommendation', :url => new_publishers_quiz_recommendation_path( :quiz_id => @quiz.id, :method => 'GET' ), :update => 'new-recommendation-form' %>
+  | <%=link_to_remote("Toggle Recommendations", :url => toggle_recommendation_publishers_quiz_path(), :with => "'quiz_id=#{@quiz.id}&is_visible=' + Element.visible('quiz-recommendation')", :method => :get, :after => "Element.toggle('quiz-recommendation')") %>
+<!--  | <a href="#" onClick="Element.toggle( 'quiz-recommendation' ); return false;">Toggle Recommendations</a> -->
+  <div id="new-recommendation-form"></div>
+  <div id="quiz-recommendation" style="border: 1px solid rgb(44, 97, 111); padding: 5px; margin: 5px; background-color: rgb(255, 255, 255);<%=session[:quiz_div][@quiz.id.to_s.to_sym][:recommendation].blank? ? 'display: none;' : ''%>">
+    <%= render :file => 'publishers/quiz_recommendations/list' %>
+  </div>
+  
+  <div id="quiz-products">
+    
+  </div>
+</div>

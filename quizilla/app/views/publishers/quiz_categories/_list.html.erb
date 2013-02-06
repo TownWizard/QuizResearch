@@ -1,0 +1,45 @@
+<div id="cat-new"></div>
+
+<% @quiz_categories.each do |qc| %>
+  <div id="quiz-category-<%=  qc.id %>" style="margin-top: 10px;">
+    <strong><%=  qc.name %></strong>
+    (
+      <%= link_to_remote "Add a New Quiz", :url => new_publishers_quiz_path( :quiz_category_id => qc.id ), :update => "cat-#{qc.id}-workspace" %>
+    )
+    <div id="cat-<%= qc.id %>-workspace"></div>
+    <div id="cat-<%= qc.id %>-partner-cats" style="margin: 15px; display: none;">
+        <table>
+          <caption style="text-align: left; font-weight: bold;">Partner Site Category Mappings</caption>
+          <% @partner_sites.each do |ps| %>
+            <tr>
+              <td>
+                <% form_for :qc do |f| %>
+                <%# form_for :quiz, :url => url_for( :controller => 'publishers/quizzes' ), :method => 'POST' do |f| %>
+                  <%= f.hidden_field :partner_id, :value => ps.id %>
+                  <%= f.hidden_field :quiz_category_id, :value => qc.id %>
+                  <%= ps.display_name %>
+              </td>
+              <td>
+                  <% pc_hit = false %>
+                  <% ps.partner_site_categories.each do |psc|  %>
+                    <% psc.partner_site_categories_quiz_categories.each do |mapping| %>
+                      <% if mapping.quiz_category_id == qc.id %>
+                        <%= f.text_field :name, :size => 15, :value => mapping.partner_site_category.name %>
+                        <% pc_hit = true %>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                  <% if !pc_hit %>
+                      <%= f.text_field :name, :size => 15 %>
+                  <% end %>
+                  <input type="submit" name="submit" value="Submit"/>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+    </div>
+  </div>
+<% end %>
+<div id="solr-results"></div>
+<div id="workspace"></div>

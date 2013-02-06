@@ -1,0 +1,13 @@
+body {
+    background-color: #fff;
+    margin: 50px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.wrapper {
+    width: 550px;
+    background-color: #909;
+    padding: 50px;
+}
+.body {
+    background-color: #fff;
+}

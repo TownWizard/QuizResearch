@@ -1,0 +1,19 @@
+<% form_for [ :publishers, @quiz_lead_answer ] do |f| %>
+  <input type="hidden" name="quiz_lead_answer[quiz_lead_question_id]" value="<%= params[ :quiz_lead_question_id ] %>" />
+  <!--<input type="hidden" name="quiz_id" value="<%= params[ :quiz_id ] %>" />-->
+  <table>
+    <tr>
+      <td><%= f.label :answer, "Lead Answer: " %> </td>
+      <td><%= f.text_field :answer, :size => 25 %> </td>
+    </tr>
+    <tr>
+      <td><%= f.label :learning_blurb, "Lead Answer Explanation: " %> &nbsp;</td>
+      <td><%= f.text_area :learning_blurb, :size => 25 %> &nbsp;</td>
+    </tr>
+    <tr>
+      <td><%= f.label :quiz_id, "Quiz: " %> &nbsp;</td>
+      <td><%= f.select( :quiz_id, @quizzes.collect{ |q| [ q.name, q.id ] }, :prompt => "Select a quiz" ) %></td>
+    </tr>
+  <input type="submit" name="submit" value="Submit Answer" />
+<% end %>
+</table>

@@ -1,0 +1,6 @@
+<input type="hidden" name="qid" value="<%= quiz.id %>" />
+<input type="hidden" name="user_id" value="<%= @user.id if @user %>" />
+<input type="hidden" name="qiid" value="<%= @quiz_instance.quiz_instance_uuid if @quiz_instance %>" />
+
+<%# new fields for determing phase navigation %>
+<input type="hidden" name="ppos" value="<%= @quiz_page %>" />

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  template_code: MyText
+  deleted_at: 2009-07-03 16:15:58
+
+two:
+  template_code: MyText
+  deleted_at: 2009-07-03 16:15:58

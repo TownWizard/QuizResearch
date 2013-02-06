@@ -1,0 +1,28 @@
+<div id="new-surveys">
+  <%= link_to_remote "Add a New Survey", :url => new_publishers_survey_path(), :update => "workspace" %>
+    <br /><br />
+</div>
+<div id="workspace"></div>
+<br />
+<div id="surveys">
+  <h3>Existing Surveys</h3>
+  <div style="padding: 0; margin: 0 10px;">
+    To manage an existing survey, select from the list below.
+    <br /><br />
+    <div>
+      <table width="100%">
+      <% @surveys.each do |s| %>
+        <tr>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;"><%= link_to s.reward_interstitial, :controller => 'surveys', :action => 'show', :id => s.id %></td>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;"><%= s.reward_url %></td>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;" align="center">
+            <% form_tag( "/publishers/surveys/#{s.id}", :method => "DELETE" ) do %>
+              <input type="submit" value="Delete"/>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+</div>

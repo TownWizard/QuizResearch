@@ -1,0 +1,15 @@
+<% content_for :bodycol do %>
+  <table style="border-bottom: 2px #b2b6b7 solid;">
+    <tr>
+      <td class="left">
+        <h3>
+          <img src="/images/demo/quiz_photo_<%= @quiz_description %>.jpg" alt="" style="float: left; margin-right: 3px;" />
+          <%= @quiz_instance.quiz.name %>
+        </h3>
+        <br style="clear: both;" /><br />
+        <h4>You scored <%= @score %> out of 1600</h4><br />
+        <p><%= @quiz_recommendation.recommendation %></p>
+      </td>
+    </tr>
+  </table>
+<% end %>

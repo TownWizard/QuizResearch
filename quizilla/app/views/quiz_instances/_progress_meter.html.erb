@@ -1,0 +1,13 @@
+<% comp_val = (@quiz_page.to_i - 1) * 100 / (@quiz.quiz_phases.size + 1) %>
+<div class="progress_bar_txt" style="font-size: .7em; font-weight: normal;">
+  Your progress<br />toward your free
+  <br />
+  <span style="font-size: 1.1em; font-weight: bold;">Personalized Assessment: <% if comp_val > 0 %><%= comp_val %>%<% end %></span>
+</div>
+<% (1..10).each do |i| %>
+  <div class="progress_bar <% if i * 10 < comp_val || i == 1 %>progress_bar_on<% end %>">
+  </div>
+<% end %>
+<br />
+<a href="/quizzes/reset/<%= @quiz.id %> " style="font-size: .6em; font-weight: normal; text-decoration: underline;">Start this quiz over</a>
+<br style="clear: both;" />

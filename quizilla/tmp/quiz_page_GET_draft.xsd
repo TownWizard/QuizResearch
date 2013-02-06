@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="quiz">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="category_identifier"/>
+        <xs:element ref="post_answers_uri"/>
+        <xs:element ref="previous_page_uri"/>
+        <xs:element ref="total_quiz_phases"/>
+        <xs:element maxOccurs="unbounded" ref="post_paramater"/>
+        <xs:element ref="description"/>
+        <xs:element ref="name"/>
+        <xs:element ref="quiz_phase"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category_identifier" type="xs:string"/>
+  <xs:element name="post_answers_uri" type="xs:anyURI"/>
+  <xs:element name="previous_page_uri" type="xs:anyURI"/>
+  <xs:element name="total_quiz_phases" type="xs:integer"/>
+  <xs:element name="post_paramater">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="quiz_phase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="position"/>
+        <xs:element maxOccurs="unbounded" ref="quiz_question"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quiz_question">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="position"/>
+        <xs:element ref="question_text"/>
+        <xs:element maxOccurs="unbounded" ref="answer_option"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="question_text" type="xs:string"/>
+  <xs:element name="answer_option">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="post_parameter"/>
+        <xs:element ref="answer_option_text"/>
+        <xs:element ref="position"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="post_parameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type"/>
+        <xs:element ref="name"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="xs:NCName"/>
+  <xs:element name="answer_option_text" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="value" type="xs:NMTOKEN"/>
+  <xs:element name="position" type="xs:integer"/>
+</xs:schema>

@@ -1,0 +1,17 @@
+<h3>Share Quizzes with Partner Site <%= @partner_site.display_name %></h3>
+<table>
+  <tr>
+    <th>Share</th>
+    <th>Quizzes</th>
+  </tr>
+
+  <% @quizzes.each do |q| %>
+    <tr>
+        <td><%=check_box_tag q.id, 1, q.shared_with_partner_site?(@partner_site), :onclick => remote_function(:url => save_publishers_partner_site_path(@partner_site),
+             :with => "'quiz=#{q.id}&amp;show=' + this.checked", :method => :post) %>
+        </td>
+        <td><%=h q.name %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', publishers_partner_sites_path() %>

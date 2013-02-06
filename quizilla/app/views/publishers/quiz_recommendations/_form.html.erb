@@ -1,0 +1,39 @@
+<% form_for [ :publishers, @quiz_recommendation ] do |f| %>
+  <input type="hidden" name="quiz_recommendation[quiz_id]" value="<%=  params[ :quiz_id ] %>" />
+  <table>
+    <tr>
+      <td><%= f.label :name, "Name" %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td>Score Range</td>
+      <td><%= f.text_field :value_floor %> - <%= f.text_field :value_ceiling %></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+          <%= f.label :recommendation, "Recommendation Text" %>
+        <div id="<%= fckeditor_div_id( "quiz_recommendation", 'recommendation' ) %>">
+          <%= fckeditor_textarea(
+            "quiz_recommendation",
+            'recommendation',
+            {
+              :rows => "40",
+              :cols => "80",
+              :width => "600",
+              :height => "400",
+              :toolbarSet => "Publishers"
+            } ) %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type="submit" name="submit" value="Submit Recommendation" />
+        &nbsp; &nbsp;
+        <a href="#" onClick="Element.toggle( 'recommendation-form' ); return false;">Cancel</a>
+      </td>
+    </tr>
+  </table>
+<% end %>

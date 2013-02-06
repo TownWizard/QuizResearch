@@ -1,0 +1,12 @@
+<h1>Editing cobrand_group</h1>
+
+<% form_for( [ :houston, @cobrand_group ]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cobrand_group %> |
+<%= link_to 'Back', houston_cobrand_groups_path %>

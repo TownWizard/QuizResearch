@@ -1,0 +1,12 @@
+<div id="quiz">
+  <div id="quiz-name"><%= @quiz.name if @quiz %></div>
+  <div id="quiz-phases">
+    <%= render :partial => 'quiz_phases/list' if @quiz_phases %>
+  </div>
+  <div id="quiz-products">
+    
+  </div>
+  <div>
+    <%= yield %>
+  </div>
+</div>

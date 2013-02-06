@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz_request>
+  <quiz_request_metadata>
+    <completed>true</completed>
+    <quiz_instance_uuid>705a1e000301012dfbab0023dfaadd9c</quiz_instance_uuid>
+    <quiz_response_uri>http://af-entertainment.synapsetest.com:3001/quizzes/open/705a1e000301012dfbab0023dfaadd9c/2</quiz_response_uri>
+    <total_quiz_phases>3</total_quiz_phases>
+    <description/>
+    <name>How Happy Are You?</name>
+  </quiz_request_metadata>
+  <quiz_phase>
+    <position>2</position>
+    <quiz_question>
+      <position>1</position>
+      <question_text>Is your outlook basically optimistic?</question_text>
+      <answer_option>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+        <answer_response_recommendation>People are usually optimistic by nature, and this is generally a good way to be. There is a lot of medical research to suggest that those who are essentially optimistic do better when confronting challenging physical conditions. And, it also makes sense that this "attitude" improves our mental outlook and allows us to deal with life</answer_response_recommendation>
+        <existing_answer>true</existing_answer>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[20]</name>
+          <value>55</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Occasionally</answer_option_text>
+        <position>2</position>
+        <answer_response_recommendation>There is a lot of medical research to suggest that those who are essentially optimistic do better when confronting challenging physical conditions. And, it also makes sense that this "attitude" improves our mental outlook and allows us to deal with life</answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[20]</name>
+          <value>56</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+        <answer_response_recommendation>Clearly, optimism is not something that can be simply turned on or off. However, there are ways to cultivate a more positive attitude and this may be important for you. There is a lot of medical research to suggest that those who are essentially optimistic do better when confronting challenging physical conditions. And, it also makes sense that this </answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[20]</name>
+          <value>57</value>
+        </post_parameter>
+      </answer_option>
+    </quiz_question>
+    <quiz_question>
+      <position>2</position>
+      <question_text>Are you able to adjust beliefs and attitudes as a result of learning from painful experiences?</question_text>
+      <answer_option>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+        <answer_response_recommendation>Your answer suggests that you grow from difficult experiences. This ultimately suggests that you are able to find meaning in life</answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[21]</name>
+          <value>58</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Occasionally</answer_option_text>
+        <position>2</position>
+        <answer_response_recommendation>It is not always easy to find meaning in life</answer_response_recommendation>
+        <existing_answer>true</existing_answer>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[21]</name>
+          <value>59</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+        <answer_response_recommendation>It is not always easy to find meaning in life</answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[21]</name>
+          <value>60</value>
+        </post_parameter>
+      </answer_option>
+    </quiz_question>
+    <quiz_question>
+      <position>3</position>
+      <question_text>Are you able to fully experience (feel) your painful feelings such as fear, anger, sadness, and hopelessness?</question_text>
+      <answer_option>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+        <answer_response_recommendation>It takes great emotional reserve to fully experience painful experiences without breaking down. Not many people can do this easily, so this is one of your strengths. Another question to ask is when you do experience these feelings, do they get stuck, or do they move through you and out of you so that you do not linger in the pain. Working with the emotions, so that they do not become "destructive" is another skill that often takes some work to master. </answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[22]</name>
+          <value>61</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Occasionally</answer_option_text>
+        <position>2</position>
+        <answer_response_recommendation>It takes great emotional reserve to fully experience painful experiences without breaking down. Not many people can do this easily, and it seems that this is hard for you at times. The other question to ask is when you do experience these feelings, do they get stuck, or do they move through you and out of you so that you do not linger in the pain. Working with the emotions, so that they do not become "destructive" is a skill that often takes some work to master.</answer_response_recommendation>
+        <existing_answer>true</existing_answer>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[22]</name>
+          <value>62</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+        <answer_response_recommendation>It takes great emotional reserve to fully experience painful experiences without breaking down. Not many people can do this easily, and it seems that this is hard for you to do. In all likelihood you are a very sensitive person. In some respects this is very nice; however, it also can make you vulnerable if you get stuck in your feelings. Working with the emotions, so that they do not become "destructive" is a skill that often takes some work to master. You might consider working with someone who can guide you in some techniques. A simple practice is to keep a journal and let the "emotions" come out, at least on paper.</answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[22]</name>
+          <value>63</value>
+        </post_parameter>
+      </answer_option>
+    </quiz_question>
+    <quiz_question>
+      <position>4</position>
+      <question_text>Do you take the time to let down and relax, or make time for play?</question_text>
+      <answer_option>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+        <answer_response_recommendation>This is very important. Life in our modern world can be chaotic and overwhelming. It remains essential that we remove ourselves from the busy and serious environments we inhabit most of the time and find peace in those places and in those ways that provide us with relief. A regular practice, e.g. a weekly ritual can be particularly useful.</answer_response_recommendation>
+        <existing_answer>true</existing_answer>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[23]</name>
+          <value>64</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Occasionally</answer_option_text>
+        <position>2</position>
+        <answer_response_recommendation>Life in our modern world can be chaotic and overwhelming. It remains essential that we remove ourselves from the busy and serious environments we inhabit most of the time and find peace in those places and in those ways that provide us with relief. While you can do this on occasion, a regular practice, e.g. a weekly ritual, going to the beach or a nearby park or lake to take a hike, may be particularly useful for you. </answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[23]</name>
+          <value>65</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+        <answer_response_recommendation>Life in our modern world can be chaotic and overwhelming. It remains essential that we remove ourselves from the busy and serious environments we inhabit most of the time and find peace in those places and in those ways that provide us with relief. Without this, "debris" often piles up and creates many types of imbalance, from chronic ailments to depression. A regular practice, e.g. a weekly ritual, going to the beach or a nearby park or lake to take a hike, may be a particularly good way to begin to address our need to relax and play. </answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[23]</name>
+          <value>66</value>
+        </post_parameter>
+      </answer_option>
+    </quiz_question>
+    <quiz_question>
+      <position>5</position>
+      <question_text>Are you free from a strong need for control or the need to be right?</question_text>
+      <answer_option>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+        <answer_response_recommendation>This is not always easy and suggests you are thoughtful and have good self esteem. In a world where cooperation is essential, there is a great need for people like you, who can work with others and make mutual decisions, without always </answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[24]</name>
+          <value>67</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Occasionally</answer_option_text>
+        <position>2</position>
+        <answer_response_recommendation>In a world where cooperation is essential, confrontations often begin when people feel they need to take control and be right. While this is sometimes necessary, a skill to develop is one that allows us to work with others to make mutual decisions. Since this is something you can occasionally do, you are in a position to see the difference between those circumstances that allow you to remain relaxed and those that do not. Often any weakness in our self esteem creates a sense that if we are not careful, e.g. in control, that others will take advantage of us. The implications of this go further than the decisions themselves and can have other health consequences. For this reason it is important to examine the nature of your need for control to the extent that it exists.</answer_response_recommendation>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[24]</name>
+          <value>68</value>
+        </post_parameter>
+      </answer_option>
+      <answer_option>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+        <answer_response_recommendation>In a world where cooperation is essential, confrontations often begin when people feel they need to take control and be right. While this is sometimes necessary, a skill to develop is one that allows us to work with others to make mutual decisions. Often any weakness in our self esteem creates a sense that if we are not careful, e.g. in control, that others will take advantage of us. The implications of this go further than the decisions themselves and can have other health consequences. For this reason it is important to examine the nature of your need for control.</answer_response_recommendation>
+        <existing_answer>true</existing_answer>
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[24]</name>
+          <value>69</value>
+        </post_parameter>
+      </answer_option>
+    </quiz_question>
+  </quiz_phase>
+  <completed_quiz_result>
+    <score>18</score>
+    <overall_recommendation_text>Based on your responses to the preceding questions, your emotional state appears to be EXCELLENT! This is a very good place to be, but you realize you might be even better. Clearly, you have many things working and the idea now is to identify those areas that are still somewhat out of balance and take some initial steps to make the necessary adjustments so that you can incrementally improve the quality of your life. In fact, if you would like to consider your health from a broader, more holistic perspective, consider answering one of the following two questions to gain further insight into how you might achieve a state of health and vitality that you desire.</overall_recommendation_text>
+    <quiz_response>
+      <question_text>Do you have specific goals in your personal and professional life?</question_text>
+      <answer_response_text>Yes</answer_response_text>
+      <answer_response_score>3</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Do you have the ability to concentrate for extended periods of time?</question_text>
+      <answer_response_text>Yes</answer_response_text>
+      <answer_response_score>3</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Is your outlook basically optimistic?</question_text>
+      <answer_response_text>Yes</answer_response_text>
+      <answer_response_score>3</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Do you take the time to let down and relax, or make time for play?</question_text>
+      <answer_response_text>Yes</answer_response_text>
+      <answer_response_score>3</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Are you able to fully experience (feel) your painful feelings such as fear, anger, sadness, and hopelessness?</question_text>
+      <answer_response_text>Occasionally</answer_response_text>
+      <answer_response_score>2</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Are you able to adjust beliefs and attitudes as a result of learning from painful experiences?</question_text>
+      <answer_response_text>Occasionally</answer_response_text>
+      <answer_response_score>2</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Are you free from a strong need for control or the need to be right?</question_text>
+      <answer_response_text>Rarely</answer_response_text>
+      <answer_response_score>1</answer_response_score>
+    </quiz_response>
+    <quiz_response>
+      <question_text>Do you believe it is possible to change?</question_text>
+      <answer_response_text>Rarely</answer_response_text>
+      <answer_response_score>1</answer_response_score>
+    </quiz_response>
+  </completed_quiz_result>
+</quiz_request>

@@ -1,0 +1,2 @@
+<%= select_tag :current_partner_id, options_from_collection_for_select(Partner.all, :id, :name, @current_partner_id) %>
+<%= observe_field "current_partner_id", :url => { :action => 'select_partner_site_list' },:with => "'current_partner_id='+encodeURIComponent(value)", :update => 'update_list' %>

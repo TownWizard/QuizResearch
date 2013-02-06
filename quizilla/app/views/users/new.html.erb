@@ -1,0 +1,14 @@
+<% content_for :bodycol do %>
+  <% @user.password = @user.password_confirmation = nil %>
+
+  <h3>New to the Site?  Sign Up for Free!</h3>
+
+  <div class="messages">
+    <%= "<div id=\"messages-notice\">#{flash[ :notice ]}<br />#{error_messages_for :user}</div>"  if flash[ :notice ] %>
+    <%= "<div id=\"messages-warn\">#{flash[ :warning ]}</div>" if flash[ :warning ] %>
+    <%= "<div id=\"messages-error\">#{flash[ :error ]}</div>"  if flash[ :error ] %>
+  </div>
+  
+  <%= render :partial => 'register_form' %>
+
+<% end %>

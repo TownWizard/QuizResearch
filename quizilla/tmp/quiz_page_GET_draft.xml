@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz id="3">
+  <category_identifier>Emotional Wellness</category_identifier>
+  <post_answers_uri>http://www.maxwelldaily.com/quizzes/open/QUIZ_INSTANCE_IDENTIFIER</post_answers_uri>
+  <previous_page_uri>http://www.maxwelldaily.com/quizzes/open/QUIZ_INSTANCE_IDENTIFIER/POSITION</previous_page_uri>
+  <total_quiz_phases>2</total_quiz_phases>
+  <post_paramater>
+    <name>quiz_page</name>
+    <value>1</value>
+  </post_paramater>
+  <post_paramater>
+    <name>qiid</name>
+    <value>QUIZ_INSTANCE_IDENTIFIER</value>
+  </post_paramater>
+  <description></description>
+  <name>How Happy Are You?</name>
+  <quiz_phase id="5">
+    <position>1</position>
+    <quiz_question id="17">
+      <position>1</position>
+      <question_text>Do you have specific goals in your personal and professional life?</question_text>
+      <answer_option id="46">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[17]</name>
+          <value>46</value>
+        </post_parameter>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+      </answer_option>
+      <answer_option id="47">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[17]</name>
+          <value>47</value>
+        </post_parameter>
+        <answer_option_text>Somewhat</answer_option_text>
+        <position>2</position>
+      </answer_option>
+      <answer_option id="48">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[17]</name>
+          <value>48</value>
+        </post_parameter>
+        <answer_option_text>Not Really</answer_option_text>
+        <position>3</position>
+      </answer_option>
+    </quiz_question>
+    <quiz_question id="18">
+      <position>2</position>
+      <question_text>Do you have the ability to concentrate for extended periods of time?</question_text>
+      <answer_option id="49">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[18]</name>
+          <value>49</value>
+        </post_parameter>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+      </answer_option>
+      <answer_option id="50">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[18]</name>
+          <value>50</value>
+        </post_parameter>
+        <answer_option_text>Occasionally</answer_option_text>
+        <position>2</position>
+      </answer_option>
+      <answer_option id="51">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[18]</name>
+          <value>51</value>
+        </post_parameter>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+      </answer_option>
+    </quiz_question>
+    <quiz_question id="19">
+      <position>3</position>
+      <question_text>Do you believe it is possible to change?</question_text>
+      <answer_option id="52">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[19]</name>
+          <value>52</value>
+        </post_parameter>
+        <answer_option_text>Yes</answer_option_text>
+        <position>1</position>
+      </answer_option>
+      <answer_option id="53">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[19]</name>
+          <value>53</value>
+        </post_parameter>
+        <answer_option_text>Sometimes</answer_option_text>
+        <position>2</position>
+      </answer_option>
+      <answer_option id="54">
+        <post_parameter>
+          <type>radio</type>
+          <name>questions[19]</name>
+          <value>54</value>
+        </post_parameter>
+        <answer_option_text>Rarely</answer_option_text>
+        <position>3</position>
+      </answer_option>
+    </quiz_question>
+  </quiz_phase>
+</quiz>

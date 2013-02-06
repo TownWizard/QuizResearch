@@ -1,0 +1,96 @@
+<%= publishers_add_link( "Add a Phase", new_publishers_quiz_phase_path( :quiz_id => @quiz.id ), 'phase-form-container' ) %>
+<!--| <a href="#" onClick="Element.toggle( 'quiz-phases-list' ); return false;">Toggle Phases</a> -->
+| <%=link_to_remote("Toggle Phases", :url => toggle_phase_publishers_quiz_path(),:with => "'quiz_id=#{@quiz.id}&is_visible=' + Element.visible('quiz-phases-list')", :method => :get, :after => "Element.toggle('quiz-phases-list')") %>
+
+
+<div id="phase-form-container"></div>
+<div id="quiz-phases-list" style="<%=session[:quiz_div][@quiz.id.to_s.to_sym][:quiz_phases_list].blank? ? 'display: none;' : ''%>">
+  <div style="border: 1px solid #2c616f; padding: 5px; background-color: #fff;">
+    <% if @quiz.quiz_phases.size < 1 %>
+      No phases yet exist for this quiz.  Please add at least one phase.
+    <% else %>
+      <% @quiz.quiz_phases.ordered.each do |phase| %>
+        <a name="phase-<%= phase.position %>"></a>
+        <div id="phase-<%= phase.id %>-form"></div>
+
+        <div id="phase-<%= phase.id %>">
+          <b>Phase Name:</b> <%= phase.name %>
+          | <%= link_to_remote( 
+              "Edit Phase",
+              :url => edit_publishers_quiz_phase_path(
+                        :id => phase.id,
+                        :quiz_id => params[ :id ] ),
+                        :method => 'GET',
+#                        :update => "phase-#{phase.id}-form" ) % >
+                        :update => "phase-#{phase.id}" ) %>
+           | <%=link_to_remote("Add a Question", :url => new_publishers_quiz_question_path(:quiz_phase_id => phase.id), :method => :get, :after => "Element.show('phase-#{phase.id}-questions')", :update => "phase-#{phase.id}-questions") %>
+           | <%=link_to_remote("Toggle Questions", :url => toggle_phase_quesion_publishers_quiz_path(phase),:with => "'quiz_id=#{@quiz.id}&is_visible=' + Element.visible('phase-#{phase.id}-questions')", :method => :get, :after => "Element.toggle('phase-#{phase.id}-questions')") %>
+      <!--    | <a href="#" onClick="Element.toggle( 'phase-< %= phase.id %>-questions' ); return false;">Toggle Questions</a> -->
+            <% form_tag( "/publishers/quiz_phases/#{phase.id}", :method => "DELETE" ) do %>
+              <input type="submit" value="Delete"/>
+            <% end %>
+
+          <div id="phase-<%= phase.id %>-mlt-results"></div>
+          <div id="phase-<%= phase.id %>-questions" style="<%=session[:quiz_div][@quiz.id.to_s.to_sym][:phases_div][phase.id.to_s.to_sym].blank? ? 'display: none;' : ''%>">
+            <% if phase.quiz_questions %>
+              <div style="background-color: #eee;">
+                <div id="phase-<%= phase.id %>-questions"></div>
+                <% phase.quiz_questions.each do |question| %>
+                  <a name="phase-<%= phase.id %>-question-<%= question.position %>"></a>
+                  <div id="question-<%= question.id%>" style="border: 1px solid #999; padding: 5px;">
+                    <b>Question</b>:
+                    <br />
+                    <i><%= question.question %></i>
+                    <% unless ["TEXT", "TEXTAREA"].include?(question.answer_display_type.display_type) && (question.quiz_answers.length >= 1) %>
+                    | <%= publishers_add_link( "Add answer", new_publishers_quiz_answer_path( :quiz_question_id => question.id ), "answer-#{question.id}-form-container" ) %>
+                    <% end %>
+                    | <%= link_to_remote( "Edit Question", :url => edit_publishers_quiz_question_path( :id => question.id, :quiz_phase_id => question.quiz_phase.id ), :method => 'GET', :update => "phase-#{phase.id}-questions" ) %>
+                    | <%=link_to_remote("Toggle Answers", :url => toggle_phase_quesion_answer_publishers_quiz_path(question),:with => "'quiz_id=#{@quiz.id}&is_visible=' + Element.visible('question-#{question.id}-answers')", :method => :get, :after => "Element.toggle('question-#{question.id}-answers')") %>
+             <!--       | <a href="#" onClick="Element.toggle( 'question-< %= question.id%>-answers' ); return false;">Toggle Answers</a> -->
+                    | <% form_tag( "/publishers/quiz_questions/#{question.id}", :method => "DELETE" ) do %>
+                        <input type="submit" value="Delete"/>
+                      <% end %>
+                    <div id="question-<%= question.id %>-mlt-results"></div>
+                    <div id="answer-<%= question.id %>-form-container"></div>
+                    <div id="question-<%= question.id%>-answers" style="<%=session[:quiz_div][@quiz.id.to_s.to_sym][:questions_div][question.id.to_s.to_sym].blank? ? 'display: none;' : '' %>">
+
+                      <% question.quiz_answers.each do |answer| %>
+                        <a name="answer-<%= answer.id %>"></a>
+                        <div id="answer-<%= answer.id %>" class="answer_display" style="padding: 5px;">
+                          <b>Answer:</b> <%= answer.answer %>
+                          | <%= link_to_remote "Edit", :url => edit_publishers_quiz_answer_path( :id => answer.id, :quiz_question_id => question.id ), :method => 'GET', :update => "answer-#{answer.id}-form-container" %>
+                          | <% form_tag( "/publishers/quiz_answers/#{answer.id}", { :method => "DELETE", :style => 'display:inline' }) do %>
+                              <input type="submit" value="Delete"/>
+                            <% end %>
+                          <br />
+                          <b>Value:</b> <%= answer.value %>
+                          <div id="answer-<%= answer.id %>-blurb" style="border: 1px #666 dashed; padding: 3px;">
+                            <%= answer.quiz_learning_blurb.blurb %>
+                          </div>
+                          <div id="answer-<%= answer.id %>-form-container" style="margin-left: 15px;"></div>
+                        </div>
+                        
+                      <% end %>
+                      
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+            
+          </div> <!-- phrase questions outer wrapper -->
+          
+        </div> <!-- per phrase wrapper -->
+        <div><br /><hr /></div>
+        <br /><br />
+      <% end %>
+
+    <% end %>
+  </div>
+</div>
+
+<div id="quiz-assessment">
+  <div id="assessment-form-container">
+    
+  </div>
+</div>

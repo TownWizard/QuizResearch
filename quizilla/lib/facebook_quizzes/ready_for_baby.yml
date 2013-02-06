@@ -1,0 +1,286 @@
+quiz:
+  quiz_category_id: 5
+  name: Are You Ready for a Baby?
+  quiz_photo_path: "Ready_For_A_Baby.jpg"
+  description: "Do you daydream about what your baby would look like -- your eyes, your dimples? Or does talk of babies send you screaming from a room? Take this short quiz and see if you are close to hearing the pitter-patter of little feet."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: Time to start knitting booties
+      recommendation: "Congratulations! You are ready to have a baby: You have baby on your mind and you're on the fast track to parenthood. You seem to be mentally and emotionally ready for an addition to you life. Before you take that big step, you should consider the following things. Make a visit with your doctor and tell him or her that you and your partner are ready to try for a baby. The doctor will check things out and either give you the green light or might tell you some health concerns you can address-whether it's losing some weight or getting your vitamin levels up-to optimize your chances for an easy pregnancy and a healthy baby. You should make sure you and your partner are in agreement with the big changes about to come into your lives. Keep an open dialogue on things like finances, going back to work, childcare, raising your child in a particular religion, etc., to minimize conflict after the baby arrives. You are about to embark on one of the most rewarding-and stressful-experiences of a lifetime. Congratulations!"
+      value_ceiling: 1666.0
+      value_floor: 1000.0
+    quiz_recommendation_1:
+      name: "Having a baby is a long-term goal"
+      recommendation: "Having a baby is on your radar: Congratulations on knowing yourself and taking a slow approach to parenthood. Too many people rush into it before they  are ready-physically, financially, emotionally-and feel overwhelmed and miserable during the first weeks and months with a demanding newborn. You know how important it is to discuss things such as budget, childcare and other work-related expenses in order to determine whether it would be feasible for one parent to stay at home with the new baby. In addition, you need to consider the emotional demands. New parents need to be able to tolerate the demands of a baby, plus the stress that lack of sleep and around-the-clock care places on an individual. Finally, you are smart to give yourself time to get your body in optimal condition to take on the physical demands of pregnancy and the hard work that comes caring for a newborn. You are on the right track to making this important life decision."
+      value_ceiling: 2333.0
+      value_floor: 1667.0
+    quiz_recommendation_2:
+      name: "It's not the right time to have a baby"
+      recommendation: "You have other priorities than a baby: You know that you're not ready to have a baby. Good for you! With all the romanticized images of children and parenthood floating around, it's easy to get an idealized, rather than a realistic, view of what it's like to be a parent. Too many people rush into parenthood without considering all the changes in their lifestyle, and as a result, feel stressed and trapped when the baby arrives. Don't let anyone talk you into being a parent before you're ready. And it's possible you'll never be ready! Parenthood is not for everyone.  It may be for some people but not for all.  Avoid feeling the family pressures and live your own life."
+      value_ceiling: 3000.0
+      value_floor: 2334.0
+
+  facebook_quiz:
+    title: Are You Ready for a Baby?
+    offer_url:
+    is_active: true
+    height: 1000
+    partner_site_id: 6
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: Are You Ready for a Baby?
+      description: Are You Ready for a Baby?
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Are You Ready for a Baby?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Congratulations! You are ready to commit to having a baby."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "You may need some more time until you are ready--emotionally and financially-to have a baby."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "You are not ready to have a baby. "
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "The last time you held a baby:"
+      description: "The last time you held a baby:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "The last time you held a baby:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "You couldn't give it back to the parents."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Was the last time you held one!
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: You remember the tiny fingers and toes.
+              value: 200
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: How often does the discussion come up with your significant other about having a baby?
+      description: How often does the discussion come up with your significant other about having a baby?
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: How often does the discussion come up with your significant other about having a baby?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Occasionally. You've discussed it before, but agree that the timing has to be perfect. "
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: Often. You are always discussing names, work logistics and child-rearing attitudes.
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: "Never. You couldn't even imagine broaching that subject with your significant other."
+              value: 300
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "You overheard a neighbor who recently had a baby discussing her weight gain. You thought:"
+      description: "You overheard a neighbor who recently had a baby discussing her weight gain. You thought:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You overheard a neighbor who recently had a baby discussing her weight gain. You thought:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "You will eat healthy when you decide to have a baby, if that day comes. "
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: "You work too hard at the gym to ruin your figure with a pregnancy. "
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: "That shouldn't be a concern. Baby first, and you'll worry about losing weight later."
+              value: 100
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "After buying a gift for a cousin's baby shower and seeing how expensive baby items cost, you think:"
+      description: "After buying a gift for a cousin's baby shower and seeing how expensive baby items cost, you think:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "After buying a gift for a cousin's baby shower and seeing how expensive baby items cost, you think:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "There's no way you could afford the things babies need. You're just starting your life."
+              value: 300
+              position: 1
+            quiz_answer_2:
+              answer: "Kids may be expensive, but the joy in having a family certainly pays off! "
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: You are going to start saving so you are ready to have a child.
+              value: 200
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "Another co-worker just announced her pregnancy. You think:"
+      description: "Another co-worker just announced her pregnancy. You think:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Another co-worker just announced her pregnancy. You think:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "She's lucky! You can't wait to plan the baby shower and see the new baby at the office."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: You like seeing pictures of babies but some people go overboard.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Oh no, more incessant baby-talk around the office. Can't we just get our work done?"
+              value: 300
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "When you think of all the co-workers who've had babies and left to be stay-at-home moms, you think:"
+      description: "When you think of all the co-workers who've had babies and left to be stay-at-home moms, you think:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When you think of all the co-workers who've had babies and left to be stay-at-home moms, you think:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "You hope you will be able to \"have it all,\" and go back to work after having a baby."
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: "Why give up everything she's worked for to stay home all day changing diapers? "
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: "It's great that they get to spend a lot of time with their babies."
+              value: 100
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "When you are walking through the mall and see a mom pushing a baby in a stroller, you:"
+      description: "When you are walking through the mall and see a mom pushing a baby in a stroller, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When you are walking through the mall and see a mom pushing a baby in a stroller, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Feel slightly annoyed when they take up all the space in the elevators.
+              value: 300
+              position: 1
+            quiz_answer_2:
+              answer: "Immediately look at the baby and think to yourself how cute the baby looks. "
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Smile at the baby but keep moving to meet your friends for lunch in the food court.
+              value: 200
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "The part that concerns you most about having a new baby is:"
+      description: "The part that concerns you most about having a new baby is:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "The part that concerns you most about having a new baby is:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Whether you will be a good parent and not overwhelm the baby with affection.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "The idea that you will miss your old lifestyle, and have limited time for yourself. "
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: All your nice furniture and clothes will be ruined by spit-up and dirty diapers.
+              value: 300
+              position: 3
+    quiz_phase_09:
+      position: 9
+      name: "On New Year's Eve, you try to avoid:"
+      description: "On New Year's Eve, you try to avoid:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "On New Year's Eve, you try to avoid:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Plans that take you too far from home. You want to enjoy fun time with friends but don't want to go through too much trouble just for a party."
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: "Going to friends' houses who have children. Kids, champagne and celebrating don't mix at all."
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: "Joining the crazy party scene. You are so over it and just want to spend it with people who are important to you. "
+              value: 100
+              position: 3
+    quiz_phase_10:
+      position: 10
+      name: "A friend who is expecting a baby asked you for help with baby names, you:"
+      description: "A friend who is expecting a baby asked you for help with baby names, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "A friend who is expecting a baby asked you for help with baby names, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Told her you have no clue with the most popular names as you mumbled -- really don't care. "
+              value: 300
+              position: 1
+            quiz_answer_2:
+              answer: "Pulled up your master list or potential names you've been keeping since you got married."
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Offer to go to the bookstore with her and get a baby naming book to go through and highlight favorites.
+              value: 200
+              position: 3

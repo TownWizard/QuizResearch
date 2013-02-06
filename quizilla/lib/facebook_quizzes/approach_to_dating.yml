@@ -1,0 +1,313 @@
+quiz:
+  quiz_category_id: 7
+  name: What's Your Approach to Dating?
+  quiz_photo_path: "Dating_style.JPG"
+  description: "Dating is a natural part of life, but for some of us, it is as unnatural as flying without a plane. Figure out your dating style and maybe change your life."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "You approach all things sensibly, but you can find more"
+      recommendation: "You are Sensible, Safe and Pragmatic: You have a sensible approach to life and how and when to spend your time. You are busy working at the same job for many years with a stable income. At night you go home but occasionally stay after work to go to a local bar to hang out with your co-workers. Consider joining a local book club to expand your personal relationships and find a new favorite author. Let your friends -- both married and single - know that you still feel they are important to you in your life and you don't want too much time to go by without seeing them. You never know when they may have a single friend for you to meet."
+      value_floor: 500
+      value_ceiling: 750
+    quiz_recommendation_1:
+      name: "It's traditional love for you"
+      recommendation: "Strict - It's your way or the highway: You are quite conservative when it comes to dating, and it's clear you take the more traditional route when it comes to love. So traditional, in fact, that it's more \"old school\" - as in Old World - than modern times permit. There is nothing wrong with holding on to traditional values, but it's okay to seek out men who share your value system in non-traditional venues, such as online dating web sites or speed-dating events at your local house of worship. If it's parental disapproval you are fearing, have a heart-to-heart talk with your mom and dad, perhaps getting a trusted aunt or brother and sister in your court first. Make it clear that, while you respect them and their traditions, you are an adult who has to make her own way in life, and that includes picking a mate."
+      value_floor: 751
+      value_ceiling: 1250
+    quiz_recommendation_2:
+      name: "You move away from the comfort zone and get better with time"
+      recommendation: "You like a little adventure: You like being a little more adventurous and move away from your comfort zone when seeking individuals who share your beliefs. With a balanced approach to dating, you are far more likely to find the man of your dreams rather than suffer through too many nightmarish dates. Continue to expand your opportunities to meet new people, whether it's through volunteer work or taking evening classes for adults. Even if you don't meet the perfect mate, you will be helping people and learning new skills, which are invaluable. Remember, you'll kiss a lot of frogs before you find that one prince, but once the magic happens, it may just mean a lifetime of happiness."
+      value_floor: 1251
+      value_ceiling: 1850
+    quiz_recommendation_3:
+      name: "Slow down to find true love"
+      recommendation: "Anything Goes Dater: Slow down, sister! Walking too much on the wild side of town is fun for the moment, but those moments are fleeting, and if you are serious about finding a mate  or going on a serious date - you need to realize that downing shots is drowning your chances for finding true love. If you want to change your success rate, change your environment. Stay away from loud, crowded bars and spend more time networking with friends and family to help you on your search. If you have any hobbies, like sports or collecting, join some local groups so you will immediately have one thing in common with other singles in the club. Consider volunteering your time at a local charity. It is a great way to meet people who have strong values and are generous with their time. This is about sending you down the right path towards finding true love rather than stopping at all the honkytonks along the way."
+      value_floor: 1851
+      value_ceiling: 2250
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: What's Your Approach to Dating?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "How would you describe your first date?"
+      description: "How would you describe your first date?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "How would you describe your first date?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Strict - it's your way or the highway"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "You like to stay in your comfort-zone"
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "Anything goes - if you can, you will"
+              value: 200
+              position: 3
+            quiz_answer_3:
+              answer: "You're sensible and pragmatic"
+              value: 150
+              position: 4
+    quiz_phase_01:
+      position: 1
+      name: "Your friend and neighbor lives in a strict household with parents who expect their daughter to follow the same religious traditions and culture as their parents followed before them. When your friend comes of dating age, you think she should:"
+      description: "Your friend and neighbor lives in a strict household with parents who expect their daughter to follow the same religious traditions and culture as their parents followed before them. When your friend comes of dating age, you think she should:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your friend and neighbor lives in a strict household with parents who expect their daughter to follow the same religious traditions and culture as their parents followed before them. When your friend comes of dating age, you think she should:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Not worry about dating because when it's time to find a husband, her parents will arrange a marriage for her."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Only date men who come from the same religious background and share her family's beliefs. This way she will have more in common with them if the relationship becomes more serious and potentially leads to marriage."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Date anyone she wants, as she's already been doing so behind her parents' back. Her parents don't know half the things she's doing."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Be open to dating different kinds of men. She should base her relationships on common interests, in addition to the looks and sense of humor that initially attract you to the opposite sex. The family issues are secondary, while happiness comes first."
+              value: 50
+              position: 4
+    quiz_phase_02:
+      position: 2
+      name: "Marla, your single work associate, has been the office 'project' for as long as you can remember. All your co-workers, single and married, are constantly offering advice on how she can improve her chances for finding the love of her life. She should:"
+      description: "Marla, your single work associate, has been the office 'project' for as long as you can remember. All your co-workers, single and married, are constantly offering advice on how she can improve her chances for finding the love of her life. She should:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Marla, your single work associate, has been the office 'project' for as long as you can remember. All your co-workers, single and married, are constantly offering advice on how she can improve her chances for finding the love of her life. She should:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Remain hopeful her family will find her a suitable mate. She comes from a large family and there are always several introductions being made."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Ask her co-workers if any of them can find her a nice guy. You work in a large professional office setting with many networking event opportunities to ask colleagues about their friends and family."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Go out with some co-workers to the local bar and look for Mr. Right Now!"
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Sign up with an online dating service. Nowadays, there are lots of reputable sites to choose from, including those strictly for people of just one religion or career! This is the best way to choose from the largest pool of eligible bachelors."
+              value: 50
+              position: 4
+    quiz_phase_03:
+      position: 3
+      name: "Carla has been a traditional dater, networking with family and friends searching for potential spousal material. Now that she's exhausted her options, she should:"
+      description: "Carla has been a traditional dater, networking with family and friends searching for potential spousal material. Now that she's exhausted her options, she should:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Carla has been a traditional dater, networking with family and friends searching for potential spousal material. Now that she's exhausted her options, she should:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Just do the activities that she enjoys the most and she will get lucky at one of the events and meet someone with a great deal of common interests."
+              value: 50
+              position: 1
+            quiz_answer_1:
+              answer: "Register with multiple dating sites and use the Internet for screening men. Nice, single men may be in short supply in her city."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Go to a bunch of speed-dating events held at local bars, and forget about finding a husband for now. It is always nice to meet a variety of interesting people in your town."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Try attending singles events sponsored by her local house of worship. There are weekly events and there is always a big turnout."
+              value: 100
+              position: 4
+    quiz_phase_04:
+      position: 4
+      name: "Though Susan was never much for love at first sight, she definitely had her priority list of things she looks for in a man. You suspect the top of her list would include:"
+      description: "Though Susan was never much for love at first sight, she definitely had her priority list of things she looks for in a man. You suspect the top of her list would include:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Though Susan was never much for love at first sight, she definitely had her priority list of things she looks for in a man. You suspect the top of her list would include:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Someone who shares the same cultural and religious beliefs. Beauty fades, but commonality is the recipe for a long and happy life together."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "A smart guy with a great personality. When you go to a party you want to feel proud to have him on your arm and have your date be able to make conversation with the other guests, too."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Someone who is the exact opposite of her ex! By now, she knows what she wants and what she doesn't want, and it's getting easier to weed out certain types that aren't desirable."
+              value: 50
+              position: 3
+            quiz_answer_3:
+              answer: "A drop-dead handsome man; someone who looks like George Clooney or Tyson Beckford. A hot blonde tennis player or a muscular linebacker."
+              value: 225
+              position: 4
+    quiz_phase_05:
+      position: 5
+      name: "Kiki is an anthropologist, loves life and enjoys meeting new people and welcomes the opportunity to discover them in their \"natural surroundings\". If you were drawing a location on a map you'd find them at:"
+      description: "Kiki is an anthropologist, loves life and enjoys meeting new people and welcomes the opportunity to discover them in their \"natural surroundings\". If you were drawing a location on a map you'd find them at:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Kiki is an anthropologist, loves life and enjoys meeting new people and welcomes the opportunity to discover them in their \"natural surroundings\". If you were drawing a location on a map you'd find them at:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "A house of worship."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "The house of a friend."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "A house of pancakes."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "A nice quiet jazz club with a martini bar."
+              value: 50
+              position: 4
+    quiz_phase_06:
+      position: 6
+      name: "When searching for the perfect place for a date, you usually have your favorite venues for that first meeting. Your best option would be:"
+      description: "When searching for the perfect place for a date, you usually have your favorite venues for that first meeting. Your best option would be:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When searching for the perfect place for a date, you usually have your favorite venues for that first meeting. Your best option would be:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Meet for lunch in a local caf\xC3\xA9, possibly with a close friend nearby in case you need an excuse to leave. You don't take any chances when it comes to dating."
+              value: 150
+              position: 1
+            quiz_answer_1:
+              answer: "Meet for coffee, preferably outside if the weather is nice. This way, you can make a quick escape if the man is not your 'cup of tea,' but you can linger on the park bench chatting if he's just the right type for you."
+              value: 50
+              position: 2
+            quiz_answer_2:
+              answer: "Meet at a local community function, so you are not alone and can observe how he acts with others. You'd like to be sure he is a good person."
+              value: 100
+              position: 3
+            quiz_answer_3:
+              answer: "Meet in a crowded bar for drinks after work. You love the electricity in the room, and it helps get you in the mood."
+              value: 225
+              position: 4
+    quiz_phase_07:
+      position: 7
+      name: "Sarah just went on her first date with Glen tonight at a local restaurant. She calls you, her best friend, to ask your advice as to how long she should give Glen to call and ask for another date. You say:"
+      description: "Sarah just went on her first date with Glen tonight at a local restaurant. She calls you, her best friend, to ask your advice as to how long she should give Glen to call and ask for another date. You say:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Sarah just went on her first date with Glen tonight at a local restaurant. She calls you, her best friend, to ask your advice as to how long she should give Glen to call and ask for another date. You say:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "You'd give it 48 hours. If he doesn't call you by then, move on."
+              value: 150
+              position: 1
+            quiz_answer_1:
+              answer: "Maybe you should shoot him an e-mail. He may be busy at work or have a family issue that's keeping him preoccupied. You'll never know if you don't give it a shot."
+              value: 50
+              position: 2
+            quiz_answer_2:
+              answer: "Don't worry; he'll call you if he is interested in going on another date."
+              value: 100
+              position: 3
+            quiz_answer_3:
+              answer: "Forget waiting and just call him right now.  These days we girls need to be proactive with dating if we want to get anywhere."
+              value: 225
+              position: 4
+    quiz_phase_08:
+      position: 8
+      name: "Ah, young love. Whether it was a stolen kiss on the playground during recess or passing notes to a crush in junior high school, we never forget our first love. Which scenario best describes your youthful romantic experiences?"
+      description: "Ah, young love. Whether it was a stolen kiss on the playground during recess or passing notes to a crush in junior high school, we never forget our first love. Which scenario best describes your youthful romantic experiences?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Ah, young love. Whether it was a stolen kiss on the playground during recess or passing notes to a crush in junior high school, we never forget our first love. Which scenario best describes your youthful romantic experiences?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "You weren't allowed to look at a boy until you were 18! Your parents were super-strict and insisted that boys were a distraction from your studies. They said that there are many years to go to concern yourself with boys."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "You hit the ground running in kindergarten, chasing after the boys on the playground in elementary school, stealing kisses behind the school in junior high, then dating the whole varsity football team throughout high school."
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "You didn't really date much. You had friends who were guys, but mostly hung out with a mixed crowd of boys and girls. You had crushes, sure, but didn't get serious about the opposite sex until college."
+              value: 50
+              position: 3
+            quiz_answer_3:
+              answer: "You met your first love in middle school. We dated throughout high school, went to the prom together, but split up when we went to different colleges. You remained friendly over the years."
+              value: 150
+              position: 4
+    quiz_phase_09:
+      position: 9
+      name: "Your oldest friend, Ava, calls to tell you that she's met the man of her dreams. She says he is 'the one,' and that they are talking about moving in together. Only problem you can see? They just met last weekend! She asks you for your opinion on the idea."
+      description: "Your oldest friend, Ava, calls to tell you that she's met the man of her dreams. She says he is 'the one,' and that they are talking about moving in together. Only problem you can see? They just met last weekend! She asks you for your opinion on the idea."
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your oldest friend, Ava, calls to tell you that she's met the man of her dreams. She says he is 'the one,' and that they are talking about moving in together. Only problem you can see? They just met last weekend! She asks you for your opinion on the idea."
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Say, 'Go for it!' We only go through life one time, so grab the bull by the horns and don't let go. All that matters is if the two of them are happy, right?"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Tell her you will support her no matter what her decision is. Give her a story or two of some friends you have who have gone through similar relationships so she can get a better picture of the right decision to make."
+              value: 50
+              position: 2
+            quiz_answer_2:
+              answer: "Urge her to slow down. What's the rush? Date for a while, spend as much time together as possible, and get to know each other. If it's right, in a few more months, she can revisit the idea of moving in together."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "Cringe as she goes on and on about the 'man of her dreams.' This isn't the first time she has rushed into a relationship, only to find it crash and burn. You don't want her to get hurt again."
+              value: 100
+              position: 4
+    quiz_phase_10:
+      position: 10
+      name: "You're on vacation with your three best girlfriends. While sightseeing, you meet a really nice guy. You spend the day together, taking in the sights, chatting, and really hitting it off. He is really sweet, super cute, with a sexy foreign accent. You:"
+      description: "You're on vacation with your three best girlfriends. While sightseeing, you meet a really nice guy. You spend the day together, taking in the sights, chatting, and really hitting it off. He is really sweet, super cute, with a sexy foreign accent. You:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You're on vacation with your three best girlfriends. While sightseeing, you meet a really nice guy. You spend the day together, taking in the sights, chatting, and really hitting it off. He is really sweet, super cute, with a sexy foreign accent. You:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Cancel your ticket back home, after spending every minute of the rest of the week together at the non-touristy places in his town."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Exchange e-mail addresses at the end of the evening. It was certainly nice to spend the day with such an attractive native, and it will be a great memory of your trip."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "See him again several times during the rest of your week there. You love the idea of combining a great vacation with a mini-romance, but know your 'real life' is waiting for you back home across the ocean."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "Say goodbye after an amazing vacation and promised to keep in touch via email."
+              value: 50
+              position: 4

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+  <error>
+    <field>user_id</field>
+    <message>Required parameter User ID not provided.</message>
+    <code>400</code>
+  </error>
+</errors>

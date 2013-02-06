@@ -1,0 +1,208 @@
+<%
+  if @xml.xpath("/quiz").size > 0
+    x = "quiz"
+    y = "/#{x}/quiz_request_metadata/"
+  elsif @xml.xpath("/quiz_request/completed_quiz_result").size > 0
+    x = "quiz_request/completed_quiz_result"
+    y = "/#{x}/quiz_recommendation_title"
+  else
+    x = "quiz_request"
+    y = "/#{x}/quiz_request_metadata/"
+  end
+
+
+  @free_text_answers = Hash.new
+  if flash[ :submitted_answers ]
+    @submitted_answers = flash[ :submitted_answers ].split( ',' )
+    @free_text_answers = flash[ :free_text_answers ]
+  end
+
+
+
+  pd = @xml.xpath("/#{x}/quiz_phase/description")
+  if pd.size > 0
+    phase_description = pd[ 0 ].content
+  end
+
+  first_answer = @xml.xpath("/#{x}/quiz_phase/quiz_question/answer_option/answer_option_text")[ 0 ].content
+  number_of_answers = @xml.xpath("/#{x}/quiz_phase/quiz_question[position=1]/answer_option").size
+  percentage_per_answer = (50/number_of_answers).floor
+
+  if @survey.id  == 32
+    imgpath = "dressbarn"
+  elsif @survey.id == 33
+    imgpath = "petco"
+  elsif @survey.id == 35
+    imgpath = "signatureHomestyle"
+  elsif @survey.id == 36
+    imgpath = "pamperedChef"
+  elsif @survey.id == 37
+    imgpath = "tomboyTools"
+  elsif @survey.id == 38
+    imgpath = "redrobin"
+  elsif @survey.id == 39
+    imgpath = "twe"
+  elsif @survey.id == 40
+    imgpath = "maryKay"
+  elsif @survey.id == 41
+    imgpath = "jafra"
+  elsif @survey.id == 42
+    imgpath = "scentsy"
+  else
+    imgpath = "generic"
+  end
+%>
+
+<% form_tag "#{@base_request_uri}#{ENV[ 'sport' ]}/surveys/#{@survey.id}/#{params[ :position ]}" do %>
+  <input type="hidden" name="quiz_id" value="<%= @quiz.id %>" />
+  <% if params[ :position ] %>
+    <input type="hidden" name="quiz_page" value="<%= params[ :position ] %>" />
+  <% end %>
+
+  <% @xml.xpath( "/#{x}/quiz_request_metadata/post_parameter" ).each do |pp| %>
+    <input type="hidden" name="<%= pp.xpath( "name" )[ 0 ].content %>" value="<%= pp.xpath( "value" )[ 0 ].content %>" />
+  <% end %>
+
+  <% if( session[ :qiid ] && params[ :position ] ) %>
+    <input type="hidden" name="qiid" value="<%= session[ :qiid] %>" />
+  <% end %>
+
+  <% if session[ :user_id ] %>
+    <input type="hidden" name="user_id" value="<%= session[ :user_id ] %>" />
+  <% end %>
+
+  <% if !params[ :position ] %>
+    <input type="hidden" name="partner_site_id" value="<%= @partner_site.id %>" />
+    <!--<input type="hidden" name="user[email]" value="sample@maxwelldaily.com" />-->
+  <% end %>
+
+
+  <div style="width: 85%; margin: 0 auto;">
+    <div style="text-align: left;">
+      <img src="/images/surveys/synapse/<%= imgpath %>/arrow.gif" alt="" style="vertical-align: bottom; float: left; margin: 0 15px 150px 0;" />
+      <h2><%= phase_description %></h2>
+
+      <% if @errors.size > 0 || flash[ :errors ] %>
+        <div class="errorExplanation" id="errorExplanation" style="color: #600;">
+          <h4>Please correct the following problems:</h4>
+          <ul style="margin-left: 25px;">
+            <% flash[ :errors ].each do |error| %>
+            <li><%= error %></li>
+            <% end %>
+            <% @errors.each do |error| %>
+              <li><%= error %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+
+    <center>
+    <table cellspacing="10" style="width: 85%; margin-top: 20px;">
+
+    <%
+        table_test = false
+        @xml.xpath( "/#{x}/quiz_phase/quiz_question" ).each do |table|
+          if table.xpath("question_text")[ 0 ].content == phase_description
+            table_test = true
+          end
+        end
+    %>
+
+    <% answer_row = @xml.xpath("/#{x}/quiz_phase/quiz_question")[ 0 ] %>
+    <tr style="vertical-align: bottom; text-align: center; font-size: 11px; font-family: verdana, sans-serif; color: #666;">
+      <% if !table_test %><td>&nbsp;</td><% end %>
+      <% answer_row.xpath("answer_option").sort_by{|b| b.xpath('position')[ 0 ].content.to_i}.each do |a| %>
+        <td><%= a.xpath("answer_option_text")[ 0 ].content %></td>
+      <% end %>
+    </tr>
+
+   <% questions = @xml.xpath( "/#{x}/quiz_phase/quiz_question" ).each do |q| %>
+     <% missed = true %>
+     <% if @submitted_answers %>
+       <% q.xpath("answer_option").each do |a| %>
+         <%
+            input_value = a.xpath("post_parameter/value")[ 0 ].content
+            if @submitted_answers.member?( input_value )
+              missed = false
+            end
+         %>
+       <% end %>
+     <% end %>
+     <% missed = @submitted_answers && missed %>
+      <tr style="vertical-align: center; font-weight; bold; font-size: 14px; text-align: right;">
+        <% if !table_test %>
+          <td style="width: 50%;<%= ( missed ) ? "background-color: #f99;" : "" %>">
+              <%= q.xpath("question_text")[ 0 ].content %>
+          </td>
+        <% end %>
+       <% q.xpath("answer_option").sort_by{|b| b.xpath('position')[ 0 ].content.to_i}.each do |a| %>
+         <%
+           input_type = a.xpath("post_parameter/type")[ 0 ].content
+           input_name = a.xpath("post_parameter/name")[ 0 ].content
+           input_value = a.xpath("post_parameter/value")[ 0 ].content
+           answer_text = a.xpath("answer_option_text")[ 0 ].content
+           is_free_text_answer = a.xpath("post_parameter/text_post_parameter_suboption").size > 0
+           if is_free_text_answer
+              free_answer_type = a.xpath("post_parameter/text_post_parameter_suboption/type")[ 0 ].content
+              free_answer_name = a.xpath("post_parameter/text_post_parameter_suboption/name")[ 0 ].content
+              free_answer_size = a.xpath("post_parameter/text_post_parameter_suboption/size")[ 0 ].content
+              free_answer_maxlength = a.xpath("post_parameter/text_post_parameter_suboption/maxlength")[ 0 ].content
+              free_answer_rows = a.xpath("post_parameter/text_post_parameter_suboption/rows")[ 0 ].content
+              free_answer_col = a.xpath("post_parameter/text_post_parameter_suboption/cols")[ 0 ].content
+           end
+           if missed
+             bg_string = "#f99;"
+           else
+             bg_string = cycle("#e6f6db", "#dff6f6", "#fef6dd", "#fee5dc", "#f5d9db")
+           end
+         %>
+        <td style="width: <%= !table_test ? percentage_per_answer : percentage_per_answer + (50 / number_of_answers) %>%; text-align: center; padding: 15px; background-color: <%= bg_string %>;">
+          <input type="<%= input_type %>" name="<%= input_name %>[]" value="<%= input_value %>"
+            <%= ( @submitted_answers && @submitted_answers.member?( input_value ) ) ? "checked=\"checked\"" : "" %> />
+
+          <% if is_free_text_answer %>
+            <% if free_answer_type == 'textarea' %>
+              <TEXTAREA name="<%= free_answer_name %>" rows="<%= free_answer_rows %>" cols="<%= free_answer_col %>" ><%= (@free_text_answers[input_value.to_s].nil?)?'':@free_text_answers[input_value.to_s] %></TEXTAREA>
+            <% else %>
+              <input type="<%= free_answer_type %>" name="<%= free_answer_name %>" size="<%= free_answer_size %>" maxlength="<%= free_answer_maxlength %>" value="<%= (@free_text_answers[input_value.to_s].nil?)?'':@free_text_answers[input_value.to_s] %>"/>
+            <% end %>
+          <% end %>
+        </td>
+       <% end %>
+      </tr>
+  <% end %>
+
+  </table>
+</center>
+
+  <div style="text-align: right; margin: 30px 10px;">
+    <input type="image" src="/images/surveys/synapse/<%= imgpath %>/button_next.gif" alt="Next" />
+  </div>
+
+  </div>
+  <%
+    if @xml.xpath("/#{x}/quiz_request_metadata/total_quiz_phases")
+        completion_percentage = ((@xml.xpath("/#{x}/quiz_phase/position")[ 0 ].content.to_f / @xml.xpath("/#{x}/quiz_request_metadata/total_quiz_phases")[ 0 ].content.to_f) * 100).floor
+    else
+        completion_percentage = 0
+    end
+  %>
+  <div class="progress_bar_wrapper">
+    <%
+        w = (610/100 * completion_percentage) + 15
+        if w > 610
+          w = 610
+        elsif w <= 50
+          w = 50;
+        end
+    %>
+    <div class="progress_bar" style="width: <%= w %>px;">
+        &nbsp;&nbsp;<%= completion_percentage %>%
+        <img src="/images/surveys/synapse/<%= imgpath %>/progress_bar_on.gif" alt="" />
+    </div>
+  </div>
+
+  <%#= debug @xml  %>
+ <% end %>
+

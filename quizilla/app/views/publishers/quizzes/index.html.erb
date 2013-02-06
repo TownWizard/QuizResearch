@@ -1,0 +1,41 @@
+<div id="quiz-categories">
+  <h3>New Quizzes</h3>
+  <div style="padding: 0; margin: 0 10px;">
+    To create a new quiz, click on the name of a category from the list below.
+    To edit category information, including lead questions and answers, use the
+    links to the right of each category name.
+    <br /><br />
+    <%= render :partial => 'publishers/quiz_categories/list' %>
+  </div>
+</div>
+<br />
+<div id="quizzes">
+  <h3>Existing Quizzes</h3>
+  <div style="padding: 0; margin: 0 10px;">
+    To manage an existing quiz, select from the list below.
+    <br /><br />
+    <div>
+      <table width="100%">
+      <% @quizzes.each do |q| %>
+        <tr>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;"><%= link_to q.name, :controller => 'quizzes', :action => 'show', :id => q.id %></td>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;"><%= q.quiz_category.name if q.quiz_category %></td>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;" align="center">
+            <% form_tag( "/publishers/quizzes/#{q.id}", :method => "DELETE" ) do %>
+              <input type="submit" value="Delete"/>
+            <% end %>
+          </td>
+          <td style="border: 1px #666 dashed; margin:5px; padding: 5px;" align="center">
+            <%# form_tag( "/publishers/quizzes/#{q.id}/get_data", :method => "GET" ) do %>
+              <!--input type="submit" value="Get Data"/-->
+            <%# end %>
+            <%= link_to image_tag("img_csv.gif"), formatted_get_data_publishers_quiz_path(q.id, :csv) %>
+            <%= link_to image_tag("img_pdf.gif"), formatted_get_data_publishers_quiz_path(q.id, :pdf) %>
+            <%= link_to image_tag("img_doc.gif"), formatted_get_data_publishers_quiz_path(q.id, :rtf) %>
+          </td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+</div>

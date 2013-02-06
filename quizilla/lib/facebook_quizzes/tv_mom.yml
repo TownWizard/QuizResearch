@@ -1,0 +1,334 @@
+quiz:
+  quiz_category_id: 5
+  name: Which TV Mom Are You?
+  quiz_photo_path: "TV_Moms.jpg"
+  description: "Like most of us, you grew up watching sitcoms. From the sublime to the ridiculous, the moms on these programs worked their way into our collective unconscious. Take this quiz to find out which TV mom you are most like."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "Everybody loves Raymond but you are Debra Barone - the woman behind it all"
+      recommendation: "You are Debra Barone: Everybody may love Raymond, but it's you - Debra Barone - who deserves all the credit. You're a stay-at-home mom who can make three different kinds of PB&J sandwiches with one hand, while holding a crying baby in the other. Like Annie Camden on \"Seventh Heaven,\" you have made sacrifices to stay home with your kids, but you know how quickly this time goes and you want to savor it. You have all of the responsibility, but get none of the fame... and you love every moment of it."
+      value_ceiling: 1250.0
+      value_floor: 1000.0
+    quiz_recommendation_1:
+      name: You are Claire Huxtable, balanced in every way
+      recommendation: "You are Claire Huxtable: You don't need a \"cliff\" to jump off, because it's you - Claire Huxtable - who can manage to keep career climbing without falling down on the job. Just like Maggie Seaver on \"Growing Pains\", you have found a perfect balance between meeting your family's needs while climbing the corporate ladder. Your Smartphone is your best friend, and you've managed your family affairs as well as any deal you've closed."
+      value_ceiling: 1875.0
+      value_floor: 1251.0
+    quiz_recommendation_2:
+      name: "It's your world Murphy Brown and you've done it on your own"
+      recommendation: "You are Murphy Brown: It's your world, Murphy Brown, and you are happy to report you've managed well on your own. Just like Angela Bower, you're \"the boss\" both at home and at work. Though you may not have a male nanny like Tony or sing in a band with your kids like Shirley on the \"Partridge Family,\" you're redefining the traditional family, and finding out that being independent isn't so bad."
+      value_ceiling: 2625.0
+      value_floor: 1876.0
+    quiz_recommendation_3:
+      name: "Here's the story of a lovely lady - You, Carol Brady"
+      recommendation: "You Are Carol Brady: Here's the story of a lovely lady... and it's you! Your life has changed a lot! You're now a stay-at-home mom to a blended family, the result of marrying a man with kids after your divorce or being widowed. Your house has gotten much louder! But you are reveling in your family life. You're managing the needs of many kids with a wide age range, some still young and some growing into adulthood. You like being at home, managing the kids' day-to-day schedules and refereeing the occasional disagreement that comes from sibling rivalry. While most of your neighbors have both parents working, you feel no pressure to do so, as the kids keep you so busy and you think it gives them some stability in this new living situation."
+      value_ceiling: 3000.0
+      value_floor: 2626.0
+
+  facebook_quiz:
+    title: Which TV Mom Are You?
+    offer_url:
+    is_active: true
+    partner_site_id: 6
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: Phase-0
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Who is your best friend most like?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Debra Barone
+              value: 
+              position: 1
+            quiz_answer_2:
+              answer: Carol Brady
+              value: 
+              position: 2
+            quiz_answer_3:
+              answer: Murphy Brown
+              value: 
+              position: 3
+            quiz_answer_4:
+              answer: Claire Huxtable
+              value: 
+              position: 4
+    quiz_phase_01:
+      position: 1
+      name: Phase-1
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When planning meals for your kids, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Grab your cell phone when leaving the office and call for takeout. After a long day at the office, which included several conference calls, back to back meetings and preparation for a new business pitch, there is no time to cook."
+              value: 225
+              position: 1
+            quiz_answer_2:
+              answer: "Call your husband from the office, and ask him to start boiling water. Pawning that off on your spouse makes him feel special, so every once in a while, it is a nice treat."
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Sit down on Sunday night with pen and paper, planning out a week's worth of meals. Staying organized keeps you and the family in check."
+              value: 100
+              position: 3
+            quiz_answer_4:
+              answer: "Try to plan out a menu based on everyone's likes and everyone's schedule. It's not easy with a large family, but there's also no use in making meals your family doesn't like and won't eat."
+              value: 300
+              position: 4
+    quiz_phase_02:
+      position: 2
+      name: Phase-2
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "After being told you need to bring two dozen cookies to your daughter's third-grade class for a holiday celebration, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Go to your recipe card file and pick out the most colorful holiday cookie recipe you found in Rachel Ray's latest cookbook. Your cookies always taste better than the store bought cookies you have seen from other parents in previous years"
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Stop off at the supermarket bakery after work the night before, just in time not to miss this occasion. Your daughter always feels special the day you supply the goodies! "
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Call your ex-husband and suggest he pick up cookie dough because he'll need to help his daughter bake cookies. You may also need to remind him a few times."
+              value: 225
+              position: 3
+            quiz_answer_4:
+              answer: "Use this as a fun \"bonding time,\" having all the siblings pitch in and help in the baking."
+              value: 300
+              position: 4
+    quiz_phase_03:
+      position: 3
+      name: Phase-3
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "After your son breaks the toilet by stuffing his toy soldiers down the bowl to see if they could survive underwater combat, you punish him by:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Making him play Tea Party with his younger sister for an entire week so you can finish painting the dining room"
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Dragging him to your office on the weekend, teaching him how to use the Xerox machine so he can help you collate and staple 200 documents for a presentation you are giving next week."
+              value: 225
+              position: 2
+            quiz_answer_3:
+              answer: "Waiting until your husband comes home from a business trip to dole out an appropriate punishment together. It is not a big deal but you would like to teach your son a good life lesson."
+              value: 150
+              position: 3
+            quiz_answer_4:
+              answer: "Calling a family meeting to discuss consequences. You want to protect his feelings at the same time as coming up with a mutually acceptable punishment."
+              value: 300
+              position: 4
+    quiz_phase_04:
+      position: 4
+      name: Phase-4
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "As part of your annual Spring Cleaning ritual, you..."
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Pull out last year's list of all places in your home that need cleaning and buy the appropriate 'green' supplies at the supermarket."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: " Look up local cleaning services over the internet at work and e-mail the names of two for your husband to call for pricing. You're busy and tired and look forward to treating yourself once in a while. "
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Don't worry about Spring Cleaning, because you try and keep your home as neat as possible throughout the year with a weekly housekeeper, and would rather spend your precious time off with your kids. "
+              value: 225
+              position: 3
+            quiz_answer_4:
+              answer: "Create a master list and dole out chores for each family member. That's another great advantage to having a large family with kids of varying ages. Divide and conquer is my mentality!"
+              value: 300
+              position: 4
+    quiz_phase_05:
+      position: 5
+      name: Phase-5
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Jordan, your 6-year-old son, has a science project due next Monday. You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Take him to the local stationery store after school and help him pick out an assortment of multi-colored pipe cleaners, Styrofoam balls and scented markers, which complement the well-labeled craft drawers you already have full of  art supplies."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Ask your husband if he can help your son construct his project, while you pick-up pizza for the family. Men are better focused for science projects."
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Work with your son over the weekend before the project is due, searching the area around your house for different colored leaves and weird bugs. You throw something together that leaves the teacher speechless."
+              value: 225
+              position: 3
+            quiz_answer_4:
+              answer: "Use your full house to your advantage. Surely one of the older kids has done a great science project over the years that Jordan can \"borrow\"."
+              value: 300
+              position: 4
+    quiz_phase_06:
+      position: 6
+      name: Phase-6
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Mrs. Jones, your teenage daughter's teacher, asks for a parent/teacher conference next Wednesday to discuss her \"attitude\" at school. You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Look up your Outlook calendar and offer two alternate dates while you text your husband asking him to check his calendar."
+              value: 150
+              position: 1
+            quiz_answer_2:
+              answer: "Write the time on your wall calendar in the kitchen and sketch a small frowning face next to the date. "
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Politely ask the teacher if you can discuss this issue over the phone rather than a face-to-face meeting.
+              value: 225
+              position: 3
+            quiz_answer_4:
+              answer: Sit your daughter down to see what the problem at school might be prior to your parent-teacher meeting to talk the issue through.
+              value: 300
+              position: 4
+    quiz_phase_07:
+      position: 7
+      name: Phase-7
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Your 7-year-old son tells you he wants to have a playdate with a classmate the next day. You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Ask the kid's mom if she can pick both her son and your son up from school, because you have an important work meeting you can't miss."
+              value: 150
+              position: 1
+            quiz_answer_2:
+              answer: "Call the kid's mom and offer to take them both to the local park after you run two errands. She took your kids to dinner and movie last week and you feel you should help her out as well and give her some 'away' time."
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Tell him tomorrow is not good for you, but Friday is better because you are off.
+              value: 225
+              position: 3
+            quiz_answer_4:
+              answer: "Say, sure, the more the merrier! There's always a few extra visiting kids scattered around the house. Your family thrives on chaos!"
+              value: 300
+              position: 4
+    quiz_phase_08:
+      position: 8
+      name: Phase-8
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When the alarm clock rings in the morning, and another day begins, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Stay in the clothes you slept in and take care of your kids' needs first, such as making lunches, writing notes for their teachers and picking out their clean clothes."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Take a shower, put on your make-up and get dressed for work while your husband gets the kids up for school. "
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: Give your daughter breakfast, then run to the bathroom for a quick shower before getting her dressed and ready for school
+              value: 225
+              position: 3
+            quiz_answer_4:
+              answer: "Usually have the older kids pour cereal and get drinks for the younger ones while you make the lunches, assembly-line style. "
+              value: 300
+              position: 4
+    quiz_phase_09:
+      position: 9
+      name: Phase-9
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "The holidays have rolled around again! This time of year finds you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Coordinating where your kids are going to be at every moment. With ex-husbands and former in-laws planning their celebrations as well, it is a finely organized schedule that keeps everyone happy.
+              value: 225
+              position: 1
+            quiz_answer_2:
+              answer: Baking, shopping, caroling, wrapping, decorating the tree, you name it, you do it yourself around here! You love the holidays and feel it's important to keep traditions alive for kids
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: "Split the responsibilities equally with your husband. He's become an expert at finding bargains online, so he handles the shopping, while you love decorating the house in your \"free\" time."
+              value: 150
+              position: 3
+            quiz_answer_4:
+              answer: "Make a master list, dividing the tasks into age-appropriate categories. It's important to keep holiday traditions alive in blended families, but it's a lot of work! You keep the kids involved at every level. "
+              value: 300
+              position: 4
+    quiz_phase_10:
+      position: 10
+      name: Phase-10
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You're planning your next vacation. What does that look like?"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "You're on your own this year! Your ex is taking the kids away for a week and you go on vacation solo. It's the first time you've done this and you're a little anxious, but excited to explore somewhere that you've always wanted to go"
+              value: 225
+              position: 1
+            quiz_answer_2:
+              answer: "You gather everyone together and discuss options. You go over budgets, everyone's top-ten list of where they'd like to visit, packing lists, etc. With a large family, you have to stay organized or you might leave someone behind like in \"Home Alone\"!"
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: "After picking a vacation spot, you get the go-ahead from your spouse and hit the ground running! You call the travel agent, book the flight and hotels and scour the internet for tourist attractions for the kids, plan meals and make a 'what to pack' list."
+              value: 100
+              position: 3
+            quiz_answer_4:
+              answer: "It's hubby's turn to pick. Every year you alternate, since the two of you have different tastes. Sometimes you have to grit your teeth to get through parts of your trip, but fair is fair, and the kids always seem to have a good time, so that's important"
+              value: 150
+              position: 4

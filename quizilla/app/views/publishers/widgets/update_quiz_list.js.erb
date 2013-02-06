@@ -1,0 +1,2 @@
+<td><label>Select Quiz</label></td>
+<td><%= select_tag("widget[quiz_id]", options_for_select(@quizzes.collect{ |p| [ p.name, p.id ] })) %></td>

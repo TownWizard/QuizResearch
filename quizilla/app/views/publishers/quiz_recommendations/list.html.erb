@@ -1,0 +1,15 @@
+<div id="quiz-recommendations-list" style="background-color: rgb(238, 238, 238);">
+  <% if @quiz.quiz_recommendations %>
+    <% @quiz.quiz_recommendations.each do |rec| %>
+      <a name="recommendation-<%= rec.id %>"></a>
+      <div id="recommendation-<%= rec.id %>" style="border: 1px solid rgb(153, 153, 153); padding: 5px;">
+        <div><%= link_to_remote( 'Edit', :url => edit_publishers_quiz_recommendation_path( :id => rec.id, :quiz_id => @quiz.id ), :update => 'recommendation-form', :method => 'GET' ) %> </div>
+        <div><b>Recommendation Name:</b> <span><%= rec.name %></span></div>
+        <div><b>Score Range:</b> <span><%= "#{rec.value_floor} - #{rec.value_ceiling}" %> </span></div>
+        <div><b>Recommendation: </b></div>
+        <div style="border: 1px dashed rgb(102, 102, 102); padding: 3px;"><%= rec.recommendation %></div>
+      </div>
+      <div id="recommendation-form"></div>
+    <% end %>
+  <% end %>
+</div>

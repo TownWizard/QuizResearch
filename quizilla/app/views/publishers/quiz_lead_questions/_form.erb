@@ -1,0 +1,7 @@
+<% form_for [ :publishers, @quiz_lead_question ] do |f| %>
+  <input type="hidden" name="quiz_lead_question[quiz_category_id]" value="<%= params[ :quiz_category_id ] %>" />
+  <input type="hidden" name="quiz_id" value="<%= params[ :quiz_id ] %>" />
+  <%= f.label :question, "Lead Question: " %> &nbsp;
+  <%= f.text_field :question, :size => 25 %> &nbsp;<br/>
+  <input type="submit" name="submit" value="Submit Answer"/>
+<% end %>

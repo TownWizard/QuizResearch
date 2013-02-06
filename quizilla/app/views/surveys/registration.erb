@@ -1,0 +1,139 @@
+<% content_for :bodycol do %>
+  <script type="text/javascript">
+    function moveOnMax(field,nextFieldID){
+      if(field.value.length >= field.maxLength){
+        document.getElementById(nextFieldID).focus();
+      }
+    }
+  </script>
+  <% form_for :user, :url => "/surveys/#{@survey.id}/register" do |f| -%>
+    <%#= f.error_messages %>
+    <% if @errors.size > 0 || flash[ :errors ] %>
+      <div class="errorExplanation" id="errorExplanation">
+        <h2>Please correct the following problems </h2>
+        <ul>
+          <% @errors.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+        <ul>
+          <% flash[ :errors ].each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <input type="hidden" name="user_id" value="<%=  session[ :user_id ] %>" />
+  <table>
+    <tr><td colspan="2" style="border-top: 0;"><h2>About You</h2></td></tr>
+    <tr <%= ( flash[ :name_first ] && flash[ :name_first ].length == 0 ) ? "style=\"background-color: #f99;\"" : "" %>>
+      <td><%= label_tag 'name_first', 'First Name' %>&nbsp;<strong>*</strong></td>
+      <td><%= f.text_field :name_first, :size => 20, :value => flash[ :name_first ] %></td>
+    </tr>
+    <tr <%= ( flash[ :name_last ] && flash[ :name_last ].length == 0 ) ? "style=\"background-color: #f99;\"" : "" %>>
+      <td><%= label_tag 'name_last', 'Last Name' %>&nbsp;<strong>*</strong></td>
+      <td><%= f.text_field :name_last,  :size => 20, :value => flash[ :name_last ] %></td>
+    </tr>
+    <tr <%= ( flash[ :email ] && flash[ :email ].length == 0 ) ? "style=\"background-color: #f99;\"" : "" %>>
+      <td><%= label_tag 'email', 'Email Address', :value => flash[ :email ] %>&nbsp;<strong>*</strong><br/></td>
+      <td><%= f.text_field :email,  :size => 20 %></td>
+    </tr>
+    <tr><td colspan="2" style="padding-top: 10px;"><h2>Mailing Address</h2></td></tr>
+    <tr>
+      <td>Address 1</td>
+      <td><input type="text" name="addr1" value="<%= flash[ :addr1 ] %>" /></td>
+    </tr>
+    <tr>
+      <td>Address 2</td>
+      <td><input type="text" name="addr2" value="<%= flash[ :addr2 ] %>" /></td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td><input type="text" name="city" value="<%= flash[ :city ] %>" /></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td><select name="state" />
+        <%= options_for_select ['AK',
+			'AL',
+			'AR',
+			'AZ',
+			'CA',
+			'CO',
+			'CT',
+			'DC',
+			'DE',
+			'FL',
+			'GA',
+			'HI',
+			'IA',
+			'ID',
+			'IL',
+			'IN',
+			'KS',
+			'KY',
+			'LA',
+			'MA',
+			'MD',
+			'ME',
+			'MI',
+			'MN',
+			'MO',
+			'MS',
+			'MT',
+			'NC',
+			'ND',
+			'NE',
+			'NH',
+			'NJ',
+			'NM',
+			'NV',
+			'NY',
+			'OH',
+			'OK',
+			'OR',
+			'PA',
+			'RI',
+			'SC',
+			'SD',
+			'TN',
+			'TX',
+			'UT',
+			'VA',
+			'VT',
+			'WA',
+			'WI',
+			'WV',
+			'WY'],
+			:selected => flash[ :state ] %>
+        </select>
+    </td>
+</tr><tr>  
+    <td>Zip:</td><td><input type="text" name="zip" size ="5" value="<%= flash[ :zip ] %>" /></td>
+
+    </tr>
+    
+    <tr>
+      <td>
+        Date of Birth ( mm / dd / yyyy )
+      </td>
+      <td>
+        <input type="text" name="dob_month" id="dob_month" value="<%= flash[ :dob_month ] %>" size="2" maxlength="2" onkeyup="moveOnMax(this,'dob_day');" /> /
+        <input type="text" name="dob_day" id="dob_day" size="2" value="<%= flash[ :dob_day ] %>" maxlength="2" onkeyup="moveOnMax(this,'dob_year');" /> /
+        <input type="text" name="dob_year" id="dob_year" size="4" value="<%= flash[ :dob_year ] %>" maxlength="4" />
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><br /><%= submit_tag 'Sign up' %></td>
+    </tr>
+  </table>
+  <!--
+    <%#= f.check_box :dob_confirmed %>&nbsp;<%= label_tag 'dob_confirmed', 'I confirm that I am 13 years or older.' %>&nbsp;<strong>*</strong>
+  -->
+    
+    
+  <% end -%>
+  <%#= debug flash %>
+<% end %>

@@ -1,0 +1,239 @@
+quiz:
+  quiz_category_id: 9
+  name: "What Kind of Sports Fan Are You? "
+  quiz_photo_path: "SportFan.JPG"
+  description: "Test your sports knowledge from the greatest athletic events from the modern era. Take this quiz and get your playing-field persona."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: You are a trivia master and live through the sports you watch
+      recommendation: "You're a total competitor: As a diehard competition freak, you live vicariously through the sports you watch. Winning is everything.Top 10 Ways to Drop $250 Feeding Your Need for Competition1. A ticket to Game Seven of the World Series, even if it is in the nosebleed section.2. A used Xbox 360, to exorcise your demons.3. An Everlast punching bag, with enough extra cash to buy the Rocky soundtrack.4. A new Taylor Made driver, to get 20 extra yards off the tee against your golfing buddies.5. ESPN Classic, where the cash gets spread out but is the gift that keeps on giving.6. DirecTV's \"Sunday Ticket,\" giving you every NFL game.7. Tickets to Game Seven of any NBA playoff series.8. A plane ticket to see Lance Armstrong ride during a stateside time trial.9. City league basketball or softball fees, for the weekly dose of competition.10. Fantasy league dues, to dominate your co-workers and friends."
+      value_ceiling: 1200.0
+      value_floor: 800.0
+    quiz_recommendation_1:
+      name: You are a fan of sports tradition
+      recommendation: "You are a sportsman: As a fan of tradition, you know the outcome matters, but so does the process. Winning and good theater are inherently married together. You can't stand cheaters or anyone who throws in the towel before giving their all.Top 10 Ways to Spend $250 Being a Good Sport1. Tickets for Opening Day, as long as it is your favorite baseball team.2. Green fees at Spyglass, since Pebble Beach is still too expensive ($425).3. A game-worn jersey of your favorite player (to frame, not to wear).4. Tickets to the Kentucky Derby, even if just once.5. The MLB season pass, giving you access to your favorite team all season.6. Tickets to a Packers-Bears game at Lambeau Field.7. DVD championship set for your favorite team's title, for the down years.8. A complete set of baseball cards from the year you graduated high school.9. Subscriptions to the best sports magazines and papers, restoring a lost joy.10. March Madness office pools, and maybe even taking in a local game."
+      value_ceiling: 1400.0
+      value_floor: 1201.0
+    quiz_recommendation_2:
+      name: You love the spectacle of sports
+      recommendation: "You're a fan of the game: As a lover of show, the style and celebrity of the event matter more than who wins. Entertainment value is what draws you to buy tickets or tune in.Top 10 Ways to Invest $250 Enjoying the Pageantry1. Tickets to the NBA All-Star Game, preferably for the dunk contest.2. DVD copies of every great sports movie you can think of.3. Red Sox-Yankees tickets, regardless of the game.4. Bleacher seats at Wrigley Field, regardless of the opponent.5. Nosebleed seats for the Super Bowl, as long as it is in Miami.6. Passes to take your kids to the \"Meet the Team\" day during the preseason.7. Tickets to the NBA or NFL Draft, at Madison Square Garden.8. Tickets to an exhibition game for Team USA Basketball.9. Pay-per-view costs for the year's big boxing matches.10. A gambling stash, for the next time you go to Vegas."
+      value_ceiling: 1800.0
+      value_floor: 1401.0
+
+  facebook_quiz:
+    title: What Kind of Sports Fan Are You?
+    offer_url:
+    is_active: true
+    partner_site_id: 6
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: Phase-0
+      description: 
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: How strong is your sports knowledge?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "You're a total sports expert"
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "You're a serious sportsman"
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "You're a fan"
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: Phase-1
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Which of the following was the quintessential moment in Michael Jordan's NBA career?"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "The \"Flu Game\" when he scored 38 points to win the crucial fifth game of the 1997 NBA Finals even though he was severely ill."
+              value: 150
+              position: 1
+            quiz_answer_2:
+              answer: The absolute spectacle when he took flight from the free throw line to win the 1988 Slam Dunk contest.
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: His game-winning shot when he pushed off Byron Russell to beat the Jazz in Game Six of the 1998 NBA finals, capping off his Bulls career with a finals-winning shot. And no, it was not a foul.
+              value: 225
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: Phase-2
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Which was the most memorable Masters Tournament?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "1987, when Larry Mize's improbable chip found  the bottom of the cup on the final hole to win."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "1997, when Tiger Woods shattered the tournament record by winning by 12 strokes, the most dominant performance in the history of golf."
+              value: 225
+              position: 2
+            quiz_answer_3:
+              answer: 1986, when Jack Nicklaus (46 years old) became the oldest Masters champion in history with a torrid comeback win.
+              value: 150
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: Phase-3
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: If given the chance, which seminal Muhammad Ali boxing match would you travel back in time to witness in person?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "The \"Rumble in the Jungle\" in 1974, when former heavyweight champ Ali defeated the younger, undefeated champ George Foreman in a title bout held in Africa.  One of the most extravagant fights, where Don King emerged as a legendary promoter."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: " The \"Thrilla in Manila\" in 1975, when the 48-2 Ali fought the 32-2 \"Smokin' Joe\" Frazier for a 3rd and final time, for the heavyweight title.  One of the most brutal fights of all time."
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Ali's 1966 3rd-round knockout of the hard-hitting Cleveland Williams, when he floored his opponent 3x in the second round alone by combining blinding speed with a flawless left jab.  That was the champ at his absolute best."
+              value: 225
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: Phase-4
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Who is the single most memorable March Madness hero over the past 25 years of NCAA basketball tournament play?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Danny Manning, who nearly single-handedly led a 21-11 Kansas to the 1988 title by scoring 31 points and grabbing 18 rebounds in the title game victory over Oklahoma. "
+              value: 225
+              position: 1
+            quiz_answer_2:
+              answer: "Christian Laettner, who led Duke to the 1992 title by hitting \"the shot\" and scoring 31 in the East Regional Final against Kentucky."
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Carmelo Anthony, who led Syracuse to the 2003 title by scoring a freshman record 33 points in the semifinals against Texas. The prolific freshman scorer lit up on the big stage and led his third-seeded team to a title. "
+              value: 100
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: Phase-5
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Who was the most worthy Heisman Trophy winner?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "2002's Carson Palmer of USC, who led the Trojans to an 11-2 record and national championship while throwing for nearly 4,000 numbers and 33 touchdowns.  You can't argue with the numbers."
+              value: 150
+              position: 1
+            quiz_answer_2:
+              answer: "2007's Tim Tebow of the University of Florida, who broke the SEC records for both rushing touchdowns and total touchdowns during a season that was sandwiched between national titles in 2006 and 2008. "
+              value: 225
+              position: 2
+            quiz_answer_3:
+              answer: "1991's Desmond Howard (Michigan), who won by the 3rd-largest margin in the history of the award after setting or tying 5 NCAA records & 12 school records."
+              value: 100
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: Phase-6
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: What is your favorite baseball stat?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Barry Bonds' major league record 73 home runs in 2001. You can't believe the incredible number of home runs that splashed down into McCovey Cove beyond the right field fence in San Francisco. As for the steroids, you don't care."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Ted Williams' .406 batting average in 1941. A .400 batting average is just magic - and Williams was the last of the all-time players to achieve such lofty numbers."
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Whitey Ford's major league record of 10 World Series wins over the course of his career."
+              value: 225
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: Phase-7
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Which do you consider to be the greatest tennis match of all time?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Bjorn Borg defeating John McEnroe after 8 match points in the 1980 Wimbledon final, following McEnroe winning a 34-point tiebreaker in the 4th set.  Each player's abilities were put to the ultimate test on the grandest of stages."
+              value: 225
+              position: 1
+            quiz_answer_2:
+              answer: "Rafael Nadal outlasting Roger Federer in a four-hour, 48-minute test of wills during the 2008 Wimbledon final.  That was a legendary event, with all the drama of the rain delays, threat of darkness and the many comebacks from both players."
+              value: 150
+              position: 2
+            quiz_answer_3:
+              answer: "Billie Jean King defeating Bobby Riggs in the \"Battle of the Sexes\" on national television in 1973. How can you top one of the best female players dismantling a past-his-prime tennis promoter and overt chauvinist? What a spectacle!"
+              value: 100
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: Phase-8
+      description:
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: What stands out as the most memorable Summer Olympics track and field moment?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Carl Lewis winning 4 gold medals on his way to becoming an international star during the 1984 games in LA. The event heralds the emergence of an all-time great winning multiple events, despite the boycott of the USSR from the '84 Olympics."
+              value: 150
+              position: 1
+            quiz_answer_2:
+              answer: "Ben Johnson being stripped of his gold medal after testing positive for steroid use during the 1988 games in Seoul. That was intense."
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: "Usain Bolt topping Michael Johnson's supposedly unbreakable 19.32 record in the 200-meter dash during the 2008 Beijing Games. Track and Field may be losing its luster, but the spark was there for this nearly impossible feat."
+              value: 225
+              position: 3

@@ -1,0 +1,201 @@
+quiz:
+  quiz_category_id: 5
+  name: How Healthy is Your Body?
+  quiz_photo_path: "Healthy_Body.jpg"
+  description: "Do you take care of your body? Whether or not you do, there's time to improve your physical well-being and lead a healthier life. Take this quiz and discover how to improve the health of your body."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "Fair, but small changes can make a difference"
+      recommendation: "Your body presents some challenges for you, but the good news is that small changes can bring big rewards to your physical health. You've probably tried a number of approaches to improve your body's appearance and performance. Don't be discouraged. Most people can't keep up overly restrictive diets or habits. But there are ways to feel good and get healthier at the same time. Try these ideas to improve your physical wellbeing: 1. You need to care for your health and looks with healthy habits. The first step, though, is to get into the right frame of mind to follow through with any plan. Talk through with a close friend any emotional issues that are holding you back, to make it easier to take good care of yourself physically. 2. One tip that may make it easier to treat your body well: Get adequate sleep. Good quality sleep is essential for optimal health, mental acuity, and emotional balance. And recent research links inadequate sleep with weight gain, diabetes, heart disease, and high blood pressure. If you don't leave enough time for sleep, consider making it a priority. But if sleep difficulties or your busy life are ruining your rest, there are solutions. Start by designating a set bedtime and a wind-down routine for the last two hours of your evening. Check your bedroom environment for light and noise. Also, avoid upsetting conversations and activities such as watching \"bad news\" right before you go to sleep. 3. You don't have to feel tired. A balance of nutrition, physical fitness, and rest can help make your body more efficient. For example, physical activity generates more energy by improving muscle tone and flexibility as well as how your body uses oxygen; it's great for your mind too! Be sure to start slowly so you stay safe and maintain your enthusiasm. 4. Next, you need a healthy eating plan that provides plenty of energy and nutrients to keep your body and mind feeling good. Eating more nutritious foods (and fewer heavily processed or fat-laden ones) will give you more energy, strengthen your immune system, and help prevent diseases. To improve your regularity, slowly increase the amount of fiber-filled foods (vegetables, fruits, etc.) you eat, and cut back on processed and refined foods (bread, cakes, pasta) and animal products. Also, be sure to drink adequate fluids, especially water. Any level of dehydration can cause constipation. And if you're not active, getting your body moving will help keep your digestion moving. 5. Reduce stress by addressing issues in your environment. An unpleasant environment can be a cause of stress, but gazing on an attractive sight can be restorative and inspiring. Seek to make your space comfortable and pleasing. Bring plants or flowers into your home, clear away clutter, and then take time to appreciate the beauty around you every day."
+      value_floor: 675
+      value_ceiling: 849
+    quiz_recommendation_1:
+      name: "You are in good shape and can get to the next level"
+      recommendation: "You're in fairly good shape, but you realize your physical health could be even better. Some of your habits are working well for you, so take care to continue those. At the same time, you could feel even better by identifying areas that are out of balance and taking steps to change them.Try these ideas to improve your physical well-being:1. Your energy level is a pretty good assessment of your general state of health and functional abilities. Better nutrition, physical fitness, and rest-all balanced correctly-can help make your body more efficient. Staying hydrated is also important for physical and mental performance.2. You need a balanced diet and a balanced life to keep your body and mind active and working well. Achieving these will give you more energy, strengthen your immune system, and help prevent diseases. To improve your regularity, slowly increase the amount of fiber-filled foods (vegetables, fruits, etc.) you eat, and cut back on processed and refined foods (bread, cakes, pasta) and animal products. Also, be sure to drink adequate fluids, especially water. Any level of dehydration can cause constipation. And if you're not active, getting your body moving will help keep your digestion moving.3. Even slight sleep problems are worth investigating so you can feel your best. Good quality sleep is essential for optimal health, mental acuity, and emotional balance. And recent research links inadequate sleep with weight gain, diabetes, heart disease, and high blood pressure. If you don't leave enough time for sleep, consider making it a priority. If you have some bad nights, start by tracking how you spend the day and evening on bad nights versus good ones. In particular, look for clues in what you eat, how active you are, and how you spend your evening hours.4. Increase your appreciation for your surroundings, and you'll feel revitalized. It's essential to have a positive connection with your environment so you can feel a sense of restoration for your body, mind, and spirit. If you need to enhance the appeal of your surroundings, start with small, manageable changes-especially if you can do them yourself. The satisfaction of accomplishment adds to the sense of pleasure. Look for ideas in the principles of Feng Shui, the Chinese art of space organization. Plant some flower seeds in the spring. A garden is a great place to cultivate appreciation for your surroundings.5. Keep up the good work, and remain open to novel concepts that might bring even healthier days ahead. Try healing practices that combine physical, mental, and spiritual components, such as meditation. Also, explore how your emotions can have a positive or negative impact on how your body feels."
+      value_floor: 850
+      value_ceiling: 1299
+    quiz_recommendation_2:
+      name: "Your effort is paying off, focus on your well-being"
+      recommendation: "Your efforts to stay in shape are paying off by keeping your body in excellent physical health. Keep up the good work. You also want to stay in touch with changes in your body and new ideas for improving your well-being even more. There may be a number of options you've yet to explore that could enhance your energy, reduce the signs of aging, and help you develop health that includes balance in every aspect of your life.Try these ideas to improve your physical well-being:1. You're on an excellent track toward many years of continued health. Continue to maintain your healthy habits, and be on the lookout for ways to improve your well-being. Everyone can do more to live a healthier, happier life. For example, if you don't already set aside time in your busy schedule for a relaxation break, consider trying it.2. Even at this excellent starting point, you might be able to have more energy, no matter what your age. Better nutrition, physical fitness, and rest-all balanced correctly-can help make your body more efficient. Something simple like staying hydrated can be critical for your physical and mental performance.3. Whatever your eating habits, most of us can do a little better by learning more about healthy nutrition, addressing issues that cause us to eat poorly, or finding ways to be less rigid about eating perfectly. If you keep your weight down with less-than-ideal eating habits, you may compromise your health by missing nutrients your body needs.4. If you ever experience bouts of constipation, there may be easy fixes. Have you been eating enough fiber-filled foods like fruits and vegetables? Are you drinking enough, especially water? Do you get enough exercise?5. Recent research links inadequate sleep with weight gain, diabetes, heart disease, and high blood pressure. That's one reason getting enough sleep is an important healthy habit. It's also good for your mental acuity and emotional balance. If you don't get 7 to 8 hours of sleep most nights, look for ways to improve your sleep hygiene.6. Cultivate your connection to your environment by appreciating the beauty around you daily. Take on tasks to care for your home and neighborhood to increase your satisfaction. If you don't already have a favorite spot, consider designating a personal sanctuary. It could be a park bench where you enjoy watching birds or a special chair where you curl up with a cup of tea. Pick a place you can go for instant calm, comfort, and revitalization, whenever you need it. Even just picturing it in your mind can help.7. Each of us tends to gravitate toward one sense or another, such as a preference for beautiful views or lovely music. Practice working with all the senses, one per weekday and a few on weekends."
+      value_floor: 1300
+      value_ceiling: 1600
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: How Healthy is Your Body?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "How Healthy is Your Body?"
+      description: "How Healthy is Your Body?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "How Healthy is Your Body?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: ""
+              value: 1
+              position: 1
+            quiz_answer_1:
+              answer: ""
+              value: 1
+              position: 2
+            quiz_answer_2:
+              answer: ""
+              value: 1
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "Are you within 10 pounds of a healthy body weight?"
+      description: "Are you within 10 pounds of a healthy body weight?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Are you within 10 pounds of a healthy body weight?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 230
+              position: 1
+            quiz_answer_1:
+              answer: "No, lighter"
+              value: 75
+              position: 2
+            quiz_answer_2:
+              answer: "No, heavier"
+              value: 75
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "Do you fall asleep easily and sleep soundly?"
+      description: "Do you fall asleep easily and sleep soundly?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you fall asleep easily and sleep soundly?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Not really"
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Not at all"
+              value: 100
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "Do you have enough energy to get through your day?"
+      description: "Do you have enough energy to get through your day?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you have enough energy to get through your day?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Always or mostly"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Sometimes"
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Rarely or never"
+              value: 100
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "Do you take time to enjoy sight, smell, sound, taste, and touch sensations?"
+      description: "Do you take time to enjoy sight, smell, sound, taste, and touch sensations?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you take time to enjoy sight, smell, sound, taste, and touch sensations?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Frequently"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Sometimes"
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Rarely or never"
+              value: 100
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "Do you usually have effortless bowel movements daily?"
+      description: "Do you usually have effortless bowel movements daily?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you usually have effortless bowel movements daily?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Not always"
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Rarely"
+              value: 100
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "Do you enjoy your environment, particularly your home and neighborhood?"
+      description: "Do you enjoy your environment, particularly your home and neighborhood?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Do you enjoy your environment, particularly your home and neighborhood?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Very much"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Somewhat"
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Not really"
+              value: 100
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "If you have chronic physical problems, do you fully understand the causes and are you doing enough about them?"
+      description: "If you have chronic physical problems, do you fully understand the causes and are you doing enough about them?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "If you have chronic physical problems, do you fully understand the causes and are you doing enough about them?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "I don't have any"
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Yes"
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "No"
+              value: 100
+              position: 3

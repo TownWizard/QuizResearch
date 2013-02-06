@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%= debug(@partner_site) %>
+<html>
+  <head>
+    <title>Welcome to <%= @partner_site.display_name %> </title>
+    <%= javascript_include_tag :defaults, :cache => true %>
+    <%= stylesheet_link_tag @partner_site.key %>
+  </head>
+  <body>
+    <a name="top"></a>
+    <div class="wrapper">
+      <div>
+        <a href="/login">Login</a>
+      </div>
+      <div class="body">
+        <%= yield :bodycol %>
+      </div>
+    </div>
+    <% if ENV[ 'RAILS_ENV' ] == 'development' %>
+      <div id="debug">
+        <h2>DEBUG OUTPUT</h2>
+        <h3>Request Params</h3>
+        <%= debug params %>
+        <hr />
+        <h3>Session</h3>
+        <%= debug session %>
+        <hr />
+        <%= request.domain %>
+        <hr />
+        <%= debug( @partner_site ) %>
+        <hr />
+        <h3>User</h3>
+        <%= debug @user %>
+        <hr />
+        <!--
+        <h3>Submitted user answers</h3>
+        <%= debug @quiz_instance.user_quiz_answers unless @quiz_instance == nil %>
+        <hr />
+        -->
+        <h3>Quiz Instance UUID</h3>
+        <%= cookies[ :qiid ] %>
+        <hr />
+        <h3>Quiz Object</h3>
+        <%= debug @quiz %>
+      </div>
+    <% end %>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-7544929-2");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
+  </body>
+</html>

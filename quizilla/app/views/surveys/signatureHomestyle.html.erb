@@ -1,0 +1,51 @@
+<% content_for :bodycol do %>
+
+  <center>
+    <div style="width: 85%; margin: 0 auto;">
+      <div style="text-align: left;">
+        <img src="/images/surveys/synapse/signatureHomestyle/arrow.gif" alt="" style="vertical-align: bottom;" />
+        <h2 style="margin-left: 15px;">Signature Homestyle Customer Survey</h2>
+        <div style="margin: 10px 0 25px 38px;">
+          Thank you for taking this brief survey. Your feedback helps us serve you better. Please enter the required fields below and you will automatically be entered into our monthly product giveaway. At the end of the survey, you will also receive a special offer!
+          <% if flash[:errors] && flash[:errors].size > 0 %>
+            <div class="color: #f00; font-weight: bold; margin-top: 15px; ">
+              Please complete all required fields.
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+     <% form_tag('/surveys/' + @survey.id.to_s + '/start') do -%>
+      <table>
+        <tr class="missed">
+          <td style="text-align: right;"><label for="user[name]">Name</label></td>
+          <td width="15px"/>
+          <td style="text-align: right;"><input type="text" name="user[name]" /></td></tr>
+        <tr class="missed">
+          <td style="text-align: right;"><label for="user[email]">Email</label></td>
+          <td width="15px"/>
+          <td style="text-align: right;"><input type="text" name="user[email]" /></td></tr>
+        <tr class="missed">
+          <td style="text-align: right;"><label for="user[name_of_host]">Name of Host</label></td>
+          <td width="15px"/>
+          <td style="text-align: right;"><input type="text" name="user[name_of_host]" /></td>
+        </tr>
+        <tr class="missed">
+          <td style="text-align: right;"><label for="user[location]">Location</label></td>
+          <td width="15px"/>
+          <td style="text-align: right;"><input type="text" name="user[location]" /></td>
+        </tr>
+        <tr class="missed">
+          <td style="text-align: right;"><label for="user[name_of_demonstrator]">Name of Demonstrator</label></td>
+          <td width="15px"/>
+          <td style="text-align: right;"><input type="text" name="user[name_of_demonstrator]" /></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="text-align: right; padding-top: 20px;">
+            <input type="image" src="/images/surveys/synapse/signatureHomestyle/button_next.gif" alt="Next" style="border: 0;" />
+          </td>
+        </tr>
+      </table>
+    <% end -%>
+  </center>
+<% end %>

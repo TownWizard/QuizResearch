@@ -1,0 +1,22 @@
+<% form_for [ :publishers, @quiz_question ] do |f| %>
+  <input type="hidden" name="quiz_question[quiz_phase_id]" value="<%=  params[ :quiz_phase_id ] %>" />
+  <table border="0" cellpadding="0" cellspacing="5" style="margin: 10px 10px 20px 15px;" >
+    <tr>
+      <td><%= f.label :question %></td>
+      <td><%= f.text_field :question %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :position %></td>
+      <td><%= f.text_field :position, :size => 1, :value => @default_position.to_i + 1 %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :answer_display_type_id %></td>
+      <td><%= f.select :answer_display_type_id, @quiz_question.allowed_answer_display_types.collect {|type| [type.display_type, type.id]} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :skip_allowed, "Skip Allow" %></td>
+      <td><%= f.check_box :skip_allowed %></td>
+    </tr>
+  </table>
+  <input type="submit" name="submit" value="Submit Question" style="margin-left: 20px;" />
+<% end %>

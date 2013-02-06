@@ -1,0 +1,12 @@
+<% content_for :bodycol do %>
+  This is the NEW template
+  <% form_tag "/surveys/#{params[:id]}", :method => 'POST' do %>
+    <input type="hidden" name="survey_id" value="<%= params[:id] %>" />
+    <input type="hidden" name="partner_site_id" value="<%= @partner_site.id %>" />
+    Please enter your email address to get started.<br/>
+
+    <input type="text" name="user[email]" />
+    <input type="submit" value="next" />
+  <% end %>
+<% end %>
+

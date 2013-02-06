@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+  <!-- We start off with some global property definitions that we'll
+       use elsewhere -->
+
+  <!-- Note that this global property is empty.  It will be set by the
+       search engine factory when it requests the search engine
+       component. -->
+  <property name="index_directory" value=""/>
+  
+  <!-- The directory where lock files will be put.  By default, this
+       is the index directory.  You can put it somewhere else if
+       you're not allowed to write files in the index directory.-->
+  <property name="lock_directory" value="${index_directory}"/>
+  
+  <!-- The number of indexing pipelines to use.  The engine can use
+       multiple indexing pipelines when indexing maps of field value
+       pairs.  The indexing pipelines are fed from a queue of
+       documents.-->
+  <property name="num_pipelines" value="1"/>
+  
+  <!-- The name of the dumping component to use for new partitions.
+       This is a global property because it's needed in a few
+       places. -->
+  <property name="dumper" value="async_dumper"/>
+  
+  <!-- A search engine, the top level component that the search
+       engine factory will request. -->
+  <component name="example_search_engine" 
+	     type="com.sun.labs.minion.engine.SearchEngineImpl">
+    <property name="index_config" value="index_config"/>
+    <property name="query_config" value="query_config"/>
+    <property name="inv_file_partition_manager" value="partition_manager"/>
+    <property name="num_pipelines" value="${num_pipelines}"/>
+    <property name="pipeline_factory" value="pipeline_factory"/>
+    <property name="dumper" value="${dumper}"/>
+  </component>
+
+  <!-- The field definitions for this engine.  The field definitions
+       are probably the only thing that you want to put in a
+       configuration file, if you want to use one of the default
+       configurations.  Fields can also be defined programatically -->
+
+  <!-- A field for the subject of an email message.  This will be
+       indexed, tokenized, and saved as a string. -->
+  <component name="content" type="com.sun.labs.minion.FieldInfo">
+    <property name="indexed" value="true"/>
+    <property name="tokenized" value="true"/>
+    <property name="vectored" value="true"/>
+    <property name="saved" value="true"/>
+    <property name="type" value="string"/>
+  </component>
+
+  <component name="less_content" type="com.sun.labs.minion.FieldInfo">
+    <property name="indexed" value="true"/>
+    <property name="tokenized" value="true"/>
+    <property name="vectored" value="true"/>
+    <property name="type" value="string"/>
+  </component>
+
+  <!-- A field for the title of a page.  Note that it inherits
+       the values of the subject field definition above. -->
+  <component name="title" inherit="content"/>
+  <component name="snare" inherit="content"/>
+  <component name="source_name" inherit="content"/>
+  <component name="item_id" inherit="content"/>
+  
+
+  <!-- A field for the date in an email message.  We will only save
+       this value, and not index it.  We can use this field for date
+       range searches, as well as displaying it when displaying
+       results. -->
+  <component name="date_published_by_source" type="com.sun.labs.minion.FieldInfo">
+    <property name="indexed" value="false"/>
+    <property name="tokenized" value="false"/>
+    <property name="vectored" value="false"/>
+    <property name="saved" value="true"/>
+    <property name="type" value="date"/>
+  </component>
+
+  <!-- A field for the last modified date for a file. -->
+  <component name="updated_at" inherit="date_published_by_source"/>
+  <component name="created_at" inherit="date_published_by_source"/>
+  <component name="indexed_at" inherit="date_published_by_source"/>
+
+  <!-- The information for the default field to use when an unknown
+       field is encountered during indexing.  We'll index, tokenize
+       and vector such fields. -->
+  <component name="unknown_field" type="com.sun.labs.minion.FieldInfo">
+    <property name="indexed" value="true"/>
+    <property name="tokenized" value="true"/>
+    <property name="vectored" value="true"/>
+    <property name="saved" value="false"/>
+  </component>
+  
+  <!-- The index configuration.  Mostly this specifies the set of
+       fields that the search engine should define at startup.  Note
+       that we use the type element in the property list to find all
+       of the components of type com.sun.labs.minion.FieldInfo defined
+       in the configuration.  This saves us having to remember to add
+       a new FieldInfo component to the list every time we add one to
+       the configuration. -->
+  <component name="index_config" type="com.sun.labs.minion.IndexConfig">
+    <property name="index_directory" value="${index_directory}"/>
+    <propertylist name="field_info">
+      <item>content</item>
+      <item>item_id</item>
+      <item>title</item>
+      <item>snare</item>
+      <item>source_name</item>      
+      <item>date_published_by_source</item>
+      <item>updated_at</item>
+      <item>created_at</item>
+      <item>indexed_at</item>
+    </propertylist>
+    <property name="default_field_info" value="unknown_field"/>
+  </component>
+
+  <!-- The query configuration.  A lot of the default behavior for
+       querying (e.g., query timouts) can be specified as part of the
+       query configuration.  You can have a look at the property
+       definitions in com.sun.labs.minion.QueryConfig to see what
+       options are available.-->
+  <component name="query_config" type="com.sun.labs.minion.QueryConfig">
+    <property name="vector_zero_words" value="zero_words"/>
+  </component>
+  
+  <!-- A partition manager for the default inverted file partitions.
+       The partition manager is responsible for keeping the list of
+       partitions available for searching up to date.  Note that the
+       partition_manager component refers to the index_config
+       component just like the sample_search_engine component does.
+       The configuration system ensures that the index_config
+       component is instantiated a single time and provided to both of
+       these components.
+  -->
+  <component name="partition_manager" type="com.sun.labs.minion.indexer.partition.PartitionManager">
+    <property name="index_config" value="index_config"/>
+    <property name="lock_dir" value="${lock_directory}"/>
+    <property name="partition_factory" value="partition_factory"/>
+    <property name="termstats_dict_factory" 
+	      value="uncached_termstats_dictionary_factory"/>
+  </component>
+
+  <!-- A pipeline factory for our "default" indexer.  The pipeline factor is 
+  used to generate indexing pipelines.  This is a common abstraction:  we want
+  to be able to generate many pipelines, but we don't want to have to put them
+  all in the configuration file.  So we configure a factory that can be used
+  to generate as many pipelines as we like.  The main part of the configuration
+  for the pipeline factory is the list of stages in the indexing pipeline and
+  the list of stagets in the highlighting pipeline.
+
+The components that make up these stages are defined elsewhere in the file.
+-->
+  <component name="pipeline_factory" 
+	     type="com.sun.labs.minion.pipeline.PipelineFactory">
+    <!-- The stages in the main indexing pipeline -->
+    <propertylist name="stages">
+      <item>universal_tokenizer</item>
+      <item>stopwords_stage</item>
+      
+      <item>memory_partition</item>
+    </propertylist>
+    
+    <!-- The stages in the highlighting pipeline -->
+    <propertylist name="hl_stages">
+      <item>universal_tokenizer_with_punct_and_white</item>
+      <item>highlight_stage</item>
+    </propertylist>
+    
+    <property name="dumper" value="${dumper}"/>
+  </component>
+  
+  <!-- Our standard tokenizer that handles Unicode -->
+  <component name="universal_tokenizer" 
+	     type="com.sun.labs.minion.document.tokenizer.UniversalTokenizer"/>
+
+  <!-- A standard tokenizer that will pass along whitespace and
+       punctuation, suitable for use when highlighting. -->
+  <component name="universal_tokenizer_with_punct_and_white" 
+	     type="com.sun.labs.minion.document.tokenizer.UniversalTokenizer">
+    <property name="send_punct" value="true"/>
+    <property name="send_white" value="true"/>
+  </component>
+
+  <!-- The factory for the default inverted file partitions.  We'll
+       need to make lots of partitions during an indexing run or
+       during querying, so we make a factory that can generate
+       partitions for us.  The main components configured here are the
+       factories for getting the dictionaries that make up the various
+       parts of the partition. -->
+  <component name="partition_factory" 
+	     type="com.sun.labs.minion.indexer.partition.InvFilePartitionFactory">
+    <property name="main_dict_factory" value="cased_dict_factory"/>
+    <property name="document_dict_factory" value="dockey_dict_factory"/>
+    <property name="field_store_dict_factory" value="id_dict_factory"/>
+    <property name="bigram_dict_factory" value="id_dict_factory"/>
+  </component>
+
+  <!-- A memory partition for our default indexing pipeline. This is
+       the stage that will do what you think of as "indexing".  It
+       takes the tokens and fields produced by earlier pipeline stages
+       and adds postings for them to its various dictionaries.-->
+  <component name="memory_partition" 
+	     type="com.sun.labs.minion.indexer.partition.InvFileMemoryPartition">
+    <property name="main_dict_factory" value="cased_dict_factory"/>
+    <property name="doc_dict_factory" value="dockey_dict_factory"/>
+    <property name="partition_manager" value="partition_manager"/>
+    <property name="index_config" value="index_config"/>
+  </component>
+  
+  <!-- A component that handles stopwords.  By default the set of
+       stopwords is empty.  We provide a default set of stopwords that
+       can be used by configuring the stopwords_fiels string list with
+       the string "stopwords" -->
+  <component name="stopwords" type="com.sun.labs.minion.pipeline.StopWords">
+    <propertylist name="stopwords_files">
+        <item>util/stopwords.txt</item>
+    </propertylist>
+  </component>
+
+  <component name="stopwords_stage"
+    type="com.sun.labs.minion.pipeline.StopWordsStage">
+    <property name="stopwords" value="stopwords"/>
+  </component>
+
+    <!-- A stage to stem terms as they come in. -->
+    <component name="stemmer" type="com.sun.labs.minion.pipeline.StemStage"/>
+  <!-- A factory for our standard main dictionaries, which are case
+       sensitive.  We're going to make lots of dictionaries, so again
+       with the factory.  We tell the factory what the entries in the
+       dictionaries should be.  The factory takes care of making
+       in-memory and disk-based dictionaries for us. -->
+  <component name="cased_dict_factory" 
+	     type="com.sun.labs.minion.indexer.dictionary.DictionaryFactory">
+    <property name="entry_class_name" 
+	      value="com.sun.labs.minion.indexer.entry.CasedDFOEntry"/>
+  </component>
+  
+  <!-- A factory for fielded document dictionaries. -->
+  <component name="dockey_dict_factory" 
+	     type="com.sun.labs.minion.indexer.dictionary.DictionaryFactory">
+    <property name="entry_class_name" 
+	      value="com.sun.labs.minion.indexer.entry.FieldedDocKeyEntry"/>
+  </component>
+
+  <!-- A factory for ID only dicitionaries, which are used for bigram
+       dictionaries and for the dictionaries where saved field values
+       are stored. -->
+  <component name="id_dict_factory" 
+	     type="com.sun.labs.minion.indexer.dictionary.DictionaryFactory">
+    <property name="entry_class_name" 
+	      value="com.sun.labs.minion.indexer.entry.IDEntry"/>
+  </component>
+  
+</config>

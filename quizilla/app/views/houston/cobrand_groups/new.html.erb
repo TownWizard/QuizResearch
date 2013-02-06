@@ -1,0 +1,33 @@
+<h1>New cobrand_group</h1>
+
+<% form_for( [ :houston, @cobrand_group ] ) do |f| %>
+  <%= f.error_messages %>
+  <% fields_for @cobrand_group do |fld| %>
+    <%=  fld.label :name, "Name: " %>
+    <%=  fld.text_field :name %>
+  <% end %>
+  <ul>
+  <% f.fields_for :cobrands do |fld| %>
+    <div>
+          <%=  fld.label :display_name, "Display Name: " %>
+          <%=  fld.text_field :display_name %>
+        </div>
+    <div>
+      <%=  fld.label :key, "Key: " %>
+      <%=  fld.text_field :key %>
+    </div>
+    <div>
+      <%=  fld.label :host, "Host " %>
+      <%=  fld.text_field :host %>
+    </div>
+    <div>
+      <%=  fld.label :domain, "Domain: " %>
+      <%=  fld.text_field :domain %>
+    </div>
+  </ul>
+  <% end %>
+  <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', houston_cobrand_groups_path %>

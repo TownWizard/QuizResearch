@@ -1,0 +1,25 @@
+<% form_for :user, :url => users_path( :loc => params[ :loc ] ) do |f| -%>
+  <%= f.error_messages %>
+  <input type="hidden" name="user[partner_site_id]" value="<%=  session[ :partner_site_id ] %>" />
+  <%= label_tag 'name_first', 'First Name' %>&nbsp;<strong>*</strong><br/>
+  <%= f.text_field :name_first %>
+  <br />
+  <%= label_tag 'name_last', 'Last Name' %>&nbsp;<strong>*</strong><br/>
+  <%= f.text_field :name_last %>
+  <br />
+  <%= label_tag 'login', 'Desired Login Name' %>&nbsp;<strong>*</strong><br/>
+  <%= f.text_field :login %>
+  <br />
+  <%= label_tag 'email', 'Email Address' %>&nbsp;<strong>*</strong><br/>
+  <%= f.text_field :email %>
+  <br />
+  <%= label_tag 'password' %>&nbsp;<strong>*</strong><br/>
+  <%= f.password_field :password %>
+  <br />
+  <%= label_tag 'password_confirmation', 'Confirm Password' %>&nbsp;<strong>*</strong><br/>
+  <%= f.password_field :password_confirmation %>
+  <br />
+  <%= f.check_box :dob_confirmed %>&nbsp;<%= label_tag 'dob_confirmed', 'I confirm that I am 13 years or older.' %>&nbsp;<strong>*</strong>
+  <br /><br />
+  <%= submit_tag 'Sign up' %>
+<% end -%>

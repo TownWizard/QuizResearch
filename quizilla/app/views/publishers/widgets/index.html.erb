@@ -1,0 +1,29 @@
+<a href="/publishers/widgets/new">Create a new widget</a>
+<div class="site_list">
+  <table border="1">
+      <tr>
+        <td>Partner Name</td>
+        <td>Selected Quiz</td>
+        <td>Logo URL</td>
+        <td>Window Size</td>
+        <%= "<td>Partner Name</td>" if current_user.has_role? 'admin' %>
+        <td></td>
+        <td></td>
+      </tr>
+     <% @widgets.each do |p| %>
+      <tr>
+        <td><%= p.partner.name %></td>
+        <td><%= p.quiz.name %></td>
+        <td><%= p.top_logo_url %></td>
+        <td><%= "#{p.width}x#{p.height}" %></td>
+        <%= "<td>#{p.partner.name if p.partner}</td>" if current_user.has_role? 'admin' %>
+        <td>
+          <a href="/publishers/widgets/edit/<%= p.id %> ">Edit</a>
+        </td>
+        <td>
+          <%= link_to "Delete", publishers_widget_url(p), :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

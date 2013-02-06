@@ -1,0 +1,17 @@
+
+<% @quiz_phase.quiz_questions.each do |question| %>
+  <%= question.question %><br/>
+  <% question.quiz_answers.each do |answer| %>
+    <%
+      if( @quiz_instance && @existing_quiz_answers != nil \
+        && @existing_quiz_answers.detect { |cqa| cqa.quiz_answer_id == answer.id } \
+        || params[ :questions ] && params[ :questions ][ question.id.to_s ] == answer.id.to_s )
+        check_it = true
+      end
+    %>
+    <input type="radio" name="questions[<%= question.id %>]" id="<%= answer.id %>" value="<%= answer.id %>" <%= check_it ? " CHECKED=\"CHECKED\"" : ""  %>>
+    <label for="<%= answer.id %>"><%= answer.answer %></label>
+    <br />
+  <% end %>
+  <br />
+<% end %>

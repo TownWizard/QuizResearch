@@ -1,0 +1,48 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<script type="text/javascript" charset="utf-8">
+
+makeCharts = function() {
+
+<% @partner_surveys.each do |survey| %>
+<%
+  chart_name = "survey_#{survey.id}_openclosed";
+
+  c_output = <<-testStr
+var #{chart_name} = new dojox.charting.Chart2D( "#{chart_name}-chart" );
+#{chart_name}.setTheme( dojox.charting.themes.PlotKit.cyan );
+#{chart_name}.addPlot("default", { type: "StackedColumns", gap: 5 } );
+#{chart_name}.addAxis( "x" )
+#{chart_name}.addAxis( "y", { vertical: true, fixUpper: "major", includeZero: true } );
+#{chart_name}.addSeries( "Completed", [ #{survey[ :completed_count ]} ], { fill: "green" } );
+#{chart_name}.addSeries( "Open", [ #{survey[ :open_count ] - survey[ :completed_count ]} ], { fill: "red" } );
+var anima = new dojox.charting.action2d.Tooltip( #{chart_name}, "default" );
+#{chart_name}.render();
+testStr
+%>
+<%= c_output %>
+<%  end %>
+};
+  dojo.addOnLoad( makeCharts );
+  
+</script>
+<table cellspacing="0">
+<% @partner_surveys.each do |survey| %>
+  
+  <tr>
+    <td><%= survey.quiz.name %></td>
+    <td>
+    <div id="<%= "survey_#{survey.id}_openclosed-chart" %>" style="width: 100px; height: 200px;"></div>
+    <div id="<%= "survey_#{survey.id}_openclosed-legend" %>"></div>
+    </td>
+    <td>
+      <a href="/publishers/reports/surveys_report/<%= survey.id %>">Pie Chart Report</a> |
+      <a href="/publishers/reports/surveys_report/<%= survey.id %>?chart_type=column">Bar Chart Report</a>
+    </td>
+  </tr>
+
+<% end %>
+
+</table>

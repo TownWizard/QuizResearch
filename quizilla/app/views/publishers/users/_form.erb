@@ -1,0 +1,83 @@
+<script language="Javascript">
+
+function showHideSites(selectObj) {
+   var selIndex = selectObj.selectedIndex;
+   var selVal = selectObj.options[selIndex].value;
+   partnerSiteDiv = document.getElementById("partner_site_select");
+   if (selVal == 'partner_site_report_viewer'){
+       partnerSiteDiv.style.display="";
+   } else {
+       partnerSiteDiv.style.display="none";
+   }
+}
+</script>
+<% form_for [ :publishers, @partner_site_user ] do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :name_first, "First Name" %></td>
+      <td><%= f.text_field :name_first %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :name_last, "Last Name" %></td>
+      <td><%= f.text_field :name_last %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email, "Email" %></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password, "Password" %></td>
+      <td><%= f.text_field :password %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :password_confirmation, "Password Confirmation" %></td>
+      <td><%= f.text_field :password_confirmation %></td>
+    </tr>
+    <% if current_user.has_role? 'admin' %>
+      <tr>
+        <td>Partner</td>
+        <td>
+          <%= render :partial => 'partner_select' %>
+        </td>
+      </tr>
+    <% else %>
+      <tr>
+        <td>Partner</td>
+        <td>
+          <%=current_user.partner.name %>
+        </td>
+      </tr>
+    <% end %>
+    <tr>
+      <td>User Role</td>
+      <td>
+        <%
+          options = [["Partner Admin", "partner_admin"],
+                      ["Partner Report Viewer", "partner_report_viewer"],
+                      ["Partner Site Report Viewer", "partner_site_report_viewer"]]
+          
+         %>
+        <%=select_tag :user_roles, options_for_select(options, @user_role) , :onchange =>'showHideSites(this)'%>
+      </td>
+    </tr>
+    <tr><td colspan="2">
+        <div id="partner_site_select" style="<%= @user_role=='partner_site_report_viewer'?'':'display: none'%>">
+          <table>
+            <tr>
+              <td width="128">Partner Site</td>
+              <td>
+                <div id ="update_list" >
+                    <%= render :partial => 'partner_site_select' %>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td></tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Submit" />
+      </td>
+    </tr>
+  </table>
+<% end %>

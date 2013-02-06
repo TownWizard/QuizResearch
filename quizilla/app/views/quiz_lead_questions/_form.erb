@@ -1,0 +1,20 @@
+<div id="quiz-form">
+  <!--
+  <script type="text/javascript">
+    window.location.href='#top';
+  </script>
+  <div id="indicator" style="display:none; margin: 10px 0;"><img src="/images/shared/icn_loading.gif" alt="Loading" />&nbsp;&nbsp;Loading...</div>
+  -->
+  <form action="/quizzes/open/new" method="POST">
+    <div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="<%= @token %>" /></div>
+    <h2 class="box_header_sig"><%= lead_question.position %>. <%= lead_question.question %></h2>
+    <% lead_question.quiz_lead_answers.each do |answer| %>
+      <input type="hidden" name="qid" value="<%= lead_question.quiz_lead_answers[0].quiz_id %>" />
+      <input type="radio" name="lq[<%= lead_question.id %>]" id="<%= answer.id %>" value="<%= answer.id %>" />
+      <label for="<%= answer.id %>"><%= answer.answer %></label>
+      <br />
+    <% end %>
+    <input type="image" src="/images/webmd/button_submit.png" style="float: right; margin-bottom: 5px;" />
+    <br style="clear: both;">
+  </form>
+</div>

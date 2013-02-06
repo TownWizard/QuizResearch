@@ -1,0 +1,285 @@
+quiz:
+  quiz_category_id: 5
+  name: Which Disney Princess Are You?
+  quiz_photo_path: "Disneyprincess.jpg"
+  description: "Growing up, did you ever watch a classic Disney movie and think, \"Hey,that's me!\"? Are you waiting for your Prince Charming to come along, or would you rather slay life's dragons by yourself? Take this two-minute quiz and see which fairytale princess you truly are."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "You're a real Cinderella!"
+      recommendation: "You are the living embodiment of Cinderella who never stops believing.Welcome to the ball, Cinderella, this is your life. Your feet are firmly planted in those gorgeous glass slippers; you are all about patience and positive attitude in facing obstacles. For you, life is one big potential romance, and you find there's more sugar than spice around every corner. If you have found your Prince Charming, you keep the romance alive by finding new ways to share your love for each other. If you are still waiting for that Knight in Shining Armor to sweep you off your feet, get out in the world more often and kiss a few more frogs, so your fantasy will become reality."
+      value_ceiling: 1666.0
+      value_floor: 1000.0
+    quiz_recommendation_1:
+      name: "You're Mulan!"
+      recommendation: "You're Mulan. With unwavering will and strong sense of commitment, you are determined to pursue what you set out to accomplish. You don't need any fancy dresses or fairy godmothers, because you take matters into your own hands. For you, half the fun of living is fighting for what you want and what you believe in. The sky is the limit for you and there's not a person out there who can tame your wild heart...or is there? Try slowing down a little, and you will find that many men out there are attracted to your sense of confidence and determination."
+      value_ceiling: 2333.0
+      value_floor: 1667.0
+    quiz_recommendation_2:
+      name: "You're a real Sleeping Beauty!"
+      recommendation: "You're a Sleeping Beauty who's oblivious to the world around you.Sure, you don't let life's little annoyances get you down, and you enjoy spending more time inside your own head than outside with others.  It's okay that you march to the beat of your own drum, but don't forget that we are social animals and we need to interact with our peers in order to live a full and rich life. So try to pay a little more bit more attention to your surrounding. Don't forget to enjoy the people around you and find a way to participate in your community."
+      value_ceiling: 3000.0
+      value_floor: 2334.0
+
+  facebook_quiz:
+    title: Which Disney Princess Are You?
+    offer_url:
+    is_active: true
+    partner_site_id: 6
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: Which Disney Princess Are You?
+      description: Which Disney Princess Are You?
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Which Disney Princess Are You?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "You're Cinderella, a hardworking and resilient person who never loses hope."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "You're Mulan; you do whatever it takes to pursue what you want."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "You're Sleeping Beauty, oblivious to the world around you."
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "When you were a little girl, you:"
+      description: "When you were a little girl, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When you were a little girl, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Didn't always have the best time, but believed that life would be better."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Were naughty and sweet.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Thought you were the center of universe and couldn't be happier."
+              value: 300
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "When your mother describes you growing up, she usually starts by saying you were:"
+      description: "When your mother describes you growing up, she usually starts by saying you were:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When your mother describes you growing up, she usually starts by saying you were:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: A sweet and loving angel who believed in fairy tales.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Interested in and exploring different things.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: In your own little world, thinking up fun stories.
+              value: 300
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "On a first date with someone you've had a crush on for a while, you would like to:"
+      description: "On a first date with someone you've had a crush on for a while, you would like to:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "On a first date with someone you've had a crush on for a while, you would like to:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Go to some place romantic so it would make a great anniversary story later.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Take him to somewhere you think he will enjoy.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Let your date pick, because it doesn't matter to you as long as you guys are together."
+              value: 300
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "Your ideal vacation includes a few key factors to make it special, such as:"
+      description: "Your ideal vacation includes a few key factors to make it special, such as:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Your ideal vacation includes a few key factors to make it special, such as:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Having lots of fabulous activities planned. "
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Going somewhere exotic and having new experiences.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Requiring minimal work on your part.
+              value: 300
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "During a Friday night outing with co-workers at a local bar, you are usually the one person in the room that is:"
+      description: "During a Friday night outing with co-workers at a local bar, you are usually the one person in the room that is:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "During a Friday night outing with co-workers at a local bar, you are usually the one person in the room that is:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Talking to your co-workers and order drinks for everyone.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Requesting the DJ to play your favorite song and meeting new people.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Having a great time being out and about.
+              value: 300
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: What do you do to pamper yourself?
+      description: What do you do to pamper yourself?
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: What do you do to pamper yourself?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Get all dolled up.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Go on a trip to see the world.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Just relax and unwind to enjoy some alone time.
+              value: 300
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "You are in a committed relationship, and it's the week before Valentine's Day. You are most likely to:"
+      description: "You are in a committed relationship, and it's the week before Valentine's Day. You are most likely to:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are in a committed relationship, and it's the week before Valentine's Day. You are most likely to:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Make a gift that has sentimental value and is unique to your experience together.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Buy tickets to a concert that you know both of you would enjoy.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Forget that Valentine's Day is approaching, but put together an unforgettable night for him at the last moment."
+              value: 300
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "During the recent economic recession, your company is cutting back and some of your colleagues have been laid off. You:"
+      description: "During the recent economic recession, your company is cutting back and some of your colleagues have been laid off. You:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "During the recent economic recession, your company is cutting back and some of your colleagues have been laid off. You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Work extra hours to make sure that all the work gets done.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Have your eyes on the managerial position that's now vacant."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Think to yourself, \"That's too bad.\""
+              value: 300
+              position: 3
+    quiz_phase_09:
+      position: 9
+      name: "You had an intense discussion with a co-worker over the progress of a project you guys are working on a couple days ago. At the next meeting with her, you:"
+      description: "You had an intense discussion with a co-worker over the progress of a project you guys are working on a couple days ago. At the next meeting with her, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You had an intense discussion with a co-worker over the progress of a project you guys are working on a couple days ago. At the next meeting with her, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Ask her how you guys can work together and reach an agreement.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Continue to have the discussion with her and defend your position.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Have already forgotten the previous discussion and ready to move on to another matter at hand.
+              value: 300
+              position: 3
+    quiz_phase_10:
+      position: 10
+      name: "When it comes to falling in love, you believe:"
+      description: "When it comes to falling in love, you believe:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "When it comes to falling in love, you believe:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: In love at first sight.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: That knowing yourself first will help you find and fall in love with the right person.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "That love is blind and you can't help whom you fall into love with."
+              value: 300
+              position: 3

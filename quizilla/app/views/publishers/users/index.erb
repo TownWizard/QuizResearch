@@ -1,0 +1,25 @@
+<a href="/publishers/users/new">Create a new user</a>
+<div class="user_list">
+  <table>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Role</td>
+        <%= "<td>Partner Name</td>" if current_user.has_role? 'admin' %>
+        <td></td>
+      </tr>
+     <% @partner_site_users.each do |u| %>
+      <tr>
+        <td><%= u.name_first %></td>
+        <td><%= u.name_last %></td>
+        <td><%= u.email %></td>
+        <td><%= u.roles[0].name unless u.roles.length == 0 %></td>
+        <%= "<td>#{u.partner.name if u.partner}</td>" if current_user.has_role? 'admin' %>
+        <td>
+          <a href="/publishers/users/edit/<%= u.id %> ">Edit</a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

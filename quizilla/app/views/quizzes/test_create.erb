@@ -1,0 +1,36 @@
+<form action="/quizzes/open/new" method="POST">
+
+  <!--
+  <div style="margin:0;padding:0">
+    <input name="authenticity_token" type="hidden" value="<%#= @token %>" />
+  </div>
+  -->
+  <h2 class="box_header_sig">Are You Happy?</h2>
+
+  <input type="hidden" name="format" value="xml" />
+  <%
+    @ruid = ""
+    4.times do
+      @ruid << ( rand( 9 ) + 1 ).to_s
+    end
+  %>
+  <input type="hidden" name="user_id" value="<%= @ruid %>" />
+  <input type="hidden" name="quiz_id" value="3" />
+  <input type="radio" name="lqa" id="107" value="107" />
+  <label for="107">I'm on a path to my dreams.</label>
+  <br />
+  
+  <input type="radio" name="lqa" id="108" value="108" />
+  <label for="107">Somewhat happy.</label>
+  <br />
+
+  <input type="radio" name="lqa" id="109" value="109" />
+  <label for="107">Not really happy.</label>
+  <br />
+  
+  <!--
+  <input type="image" src="/images/webmd/button_submit.png" style="float: right; margin-bottom: 5px;" />
+  -->
+  <input type="submit" />
+  <br style="clear: both;">
+</form>

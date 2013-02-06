@@ -1,0 +1,39 @@
+<% form_for [ :publishers, @partner_site ] do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :display_name, "Display Name" %></td>
+      <td><%= f.text_field :display_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :key, "Key" %></td>
+      <td><%= f.text_field :key %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :host, "Host" %></td>
+      <td><%= f.text_field :host %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :domain, "Domain" %></td>
+      <td><%= f.text_field :domain %></td>
+    </tr>
+    <tr>
+    <% if current_user.has_role? 'admin' %>
+        <td>Partner</td>
+        <td>
+          <%= select( :partner_site, :partner_id, Partner.all.collect{ |p| [ p.name, p.id ] },  :selected  => @partner_site[:partner_id].to_i) %>
+        </td>
+    <% else %>
+        <td>Partner</td>
+        <td>
+          <%=current_user.partner.name %>
+          <%=f.hidden_field('partner_id', :value => current_user.partner.id)%>
+        </td>
+    <% end %>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Submit" />
+      </td>
+    </tr>
+  </table>
+<% end %>

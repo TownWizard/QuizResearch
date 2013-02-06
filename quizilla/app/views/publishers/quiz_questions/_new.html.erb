@@ -1,0 +1,6 @@
+<% form_for :quiz_question, :url => '/publishers/quiz_questions', :method => "POST" do |f| %>
+  <input type="hidden" name="quiz_question[quiz_phase_id]" value="<%=  params[ :quiz_phase_id ] %>" />
+  <%= f.label :question %>
+  <%= f.text_field :question %>
+  <input type="submit" name="submit" value="Add Question" />
+<% end %>

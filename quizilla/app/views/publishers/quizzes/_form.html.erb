@@ -1,0 +1,42 @@
+<br />
+<% form_for [ :publishers, @quiz ] do |f| %>
+<%# form_for :quiz, :url => url_for( :controller => 'publishers/quizzes' ), :method => 'POST' do |f| %>
+  <!--<input type="hidden" name="quiz[quiz_category_id]" value="<%#=  params[ :quiz_category_id ] %>" />-->
+  <table>
+    <tr>
+      <td><%= f.label :name, "Enter the name of your new quiz." %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :description, "Enter the quiz description." %></td>
+      <td><%= f.text_area :description, :size => "39", :maxlength => "15" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :quiz_photo_path, "Enter the quiz image path." %></td>
+      <td><%= f.text_field :quiz_photo_path %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :active, "Active" %></td>
+      <td>Yes: <%= f.radio_button :active, true %> &nbsp;No: <%= f.radio_button :active, ( false || nil ) %></td>
+    </tr>
+    <tr>
+      <td>Partner</td>
+      <% if @partners.length == 1 %>
+        <td>
+          <%=@partners[0].name %>
+          <input type="hidden" name="quiz[partner_id]" value="<%= @partners[0].id %>" />
+        </td>
+      <% else %>
+        <td>
+          <%= select( :quiz, :partner_id, @partners.collect{ |p| [ p.name, p.id ] }) %>
+        </td>
+      <%end%>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" name="submit" value="Submit Quiz" />
+      </td>
+    </tr>
+   </table>
+<% end %>
+

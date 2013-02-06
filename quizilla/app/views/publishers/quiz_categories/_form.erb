@@ -1,0 +1,13 @@
+<% form_for [ :publishers, @quiz_category ] do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :name, "Category Name" %></td>
+      <td><%= f.text_field :name, :size => 15 %></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Submit" />
+      </td>
+    </tr>
+  </table>
+<% end %>

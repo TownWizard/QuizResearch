@@ -1,0 +1,17 @@
+<a href="/publishers/quiz_categories/new">Create a new Category</a>
+<div class="site_list">
+  <table border="1">
+      <tr>
+        <td>Name</td>
+        <td></td>
+      </tr>
+     <% @quiz_categories.each do |qc| %>
+      <tr>
+        <td><%= qc.name %></td>
+        <td>
+          <a href="/publishers/quiz_categories/edit/<%= qc.id %> ">Edit</a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

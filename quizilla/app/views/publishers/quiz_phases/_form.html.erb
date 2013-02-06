@@ -1,0 +1,60 @@
+<% form_for [ :publishers, @quiz_phase ] do |f| %>
+  <input type="hidden" name="quiz_phase[quiz_id]" value="<%= params[ :quiz_id ] %>">
+  <table border="0" cellpadding="0" cellspacing="5" style="margin: 10px 10px 20px 15px;" >
+    <tr>
+      <td><%= f.label :name %>:</td>
+      <td><%= f.text_field :name, :size => '25' %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :description%>:</td>
+      <td><%= f.text_area :description, :size => "32" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :position %></td>
+      <td>
+          <% if params[ :action ] == 'edit' %>
+            <%#= f.text_field :position, :size => '1', :value => ( @quiz_phase.position.to_i == 0 ) ? @quiz_phase.position.to_i : @quiz_phase.position.to_i + 1 %>
+            <%= f.text_field :position, :size => '1', :value => @quiz_phase.position.to_i %>
+          <% else %>
+            <% if Quiz.find( params[ :quiz_id ] ).quiz_phases.size == 0 %>
+              <%= f.text_field :position, :size => '1', :value => 0 %>
+            <% else %>
+              <%= f.text_field :position, :size => '1', :value => "#{@default_position}" %>
+            <% end %>
+          <% end %>
+        </td>
+    </tr>
+  <% unless @quiz_phase.new_record? %>
+    <tr>
+      <td><%= f.label :branch_question_id %></td>
+      <td>
+        <%= f.select :branch_question_id, @quiz_phase.quiz_questions.having_display_type('RADIO').collect {|question| [question.question, question.id]},
+          {:include_blank => "Select Branching Question"},
+          {:class => "fixwidthselect" } %>
+      </td>
+    </tr>
+  <% end %>
+    </table>
+  <input type="submit" name="submit" value="Submit Phase" style="margin-left: 20px;" />
+<% end %>
+
+<script type="text/javascript">
+  var description_element = document.getElementById('quiz_phase_description');
+  description_element.onkeydown = function(){
+    textCounter(this,255);
+  }
+  description_element.onkeyup = function(){
+    <%#*textCounter(this.form.message,this.form.remLen,100);%>
+    textCounter(this,255);
+  }
+  function textCounter(field, maxlimit) {
+    if (field.value.length > maxlimit) // if too long...trim it!
+    {
+      alert("Maximum 255 characters allowed!");
+      field.value = field.value.substring(0, maxlimit);
+    }
+    else
+      return false;
+      <%#*countfield.value = maxlimit - field.value.length;%>
+  }
+</script>

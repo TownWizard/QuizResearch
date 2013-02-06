@@ -1,0 +1,28 @@
+
+<div id="quiz-form">
+  <!--
+  <script type="text/javascript">
+    window.location.href='#top';
+  </script>
+ 
+  <div id="indicator" style="display:none; margin: 10px 0;"><img src="/images/shared/icn_loading.gif" alt="Loading" />&nbsp;&nbsp;Loading...</div>
+   -->
+<% #form_remote_tag \
+    #:url => '/quizzes/open/new' ,
+    #:loading => "Element.show( 'indicator' )",
+    #:loaded => "Element.hide( 'indicator' ); Element.update( 'messages' )" do %>
+  
+  <%# form_tag :controller => :quizzes, :action => :open do %>
+  <form action="/quiz_instances/new" method="POST">
+    <div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="<%= @token %>" /></div>
+      <%= render :partial => 'quizzes/state_parameters', :locals => { :quiz => @quiz } %>
+      <%= render :partial => 'quizzes/questions', :locals => { :quiz => @quiz } %>
+
+      <input type="hidden" id="back" name="back" value="0" />
+      <!--<%= submit_tag "Back", :onclick => "$('back').value = '1'" %>
+      <input type="reset" name="clear" value="Clear" />-->
+      <input type="submit" name="submit" value="Next" />
+
+    <%# end %>
+  </form>
+</div>

@@ -1,0 +1,47 @@
+<% content_for :bodycol do %>
+  <h3>Your Completed Quizzes</h3>
+  <br /><br />
+  <% unless !@incomplete_quizzes || @incomplete_quizzes.size == 0 %>
+    <strong>You have uncompleted quizzes!  Click on a link below to finish them and learn more about yourself.</strong>
+    <br /><br />
+    <table>
+      <tr>
+        <td><strong>Quiz Name</strong></td>
+        <td><strong>Last Activity</strong></td>
+      </tr>
+      <% @user.quiz_instances.incomplete.each do |qi| %>
+        <%
+          # determine where they left off for each incomplete quiz
+          phases = qi.user_quiz_answers.collect { |a| a.quiz_answer }.collect {|qa| qa.quiz_question }.collect { |qq| qq.quiz_phase }
+          if phases.size > 0
+            phases.sort! { |a,b| a.position <=> b.position }
+            last_step = phases.pop.position + 1
+          else
+            last_step = 1
+          end
+        %>
+        <tr>
+          <td><a href="/quizzes/open/<%= qi.quiz_instance_uuid %>/<%= last_step %>"><%= qi.quiz.name %></a></td>
+          <td><%= qi.updated_at.strftime( "%A, %B %d, %Y at %I:%M %p" ) %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+  <br />
+  <% unless !@completed_quizzes || @completed_quizzes.size == 0 %>
+    <strong>Click on a link below to view previously completed quizzes.</strong>
+    <br /><br />
+    <table>
+      <tr>
+        <td><strong>Quiz Name</strong></td>
+        <td><strong>Completed On</strong></td>
+      </tr>
+      <% @user.quiz_instances.completed.each do |qi| %>
+        <tr>
+          <td><a href="/assessments/show/<%= qi.quiz_instance_uuid %>"><%= qi.quiz.name %></a></td>
+          <td><%= qi.updated_at.strftime( "%A, %B %d, %Y at %I:%M %p" ) %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+<% end %>

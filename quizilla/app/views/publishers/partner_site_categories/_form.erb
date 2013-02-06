@@ -1,0 +1,41 @@
+<!--% form_for :publishers, @partner_categories, :url => { :action => 'params[:action]'} do |f| % -->
+<% form_for [ :publishers, @partner_site_category ] do |f| %>
+  <table>
+    <tr>
+      <td  width="70"><%= f.label :name, "Name" %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <% if current_user.has_role? 'admin' %>
+        <td>Partner</td>
+        <td>
+          <%= render :partial => 'partner_select' %>
+        </td>
+      <% else %>
+        <td>Partner</td>
+        <td>
+          <%=current_user.partner.name %>
+        </td>
+      <% end %>
+    </tr>
+    <tr><td colspan="2">
+        <div id="partner_site_select">
+          <table>
+            <tr>
+              <td width="70">Partner Site</td>
+              <td>
+                <div id ="update_list" >
+                    <%= render :partial => 'partner_site_select' %>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td></tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Submit" />
+      </td>
+    </tr>
+  </table>
+<% end %>

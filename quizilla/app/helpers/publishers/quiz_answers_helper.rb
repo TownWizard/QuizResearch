@@ -1,0 +1,2 @@
+module Publishers::QuizAnswersHelper
+end

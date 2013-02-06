@@ -1,0 +1,33 @@
+<% content_for :bodycol do %>
+  <% @quizzes.each do |quiz| %>
+    <div>
+      <h3><a href="/quizzes/start/<%= quiz.id %>"><%= quiz.lead_phase.quiz_questions[ rand quiz.lead_phase.quiz_questions.count ].question %></a></h3>
+      <% if @quiz_instances.detect { |qi| qi.completed == true && qi.quiz_id == quiz.id } %>
+
+        It looks like you have already completed this quiz.<br />
+        <% if @user %>
+          <p>Click the link above to take this quiz again.  Your previous results will be saved.</p>
+        <% else %>
+          <p>Click the link above to take this quiz again.  This will replace
+          your previous result.  To permanently save your previous result, <a
+          href="/login">Login</a> or <a href="/signup">Create an Account.</a></p>
+        <% end %>
+
+      <% elsif @quiz_instances.detect { |qi| qi.quiz_id == quiz.id } %>
+
+        It looks like you have started this quiz. <br />
+          <% if @user %>
+          <p>Click the link above to start this quiz over from the beginning,
+          or <a href="/quizzes/start/<%= quiz.id %>">resume where you left off.</a></p>
+
+        <% else %>
+
+          <p>Click the link above to start this quiz over from the beginning,
+          or <a href="/quizzes/get/<%= quiz.id %>">resume where you left off.</a></p>
+
+        <% end %>
+
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

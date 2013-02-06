@@ -1,0 +1,18 @@
+<h3>Please Log In</h3>
+<br /><br />
+<% form_for @user_session, :url => url_for( :controller => :sessions, :action => :create, :loc => params[ :loc ] ) do |f| -%>
+<%= f.label 'login' %><br />
+<%= f.text_field :login %>
+<br />
+<%= f.label 'password' %><br/>
+<%= f.password_field :password %>
+<br />
+<!-- Uncomment this if you want this functionality
+<%#= f.label 'remember_me', 'Remember me' %>
+<%#= f.check_box 'remember_me', '1', @remember_me %>
+<br />
+-->
+<br />
+<%= submit_tag 'Log in' %>
+<% end -%>
+<br />

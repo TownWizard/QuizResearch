@@ -1,0 +1,43 @@
+
+<% @quiz_lead_questions.each do |qlc| %>
+  <div>
+    Leading Question: <br />
+    <ul>
+      <%= qlc.question %>
+      | <%= link_to_remote 'Edit', {
+          :url => {
+            :controller => "publishers/quiz_lead_questions",
+            :action => 'edit',
+            :id => qlc.id,
+            :quiz_category_id => qlc.quiz_category_id,
+            :quiz_id => params[ :id ] },
+          :method => :get,
+          :update => "lead_question-#{ qlc.id }-form" } %>
+   
+      <div id="lead_question-<%= qlc.id %>-form"></div>
+      <div id="lead_question-<%= qlc.id %>-answers">
+        Lead Answers 
+        | <%= link_to_remote "Add Lead Answer to this question", {
+          :url => new_publishers_quiz_lead_answer_path( :quiz_lead_question_id => qlc.id ), :update => "category-#{params[ :id ]}-form" , :method => :get } %>
+        <div id ="lead_question-<%= qlc.id %>-answer-form"></div>
+        <ul>
+          <% qlc.quiz_lead_answers.each do |qla| %>
+            <div>
+              <%= qla.answer %>
+              | <%= link_to_remote 'Edit', {
+                  :url => {
+                    :controller => "publishers/quiz_lead_answers",
+                    :action => 'edit',
+                    :id => qla.id,
+                    :quiz_lead_question_id => qlc.id,
+                    :quiz_id => params[ :id ] },
+                  :method => :get,
+                  :update => "lead_answer-#{ qla.id }-form" } %>
+              <div id="lead_answer-<%= qla.id %>-form"></div>
+            </div>
+          <% end %>
+        </ul>
+      </div>
+     </ul>
+  </div>
+<% end %>

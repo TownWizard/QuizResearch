@@ -1,0 +1,17 @@
+<h3>Share Quiz Category with Partner Site category <%= @partner_site_category.name %></h3>
+<table>
+  <tr>
+    <th>Share</th>
+    <th>Quiz Categories</th>
+  </tr>
+
+  <% @quiz_categories.each do |qc| %>
+    <tr>
+        <td><%=check_box_tag qc.id, 1, qc.shared_with_partner_site_category?(@partner_site_category), :onclick => remote_function(:url => save_publishers_partner_site_category_path(@partner_site_category),
+             :with => "'quiz_category=#{qc.id}&amp;show=' + this.checked", :method => :post) %>
+        </td>
+        <td><%=h qc.name %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', publishers_partner_site_categories_path() %>

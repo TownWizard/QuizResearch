@@ -1,0 +1,275 @@
+quiz:
+  quiz_category_id: 5
+  name: Are You Hooked on Social Media?
+  quiz_photo_path: "Social_Media.jpg"
+  description: "Are you obsessed with Facebook and other social media? If you're in a room full of people, would you rather check in with your 'online' friends than talk to a person next to you? Take this two-minute quiz and discover if you might be too 'tuned in'."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "You're addicted to social media!"
+      recommendation: "You may need to tear yourself away from the computer screen You love to be tuned into what's going on at all times. Whether it's at your PC or on your smartphone, you have a network of friends on various social sites that you like to keep informed about what they're doing, and inform others about your activities. Wherever you are, your smartphone is right there with you. To you, social media is the fastest and most effective way for your communicate with friends. Still, don't forget about sitting down with friends, away from the machines and unplug at least once a week. Also, don't let all that time you're spending with your nose in your phone stress you out! By constantly being \"tuned in\"; and checking messages and statuses all day you can miss the chance to unwind away from the screens! Life is all about balance."
+      value_floor: 1000
+      value_ceiling: 1666
+    quiz_recommendation_1:
+      name: You keep social media in perspective
+      recommendation: "You balance real life with your second life You enjoy keeping in touch with faraway relatives and friends on the internet. You think it's great that you can see how your high school friends are doing even though you haven't seen them in over 20 years. But you also keep your relationships offline first and foremost. You recognize that it can be alienating to people when you check your phone constantly throughout a meal together, and you're aware of other people's feelings. You are social and get together with friends as often as you can and you share quality time you all deserve. To you, social media is great and it helps make communication with friends easy when face-to-face interactions are not possible."
+      value_floor: 1667
+      value_ceiling: 2333
+    quiz_recommendation_2:
+      name: You should explore the world of social media
+      recommendation: "An old friend is waiting for you When it comes to social media, you are missing out. Whether it's finding old friends on Facebook or putting your resume on Linkedin, you'll find social media as an effective communication tool. You pride yourself on your people skills and the strong relationships you've built in business and in your personal life, but today's world can keep you on top of the fun at the touch of a button! Have you ever thought about a childhood friend who moved away and wondered \"whatever happened to...\"? Go out and find them online. Think how great it would be to catch up! No one is saying you have to drop everything to stay tuned via social media, but don't get caught in a rut.  Life is all about constantly experiencing new things and it's easier today than ever."
+      value_floor: 2334
+      value_ceiling: 3000
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: Are You Hooked on Social Media?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "Are You Hooked on Social Media?"
+      description: "Are You Hooked on Social Media?"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "Are You Hooked on Social Media?"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Social media is your life"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Social media helps you stay in touch"
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Twitter? Take it or leave it"
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "Are you a fan of viral videos you get from friends on email?"
+      description: "Are you a fan of viral videos you get from friends on email?"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "Are you a fan of viral videos you get from friends on email?"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "You LOVE YouTube! Have you seen the one about the baby with the snake?"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Ew, no. You don't want a virus on your computer."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "Some viral videos are cute, but too many eat up my data plan."
+              value: 200
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "How many times do you tweet or blog every day?"
+      description: "How many times do you tweet or blog every day?"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "How many times do you tweet or blog every day?"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "None. You don't have a Twitter account and don't want one."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Once or twice a day, just to keep your friends abreast of what you are up to."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Constantly. You like to update your posse about what's going on in your life."
+              value: 100
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "Do you have a MySpace account?"
+      description: "Do you have a MySpace account?"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "Do you have a MySpace account?"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Yes, but I use everything else but that now."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Yes, but it's so it's so uncool."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "No. You never signed up for one."
+              value: 300
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "Somebody asks you a history related question and you don't know the answer, you:"
+      description: "Somebody asks you a history related question and you don't know the answer, you:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "Somebody asks you a history related question and you don't know the answer, you:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Take down your old school text books and find the answer the old fashioned way - elbow grease."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Send questions to your friends on Facebook and followers on Twitter, or Skype with your super-smart friends."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Go straight to Google or Wikipedia, to make it quick and easy."
+              value: 200
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "You are thinking about changing jobs. You:"
+      description: "You are thinking about changing jobs. You:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "You are thinking about changing jobs. You:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Network on Linkedin, Plaxo and Facebook."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Visit websites sites like monster.com."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Go online, read newspaper help wanted ads, call friends and contact a headhunter."
+              value: 300
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "You meet someone you're interested in at a party, you:"
+      description: "You meet someone you're interested in at a party, you:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "You meet someone you're interested in at a party, you:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Immediately bump your smartphones, while the two of you are chatting, securing all their digits."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Take their number on your phone and send them a text so you can keep in in your address book."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "\"Friend\" them later or the next day, after you've had a chance to check out their friends, photos, and wall discussions."
+              value: 300
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "When you feel like \"playing a game\" on a rainy day you:"
+      description: "When you feel like \"playing a game\" on a rainy day you:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "When you feel like \"playing a game\" on a rainy day you:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Take down the Monopoly from the closet and round up the clan and play for hours."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Continue to try to beat your online game of Scrabble with those diehard fans of the game."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Design strategies and characters in your MafiaWars account."
+              value: 100
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "If you are unsatisfied with a recent product you bought or service you received in a store, you:"
+      description: "If you are unsatisfied with a recent product you bought or service you received in a store, you:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "If you are unsatisfied with a recent product you bought or service you received in a store, you:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Vent to your spouse and friends using your Twitter account until you feel better."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Write a letter or e-mail to customer service via their website to guarantee receipt."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "Go straight to Yelp.com and give the business a \"0 star\" and comment on why the service/product sucks."
+              value: 100
+              position: 3
+    quiz_phase_09:
+      position: 9
+      name: "Your family is spread around the country, to stay in touch, you:"
+      description: "Your family is spread around the country, to stay in touch, you:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "Your family is spread around the country, to stay in touch, you:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Mail Hallmark cards and letters, including any new pictures of the kids."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Send weekly emails, attaching photos for the family to download and print to frame."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Update your personal blog several times a day, including photos and anecdotes about the kids and pets."
+              value: 100
+              position: 3
+    quiz_phase_10:
+      position: 10
+      name: "While on a date, the guy you are dating finally said \"would you be my girlfriend?\" How would you let your friends know?"
+      description: "While on a date, the guy you are dating finally said \"would you be my girlfriend?\" How would you let your friends know?"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "While on a date, the guy you are dating finally said \"would you be my girlfriend?\" How would you let your friends know?"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "You text/call your friends to let them know how excited you are."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "You update your Facebook relationship status to \"In a Relationship\" after a few days so all your friends would know that it's official between you and him."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "You'll post updates on Twitter as the night progresses and no details are spared."
+              value: 100
+              position: 3

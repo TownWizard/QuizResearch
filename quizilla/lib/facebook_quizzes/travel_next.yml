@@ -1,0 +1,304 @@
+quiz:
+  quiz_category_id: 7
+  name: Where Should You Travel Next?
+  quiz_photo_path: "travel_next.jpg"
+  description: "When you fantasize about getting away from the daily grind, do you picture yourself building sandcastles at the shore, riding horses in the Rockies, or sailing the high seas? Take this simple ten question quiz and discover what type of traveler you are."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "The joys of travel are just a few steps from your home"
+      recommendation: "You are a Local Traveler: Your dream vacation finds you only steps away from home. You enjoy what your region has to offer and you rarely seek out the unfamiliar. While this probably makes for stress-free trip planning, you should consider trying something different once in a while. Whether it's getting on a plane and visiting a romantic city like Paris, or driving cross country to check out a national park you read about in school, expanding your travel horizons could give you countless benefits... and memories to last a lifetime!"
+      value_floor: 1000
+      value_ceiling: 1350
+    quiz_recommendation_1:
+      name: "Visit more of America and expand your horizons"
+      recommendation: "You are a Domestic Traveler: You love what America has to offer and welcome the opportunity to explore new vistas or routes you've never seen before. But don't miss out on exciting things to see and do in your own town. You may make new friends in the process and appreciate what's going on in your own backyard. Also, don't be afraid to research a foreign country you've read about but never dreamed you'd see in person. You may find that you're more of an intrepid traveler than you thought!"
+      value_floor: 1351
+      value_ceiling: 1700
+    quiz_recommendation_2:
+      name: "You crave adventure and dream vacations"
+      recommendation: "You are a World Traveler: You crave adventure and want your dreams to become your vacation realities. You're not satisfied with ordinary experiences and live life to the fullest through your travel destinations. But don't forget about all your own country has to offer. With 50 states to choose from, there is no end to what you can see and do in the United States. In addition, don't write off a \"staycation\" just yet. In addition to saving money, you will be helping your local businesses and economy by spending vacation dollars close to home. It will give you a new appreciation for what's going on in your own backyard."
+      value_floor: 1701
+      value_ceiling: 2250
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: Where Should You Travel Next?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "What is your favorite type of destination?"
+      description: "What is your favorite type of destination?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "What is your favorite type of destination?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "All around the USA"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Anywhere Local"
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "The Globe"
+              value: 200
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "Your family is discussing hopping on a plane. Your first reaction is:"
+      description: "Your family is discussing hopping on a plane. Your first reaction is:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your family is discussing hopping on a plane. Your first reaction is:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Great! Wonder if have enough frequent flyer miles for Paris. You haven't been to Europe in months, plus, you are out of your favorite perfume."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Ahhh, hanging out at a dude ranch in Wyoming with the pristine wilderness, just you and some quiet solitude to get away from the distractions of the world. You're always up for horseback riding, fly fishing, or a 'River Runs Through It' type of hike."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "You'll drop the family off at the airport. You're a staycation type of person. You are better off jumping in a car with the family for a day trip to a new location or just taking the spouse and hitting some local wineries anytime of the year."
+              value: 100
+              position: 3
+            quiz_answer_3:
+              answer: "Finally! You've been freezing at your desk for months now. Cranking up the thermostat just isn't cutting it. You need to get down to the Caribbean, see the ocean, feel the sand between your toes and the sun on your face before you become a human icicle!"
+              value: 225
+              position: 4
+    quiz_phase_02:
+      position: 2
+      name: "Your ideal weekend getaway would be:"
+      description: "Your ideal weekend getaway would be:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your ideal weekend getaway would be:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "A local bed and breakfast on a tree lined street with local stores to go antiquing."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Sightseeing in Washington, D.C.  You haven't seen the capital city until you've seen it at night, taking the monuments tour."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Shopping in an open-air market in a foreign city like Sicily. Almost every town and urban neighborhood has its 'mercatino' (little market) open once a weekend boasting an assortment of local items, such as fresh fruits like tarocchi (blood oranges)."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Visiting Chinatown in New York City or San Francisco, eating exotic food and picking up some souvenirs for the kids."
+              value: 150
+              position: 4
+    quiz_phase_03:
+      position: 3
+      name: "A new adventure for you would be:"
+      description: "A new adventure for you would be:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "A new adventure for you would be:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Hot-air ballooning in Napa Valley, flying with the birds with the wind pulsating through your hair as you are up thousands of feet in the sky feeling like you are touching the clouds.  You're on top of the world!"
+              value: 150
+              position: 1
+            quiz_answer_1:
+              answer: "Renting an RV and heading to a state park, an adventure you've always wanted to have since you were a kid.  With your camping gear in tow and kids ready to pop the tent, you can't wait to start a campfire and get the s'mores rolling."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Surfing off the Great Barrier Reef in Australia. There you'd board your well-appointed catamaran, ready to take you exploring the crystal clear waters of the bays. You can almost see the abundant marine life waiting for you to explore while snorkeling."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Participating in a grape stomp at the Festa Italiana in Seattle. Ever since you were a little kid and saw Lucy do it on 'I Love Lucy', you thought this would be something fun to try."
+              value: 150
+              position: 4
+    quiz_phase_04:
+      position: 4
+      name: "When it comes time to plan your next vacation, you:"
+      description: "When it comes time to plan your next vacation, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When it comes time to plan your next vacation, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Don't have to plan, it's the same 'home away from home' spot every year. The feeling of warmth, comfort and hospitality makes you feel like you are sleeping in your bed at home. "
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "First, Google 'dream vacation', browse the website, and EUREKA!, you found a new vacation spot. Then hit speed-dial for your travel agent who is always happy to provide detailed information about the new location along with supplemental activities."
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "Visit the local bookstore and browse travel guides. Spending hours sitting on the floor at Barnes and Noble is always nice on a rainy day and it is easy to find people scanning over the title of your book willing to tell you of their own travel experience"
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "Get recommendations from your friends in your book club. Since we usually have varying tastes in books, yet have lively and productive discussions, you trust that their travel recommendations will be both exotic and familiar. "
+              value: 225
+              position: 4
+    quiz_phase_05:
+      position: 5
+      name: "To you, the idea of planning a 'destination wedding':"
+      description: "To you, the idea of planning a 'destination wedding':"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "To you, the idea of planning a 'destination wedding':"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Horrifies you! Getting married is stressful enough without adding travel to it."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Is possibly even more exciting than getting married! (Shhh, don't tell your fianc\xC3\xA9.)"
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "Seems like a great way to get family and friends together for your special day. Your family is scattered and it would be a great opportunity to schedule daily group meals and activities to make your wedding even more special."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "Seems like a lot of work, with some guests appreciating a chance to take a vacation and others not being able to afford it or get time off for the date chosen."
+              value: 100
+              position: 4
+    quiz_phase_06:
+      position: 6
+      name: "You're planning a trip with your school-age children. You will most likely:"
+      description: "You're planning a trip with your school-age children. You will most likely:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You're planning a trip with your school-age children. You will most likely:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Go with a theme park like Disneyland. At least it will keep the kids busy and the long lines will tire them out early.  You look forward to your favorite rides like Indiana Jones Adventure, Splash Mountain and Mr. Toad's Wild Ride."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Book a trip to a family-focused Club Med. The staff will keep your kids busy splashing in the water playing volleyball, while you catch some rays poolside. "
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Look into visiting one of the Seven Wonders of the World. The place childhood memories are made of!"
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Go to a place that does historical recreations. You like the idea of combining learning with fun, and dressing up in period costumes, with the requisite photos, which makes for hilarious memories."
+              value: 150
+              position: 4
+    quiz_phase_07:
+      position: 7
+      name: "When it comes to souvenirs, you usually bring home:"
+      description: "When it comes to souvenirs, you usually bring home:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When it comes to souvenirs, you usually bring home:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "A t-shirt or magnet with the name of the city or attraction you visited. Your wardrobe and refrigerator reflect your favorite travel destinations."
+              value: 150
+              position: 1
+            quiz_answer_1:
+              answer: "A hand-made, one-of-a-kind art piece from a local artisan. When you look around your house, you like the feel of local culture in your home to bring warmth and vacation reminders, especially during stressful times at work. "
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "Not a thing. Your digital photos are enough memories for you. You are a minimalist and don't like to keep lots of 'chachkas' around."
+              value: 100
+              position: 3
+            quiz_answer_3:
+              answer: "Nothing. You usually spend all your money on the trip, and have none left to buy souvenirs."
+              value: 225
+              position: 4
+    quiz_phase_08:
+      position: 8
+      name: "When picking a place to eat on vacation, you:"
+      description: "When picking a place to eat on vacation, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When picking a place to eat on vacation, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Look in the cabin fridge to plan a meal out of the supplies you brought or picked up at the local farmers' market."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Grab the local dining guide or ask the hotel concierge for restaurant recommendations. You want to be sure you find the best 'hot spot' in the area to ensure your taste buds are satiated."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Only try local foods, which you find while exploring the back streets of wherever you are. When in South America one time, you tried 'Cuy,' or guinea pig, which are popular with the Andean people."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Go online before your trip and print out restaurant menus that look interesting. With your family all having different tastes in food, it pays to be organized and know in advance if everyone will be able to find something to their taste."
+              value: 225
+              position: 4
+    quiz_phase_09:
+      position: 9
+      name: "Next fall, you will celebrate your 25th anniversary. To celebrate, you're going to surprise your spouse with a trip! You will most likely book:"
+      description: "Next fall, you will celebrate your 25th anniversary. To celebrate, you're going to surprise your spouse with a trip! You will most likely book:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Next fall, you will celebrate your 25th anniversary. To celebrate, you're going to surprise your spouse with a trip! You will most likely book:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "A trip to the nearest big city or your state's capital. There you will dine at famous restaurants, tour museums, and take in a musical."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "A trip to the Amazon rainforest. You have talked about taking a life-changing trip of this kind for years, but you've never gotten the time or money to plan it. You will revel in exploring the rainforest by plane, with its spectacular aerial views."
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "A trip to Montreal in Canada. You are thrilled at the idea of visiting this beautiful city, and look forward to practicing your French without having to travel to Europe! "
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "A Mediterranean cruise. You love the history of this part of the world, and the cultural influences of the ancient Greek civilization."
+              value: 225
+              position: 4
+    quiz_phase_10:
+      position: 10
+      name: "Your extended family has been talking about everyone going on a cruise together. Your first thought is:"
+      description: "Your extended family has been talking about everyone going on a cruise together. Your first thought is:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your extended family has been talking about everyone going on a cruise together. Your first thought is:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Oh, no! You'd get claustrophobic stuck on a boat with nothing to see for miles but ocean. You'd consider a cruise on the local river in your hometown or the next state over, but that's about it. "
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Oh yes! But only if it's a Caribbean cruise. You love nothing more than just lying on a beach all day, sipping a cold cocktail, listening to birds cawing overhead and the smell of coconut oil."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Oh, yes! A European cruise aboard a luxury liner? Sounds like heaven. It's a great way to see multiple cities on one trip. Let's do it! "
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Oh, yes! You've always wanted to do an Alaskan cruise. You'd love to go whale watching and take a ride on the Yukon Railway. You hear the state parks are breathtakingly beautiful!"
+              value: 150
+              position: 4

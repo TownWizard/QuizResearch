@@ -1,0 +1,239 @@
+quiz:
+  quiz_category_id: 7
+  name: How Do you Get a Guy?
+  quiz_photo_path: "Get_A_Guy.jpg"
+  description: "Do you always get the guy you want? Or do you often wonder why you haven't had much luck with men? Take this quiz and find out what you've been doing right or wrong when it comes to getting a guy."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: You do whatever it takes.
+      recommendation: "Do whatever it takes: You are someone who knows what you want and how to get it. You take matters into your own hands, and getting a guy is no exception. Whether it's making a bold move to ask a guy on a date or simply creating the right environment for you guys to meet, you are not waiting for him or leaving it up to chance."
+      value_ceiling: 1333.0
+      value_floor: 800.0
+    quiz_recommendation_1:
+      name: You let nature take its course
+      recommendation: "Let nature take its course: You are a true believer in everything happens for a reason and everything will work out in the end if it's meant to be. When it comes to getting a guy, you take the same natural and laid-back approach. When the right opportunity comes along, you take it, but you don't go out of you way to make things happen."
+      value_ceiling: 1867.0
+      value_floor: 1334.0
+    quiz_recommendation_2:
+      name: You play hard to get
+      recommendation: "You play hard to get: You take a very passive aggressive approach when pursuing man because you know how to keep them interested. Dating is fun, because it is a game and no game is fun without some challenges. You believe men are conditioned to pursue women and they often enjoy the challenges. By playing hard to get, not only you appear more attractive to them, but also keep them coming back for more."
+      value_ceiling: 2400.0
+      value_floor: 1868.0
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: How Would You Get A Guy?
+    offer_url:
+    is_active: true
+    height: 1520
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: How Would You Get A Guy?
+      description: How Would You Get A Guy?
+      
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: How Would You Get A Guy?
+          quiz_answers:
+            quiz_answer_1:
+              answer: Do whatever it takes
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Let nature take its course
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Play hard to get
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "You are sitting next to an attractive guy on an airplane with heavy turbulence. You are scared. Do you:"
+      description: "You are sitting next to an attractive guy on an airplane with heavy turbulence. You are scared. Do you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are sitting next to an attractive guy on an airplane with heavy turbulence. You are scared. Do you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Grab his hand
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Stare blankly out of the window
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: "Tell him \"I'm so scared\""
+              value: 200
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "You are at a bar and you see a guy standing across the room. Would you:"
+      description: "You are at a bar and you see a guy standing across the room. Would you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are at a bar and you see a guy standing across the room. Would you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Sneak a peak from time to time
+              value: 300
+              position: 1
+            quiz_answer_2:
+              answer: Move with your friends to him to be seen by him
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Buy him a drink
+              value: 100
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "You are online publishing a dating profile. Would you:"
+      description: "You are online publishing a dating profile. Would you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are online publishing a dating profile. Would you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Lie about your age
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "List yourself as \"it's complicated\""
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: Share information about your daily routine
+              value: 200
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "You are at the gym. A good looking guy comes up to you after class and says \"this class is killing me\". You respond:"
+      description: "You are at the gym. A good looking guy comes up to you after class and says \"this class is killing me\". You respond:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are at the gym. A good looking guy comes up to you after class and says \"this class is killing me\". You respond:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "\"Yeah, that was tough.\""
+              value: 300
+              position: 1
+            quiz_answer_2:
+              answer: "\"You should come to class more often.\""
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "\"Oh you should go to the other class with me. That's the really tough one.\""
+              value: 100
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "After a long project at work finishes, your good looking colleague invites you out for a drink to celebrate.  You respond:"
+      description: "After a long project at work finishes, your good looking colleague invites you out for a drink to celebrate.  You respond:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "After a long project at work finishes, your good looking colleague invites you out for a drink to celebrate.  You respond:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "\"Sure! Where to?\""
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: "\"Maybe next time.\""
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: "\"Let's go. I know somewhere really fun.\""
+              value: 100
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "After a wonderful date, he asks you to come home with him. You:"
+      description: "After a wonderful date, he asks you to come home with him. You:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "After a wonderful date, he asks you to come home with him. You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Make out in his car.
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: "Grab his behind and say \"should I drive?\""
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Tell him what a wonderful date it was and set up the next one.
+              value: 300
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "A guy you are dating asks you to go away with him for the weekend.  You:"
+      description: "A guy you are dating asks you to go away with him for the weekend.  You:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "A guy you are dating asks you to go away with him for the weekend.  You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Re-arrange your schedule to make it happen.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Politely decline and tell him you're booked."
+              value: 300
+              position: 2
+            quiz_answer_3:
+              answer: You are busy, but ask him if he can pick another time.
+              value: 200
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "You are at a friend's party, packed with eligible men.  You:"
+      description: "You are at a friend's party, packed with eligible men.  You:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are at a friend's party, packed with eligible men.  You:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Stand near the bar talking to the people you know.
+              value: 200
+              position: 1
+            quiz_answer_2:
+              answer: Ask your friend to introduce you around.
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Make eye contact with the best looking guys, sipping your drink.
+              value: 300
+              position: 3

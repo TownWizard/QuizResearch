@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="quiz_request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="quiz_request_metadata"/>
+        <xs:element ref="quiz_phase"/>
+        <xs:element ref="completed_quiz_result" minOccurs="0' />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quiz_request_metadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="completed"/>
+        <xs:element ref="quiz_instance_uuid"/>
+        <xs:element ref="quiz_response_uri"/>
+        <xs:element ref="total_quiz_phases"/>
+	<xs:element ref="resume_quiz_uri" minOccurs="0" />
+        <xs:element ref="description" minOccurs="0" />
+        <xs:element ref="name"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="completed" type="xs:boolean"/>
+  <xs:element name="quiz_instance_uuid" type="xs:string"/>
+  <xs:element name="quiz_response_uri" type="xs:anyURI"/>
+  <xs:element name="resume_quiz_uri" type="xs:anyURI"/>
+  <xs:element name="total_quiz_phases" type="xs:integer"/>
+  <xs:element name="description">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="quiz_phase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="position"/>
+        <xs:element maxOccurs="unbounded" ref="quiz_question"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="quiz_question">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="position" minOccurs="0" />
+        <xs:element ref="question_text"/>
+        <xs:element maxOccurs="unbounded" ref="answer_option"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="answer_option">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="answer_option_text"/>
+        <xs:element ref="position"/>
+        <xs:element ref="answer_response_recommendation"/>
+        <xs:element minOccurs="0" ref="existing_answer"/>
+        <xs:element ref="post_parameter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="answer_option_text" type="xs:NCName"/>
+  <xs:element name="answer_response_recommendation" type="xs:string"/>
+  <xs:element name="existing_answer" type="xs:boolean"/>
+  <xs:element name="post_parameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type"/>
+        <xs:element ref="name"/>
+        <xs:element ref="value"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="xs:NCName"/>
+  <xs:element name="value" type="xs:integer"/>
+  <xs:element name="completed_quiz_result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="score"/>
+        <xs:element ref="overall_recommendation_text"/>
+        <xs:element maxOccurs="unbounded" ref="quiz_response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="score" type="xs:integer"/>
+  <xs:element name="overall_recommendation_text" type="xs:string"/>
+  <xs:element name="quiz_response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="question_text"/>
+        <xs:element ref="answer_response_text"/>
+        <xs:element ref="answer_response_score"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="answer_response_text" type="xs:NCName"/>
+  <xs:element name="answer_response_score" type="xs:integer"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="position" type="xs:integer"/>
+  <xs:element name="question_text" type="xs:string"/>
+</xs:schema>

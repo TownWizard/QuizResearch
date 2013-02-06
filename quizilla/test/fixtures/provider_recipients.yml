@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  partner_id: 1
+  recipient_id: 1
+  deleted_at: 2009-07-03 11:47:44
+
+two:
+  partner_id: 1
+  recipient_id: 1
+  deleted_at: 2009-07-03 11:47:44

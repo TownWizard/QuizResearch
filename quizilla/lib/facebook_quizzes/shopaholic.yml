@@ -1,0 +1,313 @@
+quiz:
+  quiz_category_id: 7
+  name: Are You a Shopaholic?
+  quiz_photo_path: "Shopaholic.jpg"
+  description: "No matter your income or status, we have to shop. Whether it's for groceries or an evening gown, we all need to eat and wear clothes. Take this short quiz and find out your shopping style."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "You are a Shopaholic"
+      recommendation: "You are a Shopaholic: You may be a shopaholic! Do you find yourself canceling plans with friends because there's a sale at your favorite department store? Are you finding it hard to make the minimum payments on your credit cards each month? Shopping is fun, and having new clothing and housewares is great, but you have to ask yourself if you're shopping for the right reasons. Maybe you're bored. Consider joining a local social group in your town to meet new people and cultivate new hobbies. Try to increase your exercise levels. For some people, acquiring new items gives raises their spirits; exercise can produce that same release of endorphins responsible for the \"rush.\" Quitting shopping cold turkey can be impossible for some people, but here is an idea to try. If you see something you must have, make yourself wait a day. Ask the store if they can put it on hold for you. Go home and sleep on it. If you absolutely still want the item the next day, return to the store and buy it. This \"slowing down\" will force you to put more thought into your purchases."
+      value_floor: 1000
+      value_ceiling: 1250
+    quiz_recommendation_1:
+      name: "You are a Casual Shopper"
+      recommendation: "You are a Casual Shopper: Casual Shopper. While you appreciate new things and interesting finds, you wouldn't go out of your way or change any social plans just to go shopping. You have a busy social life full of interesting activities and you are able to balance your time and money by not going crazy at the mall.  When you go to lunch with your friends on main street, you park far away from the restaurant leaving time to window show to and from your favorite lunch place."
+      value_floor: 1251
+      value_ceiling: 1874
+    quiz_recommendation_2:
+      name: "You are indifferent about shopping"
+      recommendation: "You are a Necessity Shopper: Necessity Shopper You are indifferent about shopping. You tend to go to stores only when you absolutely need something, and you are just as happy to make do with what you have. You have hobbies and interests that take up much of your free time, and spending time with loved ones is important to you. Spending your money on more \"stuff\" doesn't appeal to you.  You are focused and efficient with your money and your time.  When you 'absolutely need something, you buy something."
+      value_floor: 1875
+      value_ceiling: 2250
+    quiz_recommendation_3:
+      name: "You are an Online Shopper"
+      recommendation: "You are an Online shopper: You've embraced the technology of the new millennium -- well, at least as far as shopping is concerned. No longer a slave to crowded mall parking lots, you consider shipping costs more reasonable than paying for gas and tolls to get to the shopping center. You've even tried a shop-at-home grocery website, though you think they need to work out a few more kinks in their produce and frozen foods delivery. You love coming home from work to see what the mailman has dropped off for you. Since you've discovered trying on clothing purchases in the comfort of your own home, you avoid stores as much as possible nowadays."
+      value_floor: 2251
+      value_ceiling: 3000
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: Are You a Shopaholic?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "Are You a Shopaholic?"
+      description: "Are You a Shopaholic?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Are You a Shopaholic?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "She shops for necessities"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "She's a casual shopper"
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "She buys more! Now!"
+              value: 200
+              position: 3
+            quiz_answer_3:
+              answer: "She shops on-line"
+              value: 150
+              position: 4
+    quiz_phase_01:
+      position: 1
+      name: "It's the dog days of August, but it's back to school in a couple of weeks.  At this time of year, you:"
+      description: "It's the dog days of August, but it's back to school in a couple of weeks.  At this time of year, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "It's the dog days of August, but it's back to school in a couple of weeks.  At this time of year, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Shop every day, visiting multiple stores to find just the right back-to-school outfits for the kids, including shoes and accessories. "
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Go to a couple of stores to pick up a new outfit for the kids' first day of school."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Enjoy the pool and park these last few precious days of summer, knowing that the kids are all set thanks to the items you've picked up on sale throughout the year."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Check websites for back-to-school sales and promotions. You can even do online shopping on your Smartphone while you're at the beach. It's the best of both worlds!"
+              value: 300
+              position: 4
+    quiz_phase_02:
+      position: 2
+      name: "When it comes to shopping for groceries, you:"
+      description: "When it comes to shopping for groceries, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When it comes to shopping for groceries, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Signed up for online grocery shopping. You love the convenience of having your groceries delivered right to the door! Even if you're having a crazy day at work, you know that there will be fresh ingredients waiting at home to quickly put together a meal."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Usually stop off after work to pick up something to eat for dinner and throw in a few extra items as needed."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Are a Stop & Shop-aholic! You spend way too much time at the supermarket walking around every aisle thinking of what you can make for future meals and looking for new products and good bulk items on sale."
+              value: 100
+              position: 3
+            quiz_answer_3:
+              answer: "Go to the supermarket once a week, armed with an organized list that you prepare and everyone in the family adds to it, as we run out of a favorite item."
+              value: 300
+              position: 4
+    quiz_phase_03:
+      position: 3
+      name: "A friend wants to meet for lunch at the mall, you:"
+      description: "A friend wants to meet for lunch at the mall, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "A friend wants to meet for lunch at the mall, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Grit your teeth and agree. You enjoy your friend's company, but hate fighting the crowds and the busy parking lot, and you don't need to buy anything."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Can barely contain your excitement! After all, it's been two whole days since you were there, and you want to see if there are any new sales. "
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Think, that's a great idea! You arrive early, and can stop into that little store that's running its twice-yearly sale this week."
+              value: 150
+              position: 3
+            quiz_answer_2:
+              answer: "Are just so happy to see your friend that you don't even care where you meet. It's been too long!"
+              value: 300
+              position: 4
+    quiz_phase_04:
+      position: 4
+      name: "You've been invited to a black-tie gala honoring your boss next month, you:"
+      description: "You've been invited to a black-tie gala honoring your boss next month, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You've been invited to a black-tie gala honoring your boss next month, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Head to a local thrift store where hopefully you can get designer names at wholesale prices. If you hit the stores on Mondays, they usually put out the most recently donated items. "
+              value: 150
+              position: 1
+            quiz_answer_1:
+              answer: "Call your favorite department store to reserve a personal shopper. She's been fabulous in the past, helping you make great choices, and you always leave the store with several bags of purchases. "
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Call your sister and your best friend to see if they have any nice dresses you can borrow for the evening. Then you can buy a purse or pair of earrings to complement the look."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Start visiting fashion websites way in advance of the event. You can get really great deals on designer duds if you know which sites to search out."
+              value: 300
+              position: 4
+    quiz_phase_05:
+      position: 5
+      name: "You are on the vacation of a lifetime in Europe, visiting 15 major cities and you think of shopping.  It fits into your schedule by:"
+      description: "You are on the vacation of a lifetime in Europe, visiting 15 major cities and you think of shopping.  It fits into your schedule by:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You are on the vacation of a lifetime in Europe, visiting 15 major cities and you think of shopping.  It fits into your schedule by:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Wait...it doesn't. You're in Europe to visit famous sites and learn about other cultures. You wouldn't waste a minute shopping - there is too much to see and photographs to take. "
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "You shop every day for a large part of the day and can't believe the array of things available, plus you're  getting amazing bargains on jewelry and leather and local craft items to showcase in your house. "
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "If your travel schedule finds you in a shopping area, you'll browse the local stores. If something catches your eye and fits your budget, you'll buy it."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "You might shop if time allows, but also check to see if the local stores have websites so you can shop when you get home. Yes, you'll have to pay postage, but it's easier than dragging your suitcases through the airport with your added purchases."
+              value: 300
+              position: 4
+    quiz_phase_06:
+      position: 6
+      name: "You are on a weekend trip in the country and your spouse wants to stop at an auction. You've never been to one before, so you:"
+      description: "You are on a weekend trip in the country and your spouse wants to stop at an auction. You've never been to one before, so you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You are on a weekend trip in the country and your spouse wants to stop at an auction. You've never been to one before, so you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Sit in the back, waiting to see if anything that fits into your current decorating style appeals to you before you decide if you'll bid or not."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Rush in, grab a paddle and a seat upfront, and proceed to bid to your heart's content on every item. You think, this is so much fun, how come you've never done this before."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Are surprised to see an item you've been looking for up for auction. You bid what you think is a fair price and you're excited when you are the last bidder."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "You prefer to go to EBay to search a larger selection of antiques to buy."
+              value: 300
+              position: 4
+    quiz_phase_07:
+      position: 7
+      name: "Ah... it's the holiday season again. This time of year finds you:"
+      description: "Ah... it's the holiday season again. This time of year finds you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Ah... it's the holiday season again. This time of year finds you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Alive with holiday spirit! You shop from early in the morning to late at night, energized by beating the crowds and getting a key parking spot. You revel in waking up at 3 AM the day after Thanksgiving to stand in line."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Dreading the idea of holiday songs being played before it's even Thanksgiving! You hate the crass commercialization of what should be a holy season about family and togetherness."
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "Not worrying too much about shopping. You would rather spend your spare time decorating the house and baking cookies. You divide the kids' toy wish lists with your husband and shop whenever we get free time, lunch hours and weekends."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "Starting early in the season, so you don't have to fight too many mall crowds. In addition, you do much of your shopping online, as most places offer free shipping at this time of year."
+              value: 300
+              position: 4
+    quiz_phase_08:
+      position: 8
+      name: "Your favorite baseball team is playing at home. Your best friend calls and says she's snagged great seats from a friend who works at the stadium. Wanting to fit in with what everyone else is wearing, you:"
+      description: "Your favorite baseball team is playing at home. Your best friend calls and says she's snagged great seats from a friend who works at the stadium. Wanting to fit in with what everyone else is wearing, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your favorite baseball team is playing at home. Your best friend calls and says she's snagged great seats from a friend who works at the stadium. Wanting to fit in with what everyone else is wearing, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Look through your husband's drawer to find a team t-shirt. You know there's one in there somewhere! If you can't find it, maybe you'll buy a shirt at the game to wear that day."
+              value: 150
+              position: 1
+            quiz_answer_1:
+              answer: "Rush to the local sporting goods store to buy a team jersey, hoodie, hat, socks, pennant and any other cute branded items you can find. Such cute stuff!"
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Couldn't care less  what you wear. It's a baseball game, not a fashion show! You're there to support the team."
+              value: 225
+              position: 3
+            quiz_answer_3:
+              answer: "Borrow a t-shirt from your husband or son, then buy a hat when you get to the stadium or when you get home go online to see what is on sale."
+              value: 300
+              position: 4
+    quiz_phase_09:
+      position: 9
+      name: "You and your sisters are beginning to plan for your parents' upcoming wedding anniversary. It's a big milestone, and you want it to be a memory they will cherish forever. When the discussion turns towards what gift the siblings should give, you think:"
+      description: "You and your sisters are beginning to plan for your parents' upcoming wedding anniversary. It's a big milestone, and you want it to be a memory they will cherish forever. When the discussion turns towards what gift the siblings should give, you think:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You and your sisters are beginning to plan for your parents' upcoming wedding anniversary. It's a big milestone, and you want it to be a memory they will cherish forever. When the discussion turns towards what gift the siblings should give, you think:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Gift? Who has time to think about shopping? There's so much to be done, like booking the restaurant, getting invitations printed, choosing decorations, planning a menu, deciding what filling to put in the cake, coordinating RSVPs, etc, etc."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "OK, that's your department! The rest of the sisters can deal with the caterers. You know each anniversary and what gift corresponds with it. Your specialty is shopping for the exact right gift."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Sure, you'll contribute toward the gift. Time's going to be tight with all the party preparations, but if your sisters need help shopping for a present, you'll try to make time to go along."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "You'll go to your favorite website, which you have bookmarked, to look for cute and clever gift ideas for anniversaries."
+              value: 300
+              position: 4
+    quiz_phase_10:
+      position: 10
+      name: "A friend calls and asks if you'd like to meet her to go shopping on Black Friday. You think:"
+      description: "A friend calls and asks if you'd like to meet her to go shopping on Black Friday. You think:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "A friend calls and asks if you'd like to meet her to go shopping on Black Friday. You think:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Of course! But only if she fits into the schedule you already have mapped out for the sales. You're setting the alarm for 3 AM, grabbing your thermos of coffee, and heading out the door by 3:15 AM. No time for a shower!"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "What is Black Friday? Wake up in the wee hours just to shop? Ugh, no way. You've just gotten over shopping, cooking and cleaning for Thanksgiving Day. Friday is a day to sleep late, watch football and eat leftovers."
+              value: 225
+              position: 2
+            quiz_answer_2:
+              answer: "Umm, Ok, why not? You've never done it, but see all the TV coverage of people waiting in lines. Maybe it's a chance to get some great bargains and a jump-start on your shopping. You'll try anything once."
+              value: 150
+              position: 3
+            quiz_answer_3:
+              answer: "You don't leave your house on Black Friday! Why would you have to when all the websites offer shipping specials and promotions all day?  Some even start their sales the evening before."
+              value: 300
+              position: 4

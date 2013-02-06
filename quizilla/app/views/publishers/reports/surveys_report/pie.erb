@@ -1,0 +1,80 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<script type="text/javascript" charset="utf-8">
+  makeCharts = function() {
+    <%
+
+      @quiz_question_grouping.each do |name,grp|
+
+        chart_name = "chart_question_#{name}"
+        # need to build the series string based on answer information
+        total_answers = grp.length
+        series_member_strings = []
+        grp.subgroups.each do |name, agrp|
+
+          slice_size = ( agrp.length.to_f / total_answers.to_f * 100 ).to_i
+          sm_string = <<-sms
+{ y : #{slice_size},
+  tooltip: \"#{agrp.column( 'quiz_answer.answer' )[ 0 ]} ( #{slice_size} )\",
+  legend: \"#{agrp.column( 'quiz_answer.answer' )[ 0 ]} ( #{slice_size}% )\",
+  stroke : \"black\"
+}
+          sms
+          series_member_strings << sm_string
+        end
+
+      c_output = <<-testStr
+var #{chart_name} = new dojox.charting.Chart2D("#{chart_name}-chart");
+#{chart_name}.setTheme( dojox.charting.themes.PlotKit.cyan );
+#{chart_name}.addPlot( "default", { type : "Pie", labelOffset : -22, ticks : true, radius : 50 } );
+#{chart_name}.addSeries( "Series1", [ #{series_member_strings.join ', ' } ] );
+
+var #{chart_name}_tooltip = new dojox.charting.action2d.Tooltip( #{chart_name}, "default" );
+var #{chart_name}_magnify = new dojox.charting.action2d.#{ series_member_strings.size > 1 ? "MoveSlice" : "Magnify" }( #{chart_name}, "default", { scale: 1.1, shift: 5 } );
+#{chart_name}.render();
+var #{chart_name}_legend  = new dojox.charting.widget.Legend( { chart: #{chart_name}, horizontal: false }, "#{chart_name}-legend" );
+       testStr
+
+    %>
+      <%= c_output %>
+    <% end %>
+
+  };
+
+  dojo.addOnLoad( makeCharts );
+
+</script>
+
+<h1>Report</h1>
+<h2>Some heading</h2>
+<h3>Total Questions Answered: <%= @table.size %></h3>
+
+<table width="500" cellspacing="0">
+  <% @quiz_question_grouping.each do |name, group| %>
+    <% times_answered = group.length %>
+    <tr>
+      <td colspan="2">
+        <%= group.column( 'quiz_question.question' )[ 0 ] %>
+        &nbsp; &nbsp;
+        <%= group.length %>
+      </td>
+    </tr>
+    <tr>
+      <td nowrap>
+        <div id="<%= "chart_question_#{name}-legend" %>"></div>
+      </td>
+      <td>
+        <div id="<%= "chart_question_#{name}-chart" %>" style="width: 200px; height: 200px;"></div>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%#= debug @unsorted_quiz_question_grouping %>
+
+<hr />
+
+<%#= debug @table %>

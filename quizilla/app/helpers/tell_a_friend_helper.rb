@@ -1,0 +1,2 @@
+module TellAFriendHelper
+end

@@ -1,0 +1,89 @@
+<% form_for [ :publishers, @widget ] do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :title, "Window Title" %></td>
+      <td><%= f.text_field :title, :size => "30" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :domain_name, "Domain Name" %></td>
+      <td><%= f.text_field :domain_name, :size => "30" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :partner_id, "Partner Name" %></td>
+      <td><%= f.select(:partner_id, Partner.all.collect {|u| [u.name, u.id]}, {:selected => @widget[:partner_id].to_i},
+                                :onchange => remote_function(
+                                :update => "quiz_select",
+                                :method => "get",
+                                :with => "'partner_id=' + value",
+                                :url => update_quiz_list_publishers_widgets_url)) %></td>
+    </tr>
+    <tr id="quiz_select">
+    
+      <td><%= f.label :quiz_id, "Select Quiz" %></td>
+      <% if @widget.new_record? %>
+        <td><%= select( :widget, :quiz_id, Quiz.find(:all, :conditions => ['partner_id =?', Partner.first.id]).collect{ |p| [ p.name, p.id ] },  :selected  => @widget[:quiz_id].to_i) %></td>
+      <% else %>
+        <td><%= select( :widget, :quiz_id, Quiz.find(:all, :conditions => ['partner_id =?', @widget.partner.id]).collect{ |p| [ p.name, p.id ] },  :selected  => @widget[:quiz_id].to_i) %></td>
+      <% end %>
+      
+    
+    </tr>
+    <tr>
+      <td><%= f.label :top_logo_url, "Logo Url" %></td>
+      <td><%= f.text_field :top_logo_url, :size => "30" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :logo_width, "Logo Size" %></td>
+      <td><%= f.text_field :logo_width, :size => "3" %>x<%= f.text_field :logo_height, :size => "3" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :pre_footer_text, "Pre Footer Text" %></td>
+      <td><%= f.text_area :pre_footer_text, :style => "height: 78px; width: 334px;" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :width, "Window Size" %></td>
+      <td><%= f.text_field :width, :size => "3" %>x<%= f.text_field :height, :size => "3" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :bg_color, "Background Color" %></td>
+      <td><%= f.text_field :bg_color, :size => "10" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :font_size, "Font Size" %></td>
+      <td><%= select( :widget, :font_size, [[8, "8"], [10, "10"], [12, "12"], [14, "14"], [16, "16"], [18, "18"]],  :selected  => @widget.new_record? ? "" : @widget.font_size) %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :font_color, "Font Color" %></td>
+      <td><%= f.text_field :font_color, :size => "10" %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :location, "Location" %></td>
+      <td><%= f.select(:location, [
+                                    ["Top Left", "top: 20px; left: 15px;"],
+                                    ["Top Right", "top: 20px; right: 15px;"],
+                                    ["Bottom Left", "bottom: 20px; left: 15px;"],
+                                    ["Bottom Right", "bottom: 20px; right: 15px;"],
+                                    ["Left Middle", "top: 350px; left: 15px;"],
+                                    ["Right Middle", "top: 350px; right: 15px;"]
+                                  ]) %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :contact_us_link, "Contact Us Link" %></td>
+      <td><%= f.text_field :contact_us_link, :size => "30" %></td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Submit" />
+      </td>
+    </tr>
+  </table>
+<br />
+<div style="clear: both; border: 1px solid #EEE; height: 100px;">
+  <% next_id = Widget.last.nil? ? 1 : Widget.last.id+1 %>
+&nbsp;&nbsp;<span style="color:black;"><strong>&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="http://<%= @widget.new_record? ? "synapse" : @widget.partner.name.downcase %>.widgets.quizresearch.com/widgets/get_api_widget/<%= @widget.new_record? ? next_id : @widget.id %>.js"&gt;&lt;/SCRIPT&gt;</strong></span><br>
+&nbsp;&nbsp;<br />
+</div>
+<% end %>

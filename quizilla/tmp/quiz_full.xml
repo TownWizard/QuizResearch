@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz_data>
+  <quiz id="1">
+    <active>true</active>
+    <boost_keywords></boost_keywords>
+    <created_at>Sun Oct 12 05:43:10 UTC 2008</created_at>
+    <description></description>
+    <id>1</id>
+    <name>Do you feel physically attractive?</name>
+    <quiz_category_id>1</quiz_category_id>
+    <quiz_photo_path></quiz_photo_path>
+    <updated_at>Wed Jan 28 06:30:34 UTC 2009</updated_at>
+    <quiz_phases>
+      <phase id="1">
+        <active>false</active>
+        <boost_keywords>eating,healthy,body,weight,foods,issues,diet,emotional,energy,eat,vegetables,nutrients,fruits,overweight,food,underweight,diets,nutritious,pounds</boost_keywords>
+        <created_at>Mon Oct 13 01:47:44 UTC 2008</created_at>
+        <id>1</id>
+        <name>First</name>
+        <position>1</position>
+        <quiz_id>1</quiz_id>
+        <updated_at>Mon Feb 09 04:31:45 UTC 2009</updated_at>
+        <quiz_questions>
+          <quiz_question id="1">
+            <active>true</active>
+            <boost_keywords></boost_keywords>
+            <created_at>Tue Oct 07 00:24:47 UTC 2008</created_at>
+            <id>1</id>
+            <position>1</position>
+            <question>1. Are you within 10 pounds of a healthy body weight?</question>
+            <quiz_phase_id>1</quiz_phase_id>
+            <updated_at>Mon Feb 09 04:28:42 UTC 2009</updated_at>
+            <quiz_answers>
+              <quiz_answer id="1">
+                <active>true</active>
+                <answer>Yes</answer>
+                <boost_keywords></boost_keywords>
+                <created_at>Tue Oct 07 00:26:54 UTC 2008</created_at>
+                <id>1</id>
+                <position>1</position>
+                <quiz_question_id>1</quiz_question_id>
+                <updated_at>Thu Feb 05 22:54:25 UTC 2009</updated_at>
+                <value>230</value>
+                <learning_blurb id="1">
+                  <active>true</active>
+                  <blurb>&lt;p&gt;Good job keeping your weight where you want it. That&amp;rsquo;s not easy. If you manage your weight with a healthy, well-balanced diet&amp;mdash;particularly if it&amp;rsquo;s rich in fresh vegetables, fruits, and other whole foods&amp;mdash;you should feel very good about yourself. But if you keep your weight down with less-than-ideal eating habits, you may compromise your health by missing nutrients your body needs.&lt;/p&gt;
+&lt;p&gt;Whatever your eating habits, most of us can do a little better by learning more about healthy nutrition, addressing issues that cause us to eat poorly, or finding ways to be less rigid about eating perfectly.&lt;/p&gt;
+&lt;p&gt;The Personalized Plan you receive when you join the MaxWell Daily Club will include ideas for healthy eating to satisfy your body, mind, and spirit.&lt;/p&gt;</blurb>
+                  <boost_keywords></boost_keywords>
+                  <created_at>Tue Oct 07 02:41:57 UTC 2008</created_at>
+                  <id>1</id>
+                  <name></name>
+                  <quiz_answer_id>1</quiz_answer_id>
+                  <updated_at>Thu Feb 05 22:54:51 UTC 2009</updated_at>
+                </learning_blurb>
+              </quiz_answer>
+              [ additional answer elements ]
+            </quiz_answers>
+          </quiz_question>
+          [ additional question elements ]
+        </quiz_questions>
+      </phase>
+      [ additional phase elements ]
+    </quiz_phases>
+  </quiz>
+</quiz_data>

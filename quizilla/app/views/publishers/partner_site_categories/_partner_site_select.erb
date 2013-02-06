@@ -1,0 +1,3 @@
+<%= select( :partner_site_category, :partner_site_id, 
+            @partner_sites.collect{ |p| [ p.display_name, p.id ] },
+            :selected  => @partner_site_category.nil? ? @curr_sel_site : @partner_site_category[:partner_site_id].to_i) %>

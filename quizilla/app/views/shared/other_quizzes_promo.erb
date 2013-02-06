@@ -1,0 +1,20 @@
+<%
+  if !@quiz_instance
+    cat_to_exclude = 0
+  else
+    cat_to_exclude = @quiz_instance.quiz.quiz_category.id
+  end
+
+  promo_quizzes = QuizCategory.find( :all, :include => [:quiz_lead_questions => { :quiz_lead_answers => :quiz }], :conditions => "quiz_categories.id != #{cat_to_exclude} AND quizzes.active = true AND quiz_lead_answers.active = true" )
+
+  promo_quizzes.each do |pq|
+    quiz_desc = pq.name.to_s.downcase[0..pq.name.to_s.index(" ").to_i - 1]
+    pq.quiz_lead_questions.each do |plq|
+%>
+      <a href="/quizzes/get/<%= plq.quiz_lead_answers[0].quiz_id %>">
+        <img src="/images/demo/quiz_promo_<%= quiz_desc.strip %>.jpg" alt="" />
+      </a><br /><br />
+<%
+    end
+  end
+%>

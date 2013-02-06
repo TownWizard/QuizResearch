@@ -1,0 +1,3 @@
+SuggestMailer#suggest_quiz
+
+Find me in app/views/suggest_mailer/suggest_quiz.erb

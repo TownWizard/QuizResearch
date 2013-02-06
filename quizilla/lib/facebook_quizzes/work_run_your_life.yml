@@ -1,0 +1,264 @@
+quiz:
+  quiz_category_id: 5
+  name: Does Work Run Your Life?
+  quiz_photo_path: "Run_Your_Life.JPG"
+  description: "Are you spending too much time at work or thinking about your to do list? Are you living to work or working to live? Take this quiz to see if you have achieved a happy balance between your work and home lives."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: You are a workaholic!
+      recommendation: "You live to work: You love your job, but maybe too much. Most people have to work, and it's a bonus if you love what you do. But there is more to life than your career. Family, friends and relationships matter, too, and if you find that you have no time for nurturing these relationships, it's time to step back and take an inventory of what's important. Yes, your livelihood depends on earning a salary from work, but ask yourself if you're working too much for the wrong reasons. Sometimes people use work as an excuse to keep them from developing deeper relationships with family and friends or to avoid conflict at home. You could benefit from developing interests outside of work, like volunteering, in which you can get a great feeling of personal satisfaction that has nothing to do with earning money or impressing the boss. You could also take up a hobby or try a relaxing exercise program, like yoga. You will find that centering your breathing and your body can lead to \"centering\" of your work and home lives, as well."
+      value_floor: 1000
+      value_ceiling: 1666
+    quiz_recommendation_1:
+      name: You work to pay the bills
+      recommendation: "You work to live: You have a lot going on in your life, and you get much enjoyment out of things. Work for you is a means to an end, but nothing more. You like socializing with your co-workers, but you get fulfillment from your relationships with family and friends and social circle on weekends. That's OK! Everyone can't be a Donald Trump and in fact, you probably don't even like him. What activities do you so look forward to on weekends? Maybe it's visiting with family or volunteering with the homeless.  Maybe you like participating in neighborhood clean-ups. Maybe it's running in the park or running a monthly book club. Ask yourself if there's any way to turn these favorite activities into a job you might love too! Fill out a volunteer application at a local charity. Inquire at a sporting goods store about career paths or consider getting a personal trainer certification. The point is, you may be unsatisfied with your job, but it doesn't mean that you don't like to work at all."
+      value_floor: 1667
+      value_ceiling: 2333
+    quiz_recommendation_2:
+      name: Your life is in balance
+      recommendation: "You balance home and work life beautifully: You seem to have gotten the right balance between being a team player at work and taking the time to nurture yourself and your personal relationships. Good for you! People are constantly being pulled in many directions-work demands, spouse and child needs, aging parents-can get overwhelmed. You have somehow designed your life to make it all work. You do your best at your job without letting it take over your life, while also delegating home responsibilities so it all gets done. Remember to frequently check in with family and friends you haven't spoken to in a while to keep involved in their lives. Try to make time for yourself, whether it's participating in a sport you love or taking a film class at your local library. The more happy and centered you feel, the easier it is to meet the responsibilities of others."
+      value_floor: 2334
+      value_ceiling: 3000
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: Does Work Run Your Life?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: Does Work Run Your Life?
+      description: Does Work Run Your Life?
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: Does Work Run Your Life?
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Workaholic, spending too much time at work/thinking about work"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: More consumed with non-work things, may need to concentrate more at work
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: Balanced with work and personal life responsibilities
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "Your work life closely resembles:"
+      description: "Your work life closely resembles:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your work life closely resembles:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "That of a workaholic"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "That of a Zen master"
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "That of a couch potato"
+              value: 200
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "Your relationship with your BlackBerry can best be described as:"
+      description: "Your relationship with your BlackBerry can best be described as:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your relationship with your BlackBerry can best be described as:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "A fair-weather friend. You like to use it during the day to keep up with your boss and with what friends are saying on Facebook."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "A warm relationship. You only use it from 9-5, and use your home computer to keep in touch with friends and family online."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "A red-hot romance. You spend more time staring at it than into your spouse's eyes."
+              value: 100
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "You know maintaining your health is important, and you:"
+      description: "You know maintaining your health is important, and you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You know maintaining your health is important, and you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Still can't remember when you last saw the doctor because you can't take the time off."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Schedule doctor's appointments on lunch hours or evenings."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Use personal days to schedule doctor visits because that's what personal days are for."
+              value: 300
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "Your 5-year-old son is playing a cow in his first school play, you:"
+      description: "Your 5-year-old son is playing a cow in his first school play, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your 5-year-old son is playing a cow in his first school play, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Call in sick that morning to help him get ready and get a front seat in the auditorium to take good pictures."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Promise to watch the video that grandma makes and take him out for ice cream on the weekend."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Ask your boss if you can come in a little late and make up the time at the end of the day since family is important."
+              value: 300
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "When you think back on your last vacation, you:"
+      description: "When you think back on your last vacation, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When you think back on your last vacation, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Know exactly when and where it was because you have a time-share and you wouldn't miss it for anything."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Can hardly remember because it's been so long, but you do know you were on conference calls while poolside."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Enjoyed yourself by keeping your promise to check e-mails once a day, then putting the computer away for the rest of the time."
+              value: 300
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "What do you enjoy and tend to talk about when you have conversations with friends :"
+      description: "What do you enjoy and tend to talk about when you have conversations with friends :"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "What do you enjoy and tend to talk about when you have conversations with friends :"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "I like to talk to other people about our common interests."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Anything but work related topics. What I enjoy in my personal life and what I do at work are completely different."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "You can't shut up about the new project that you are taking on at work."
+              value: 100
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "When it comes to work and dating, you:"
+      description: "When it comes to work and dating, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When it comes to work and dating, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Don't have time for dating at this time. Relationships just get in the way of success at work."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Think work is a great place to meet prospective dates since you automatically have something in common."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Haven't yet met someone at work that you would like to date, but you don't exclude the possibility."
+              value: 300
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "The holidays are rolling around again and you:"
+      description: "The holidays are rolling around again and you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "The holidays are rolling around again and you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Start celebrating the holiday's weeks in advance. You shop on your lunch hour and save up your vacation days for this time of year."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Shop online for the kids, but like to shop on weekends with your family to find personal gifts for loved ones."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "Shop online when you get a free moment, and volunteer to work when other people want to take off."
+              value: 100
+              position: 3
+    quiz_phase_09:
+      position: 9
+      name: "When it comes to pets, you:"
+      description: "When it comes to pets, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "When it comes to pets, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Prefer not to keep any pets since the last three goldfish you owned went belly up because you were never home to feed them."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Have two cats that you must get home to feed on schedule, check on them constantly, and make sure they get playtime in before bed."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Have a dog who you enjoy running in the park with every morning, then drop him off at the dog sitter for the day."
+              value: 300
+              position: 3
+    quiz_phase_10:
+      position: 10
+      name: "Your elderly mother fell and broke her hip, you:"
+      description: "Your elderly mother fell and broke her hip, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your elderly mother fell and broke her hip, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Check in with her frequently and have your siblings to help with the workload of taking care of your mother."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Take off from work immediately and tell HR that you'll be back when your personal emergency gets resolved."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Fly down on the weekend to get your mother set up with a visiting nurse service, because you have no time to check in on her."
+              value: 100
+              position: 3

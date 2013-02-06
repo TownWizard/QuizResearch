@@ -1,0 +1,29 @@
+<a href="/publishers/partner_sites/new">Create a new site</a>
+<div class="site_list">
+  <table border="1">
+      <tr>
+        <td>Display Name</td>
+        <td>Key</td>
+        <td>Host</td>
+        <td>Domain</td>
+        <%= "<td>Partner Name</td>" if current_user.has_role? 'admin' %>
+        <td></td>
+        <td></td>
+      </tr>
+     <% @partner_sites.each do |p| %>
+      <tr>
+        <td><%= p.display_name %></td>
+        <td><%= p.key %></td>
+        <td><%= p.host %></td>
+        <td><%= p.domain %></td>
+        <%= "<td>#{p.partner.name if p.partner}</td>" if current_user.has_role? 'admin' %>
+        <td>
+          <a href="/publishers/partner_sites/edit/<%= p.id %> ">Edit</a>
+        </td>
+        <td>
+          <%= link_to 'Share Quizzes', show_quizzes_publishers_partner_site_path(p) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

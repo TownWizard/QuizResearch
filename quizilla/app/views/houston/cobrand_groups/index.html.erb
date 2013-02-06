@@ -1,0 +1,19 @@
+<h1>Listing cobrand_groups</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @cobrand_groups.each do |cobrand_group| %>
+  <tr>
+    <td><%= cobrand_group.name %>
+    <td><%= link_to 'Show', houston_cobrand_group_url( cobrand_group ) %></td>
+    <td><%= link_to 'Edit', edit_houston_cobrand_group_path( cobrand_group) %></td>
+    <td><%= link_to 'Destroy', houston_cobrand_group_url( cobrand_group ), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cobrand_group', new_houston_cobrand_group_path %>

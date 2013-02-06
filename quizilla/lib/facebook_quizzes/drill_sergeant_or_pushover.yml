@@ -1,0 +1,286 @@
+quiz:
+  quiz_category_id: 5
+  name: Are You A Drill Sergeant or A Pushover?
+  quiz_photo_path: "pushover.jpg"
+  description: "Are you known as the \"strict one\" in the bunch, or do people ask you for everything because they know you won't say 'no'? Take this short quiz and see if you need to grow a backbone."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "It's your way or the highway!"
+      recommendation: "You are a drill sergeant: You like to keep control in your life - both at home and in your workplace. That is admirable, and you are probably a pro at keeping many balls in the air at once. But a drill sergeant can be tough to deal with on a daily basis, and sometimes situations call for flexibility. You may be taking on too much and feel that the only way to get it all done is to bark orders and delegate to underlings. But you need to stop pushing people around. Your way is not always the right way and you should be thoughtful of people around you. Next time you find yourself speaking in a firm, bossy tone, stop and take a deep breath. If possible, walk away from the situation to get a minute to compose yourself. Sometimes the old saying about catching more flies with honey than vinegar is true; kindness begets kindness and you may find yourself getting more things accomplished and feeling better about yourself when you are flexible. Other people will respond positively to your change as well."
+      value_ceiling: 1666.0
+      value_floor: 1000.0
+    quiz_recommendation_1:
+      name: "You are easy-going but get things done! "
+      recommendation: "You are efficient and keep people happy: You seem to have gotten the right balance between being a team player and sticking up for yourself. Good for you! People sometimes fall into a routine of taking on too much simply because it's 'easier', or they don't want to rock the boat. But, in the long run, it doesn't benefit anyone: the 'taker' doesn&rsquo;t learn to do things for themselves, and the 'giver' gets resentful because they are doing too much. Continue to look for areas in your life-whether it's at work or at home-to help people out while at the same time being true to yourself and knowing how much is too much."
+      value_ceiling: 2333.0
+      value_floor: 1667.0
+    quiz_recommendation_2:
+      name: You might be a pushover
+      recommendation: "Don't make everyone happy at your expense: You yearn to be a crowd pleaser and to be liked by everyone. You want to make everyone else happy and don't like to make waves. But you have to work on not being a pushover. You have to learn to say the word, 'no'. People may balk at first, particularly family members and co-workers who have gotten used to dumping things on you and you getting them done. But they can get used to the new you, too. You will have more time for yourself, will definitely feel less stressed, and you may just gain the respect of some people who have been using you for too long. You need to stop trying to be what everyone else wants you to be. It is time you realize that you don't need to do everything according to everyone else's wish to get people's affections.  Put things in perspective and think about your needs too. Don't be afraid to make your voice heard! In the long run, those people who love you for who you are and not for what you do for them will stay by your side."
+      value_ceiling: 3000.0
+      value_floor: 2334.0
+
+  facebook_quiz:
+    title: A Drill Sergeant or A Pushover
+    offer_url:
+    is_active: true
+    height: 1000
+    partner_site_id: 6
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: Are You A Drill Sergeant or A Pushover?
+      description: Are You A Drill Sergeant or A Pushover?
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: Are You A Drill Sergeant or A Pushover?
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Bossy and inflexible (Firm, direct, doesn't pull any punches)"
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Balanced (can be firm when the occasion calls for it, but is generally easy-going)
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Pushover (doesn't stand up for oneself, lets others get their way)"
+              value: 300
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "our brother recently got a cute new puppy. When the puppy begs for food at the dinner table, you:"
+      description: "our brother recently got a cute new puppy. When the puppy begs for food at the dinner table, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "our brother recently got a cute new puppy. When the puppy begs for food at the dinner table, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Shoo it away using a loud, sharp voice. Dogs need to learn their place.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Sneak it an occasional piece of food. You can't resist those puppy dog eyes."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Give it treats off your plate. You are a doting 'auntie' and give into the whimpering. "
+              value: 300
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "You are invited to a barbecue at a friend's house. When you get there, you:"
+      description: "You are invited to a barbecue at a friend's house. When you get there, you:\r\n"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are invited to a barbecue at a friend's house. When you get there, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Immediately take over the grill because you like your meat cooked a certain way. "
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Help put out some appetizers you brought while chatting with friends you haven't seen in a while."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Are enlisted to help serve drinks and take out the trash since you always do such a good job helping with everything.
+              value: 300
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "You're out shopping for new furniture. No one has approached you to see if you need help, you:"
+      description: "You're out shopping for new furniture. No one has approached you to see if you need help, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You're out shopping for new furniture. No one has approached you to see if you need help, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Approach a salesperson and start asking questions - the people ahead of you don't seem to mind."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Ask for help, then wait your turn while two other people who have been in line are waited on.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Wait around for 15 minutes or so, then finally leave and figure you'll come back when it's less busy. "
+              value: 300
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "You are hosting a dinner party for your friends and you already have menu and date picked out.  Your friends ask for details about the party and want to give some suggestions, you think to yourself:"
+      description: "You are hosting a dinner party for your friends and you already have menu and date picked out.  Your friends ask for details about the party and want to give some suggestions, you think to yourself:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You are hosting a dinner party for your friends and you already have menu and date picked out.  Your friends ask for details about the party and want to give some suggestions, you think to yourself:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "I already have everything planned. Everything's perfect the way it is, and I'd rather not deal with other people's food."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "That's nice. I'll let them know what I've planned and see if I missed anything."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "I really want this party to go well; let's see what everyone wants."
+              value: 300
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "You're at your regular exercise class. The instructor has called in sick, and there is a replacement, you:"
+      description: "You're at your regular exercise class. The instructor has called in sick, and there is a replacement, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "You're at your regular exercise class. The instructor has called in sick, and there is a replacement, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Take over the class because the instructor doesn't seem to know what he's doing. You've been doing it so long you can teach the steps almost as good as the regular teacher."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Offer the substitute some guidance on how the regular instructor runs the routines and follow along.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Quietly follow along knowing - it's not perfect but it's only this once, after all."
+              value: 300
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "It's time for the monthly birthday celebration at work and your boss is looking for help, you:"
+      description: "It's time for the monthly birthday celebration at work and your boss is looking for help, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "It's time for the monthly birthday celebration at work and your boss is looking for help, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Print out a list of tasks and assignments and start doling them out to co-workers.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Agree to bake while other people volunteer to decorate and get the gift and card.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Volunteer to put together the whole thing since you know no one else will.
+              value: 300
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "Your widowed mother can no longer live on her own and take care of her house, but she doesn't want to live in nursing home, you:"
+      description: "Your widowed mother can no longer live on her own and take care of her house, but she doesn't want to live in nursing home, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Your widowed mother can no longer live on her own and take care of her house, but she doesn't want to live in nursing home, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Put her house on the market and start researching different types of facilities. She will get used to it and it's the right thing to do."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: Arrange a meeting with your siblings to devise a plan for finding her live-in help so she can stay in her home.
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: Let her move in with you, because your siblings said you would be the best person to live with your mom. Your own family will need to make some adjustments, but it is your mother, after all.
+              value: 300
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "Your 17-year-old daughter is going to her senior prom and wants a 4am curfew. You tell her:"
+      description: "Your 17-year-old daughter is going to her senior prom and wants a 4am curfew. You tell her:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Your 17-year-old daughter is going to her senior prom and wants a 4am curfew. You tell her:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: "Forget it! There is no reason to be out at all hours of the night or morning at your age."
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Alright! Just be careful staying out that late and be diligent about your safety."
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "See you tomorrow! You are surprised she asked you in the first place."
+              value: 300
+              position: 3
+    quiz_phase_09:
+      position: 9
+      name: "The holidays are coming and you're having company. To get the house looking its best, you:"
+      description: "The holidays are coming and you're having company. To get the house looking its best, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "The holidays are coming and you're having company. To get the house looking its best, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: Gather the family, assign jobs, and tell them that no one leaves until the place is sparkling clean.
+              value: 100
+              position: 1
+            quiz_answer_2:
+              answer: "Get everyone to clean a room, knowing that you may have to go over it again, especially for the younger kids. "
+              value: 200
+              position: 2
+            quiz_answer_3:
+              answer: "Do it all yourself. It's just easier that way."
+              value: 300
+              position: 3
+    quiz_phase_10:
+      position: 10
+      name: "Someone from your daughter's school's PTA calls to ask you to help coordinate the upcoming bake sale, you:"
+      description: "Someone from your daughter's school's PTA calls to ask you to help coordinate the upcoming bake sale, you:"
+
+      quiz_questions:
+        quiz_question_1:
+          position: 1
+          question: "Someone from your daughter's school's PTA calls to ask you to help coordinate the upcoming bake sale, you:"
+
+          quiz_answers:
+            quiz_answer_1:
+              answer: End up making 300 cupcakes, frosting and sprinkles all.
+              value: 300
+              position: 1
+            quiz_answer_2:
+              answer: Call several other moms and tell them what they should bake.
+              value: 100
+              position: 2
+            quiz_answer_3:
+              answer: Coordinate with other moms so that each person can make something different.
+              value: 200
+              position: 3

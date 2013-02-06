@@ -1,0 +1,15 @@
+<% @survey_output = capture do %>
+    <%= yield :bodycol %>
+<% end %>
+<%=
+    @template = Liquid::Template.parse(@survey.survey_display_instance)
+    @template.render('survey' => @survey_output)
+%>
+
+<% if RAILS_ENV == 'development' %>
+  <hr />
+  <h3>Session</h3>
+  <%= debug session %>
+  <hr />
+  <%= debug @user %>
+<% end %>

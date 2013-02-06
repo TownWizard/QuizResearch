@@ -1,0 +1,40 @@
+<% content_for :bodycol do %>
+
+  <div class="messages">
+    <%= "<div id=\"messages-notice\">#{flash[ :notice ]}</div>"  if flash[ :notice ] %>
+    <%= "<div id=\"messages-warn\">#{flash[ :warning ]}</div>" if flash[ :warning ] %>
+    <%= "<div id=\"messages-error\">#{flash[ :error ]}</div>"  if flash[ :error ] %>
+  </div>
+
+  <table>
+    <tr>
+      <td class="left">
+        <h3>Sign Up for Free!</h3>
+        <br /><br />
+          <%= render :partial => 'users/register_form' %>
+      </td>
+      <td class="right">
+        <h3>Please Log In</h3>
+        <br /><br />
+        <% form_for @user_session, :url => url_for( :controller => :sessions, :action => :create, :loc => params[ :loc ] ) do |f| -%>
+        <%= f.label 'login' %><br />
+        <%= f.text_field :login %>
+        <br />
+        <%= f.label 'password' %><br/>
+        <%= f.password_field :password %>
+        <br />
+        <!-- Uncomment this if you want this functionality
+        <%#= f.label 'remember_me', 'Remember me' %>
+        <%#= f.check_box 'remember_me', '1', @remember_me %>
+        <br />
+        -->
+        <br />
+        <%= submit_tag 'Log in' %>
+        <% end -%>
+        <br />
+        <a href="/maxwelldaily">Forgot my password</a> | <a href="/maxwelldaily">Help</a>
+      </td>
+    </tr>
+  </table>
+
+<% end %>

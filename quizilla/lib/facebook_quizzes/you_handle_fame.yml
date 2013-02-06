@@ -1,0 +1,210 @@
+quiz:
+  quiz_category_id: 5
+  name: How Would You Handle Fame?
+  quiz_photo_path: "handle_fame.jpg"
+  description: "When you picture the spotlight, do you see yourself in the center or somewhere in the shadows?  Are you the next Paris Hilton, dancing on tables and posing for the Paparazzi? Take this quiz to see how you'd handle fame."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: In your next life you will be Beyonce Knowles or Sasha Baron Cohen
+      recommendation: "You want as much celebrity as possible and will take every advantage that comes with it. You are Paris Hilton, Beyonce Knowles, Madonna and Sasha Baron Cohen rolled into one.You crave attention and will do nearly anything to get it. Not only is every activity a photo-op, you call the paparazzi in advance to tell them where you'll be. You love to be \"caught out shopping\" on Robertson and Rodeo, lunching at the latest LA hotspot, on the beach in the Riviera and/or posing at the latest designer boutique opening. You are not a stranger to embarrassing publicity, but have learned that any and all press is good press. Some might find you to be self-centered and high maintenance, but you know they're just jealous.Luckily, you were born to be a star and take full advantage of the perks. You aim to rule over a boundless empire: gold records, endorsements, commercials, an Oscar, a designer clothing line; you want it all. Over-exposure is not part of your lexicon. Bring the fame and bring the noise.You are purposeful and premeditated in your pursuit of press and notoriety. You constantly reinvent yourself in order to keep the public's interest. You do not shy away from controversy and, frequently, seek it out. You are unapologetic about your choices and do it your own way. Never one to be owned or told what to do, you have created the ultimate brand: yourself.To stay in the spotlight, you will do any stunts to shock your audience, so being in front of the paparazzi in pursuit of a good picture and crazy story that sells to all the tabloids is your main goal. You look forward to the most publicity and subsequent lawsuits. You are currently brainstorming your next MTV type stunt when you are finished with your latest documentary."
+      value_floor: 700
+      value_ceiling: 850
+    quiz_recommendation_1:
+      name: You are Meryl Streep and Ed Norton
+      recommendation: "You occasionally exploit the perks, but would keep your ego in check! You are Meryl Streep, Jennifer Lopez and Ed Norton rolled into one.A diva, you yearn to be a singular act at all times. Instead of interviews, you primarily express yourself through fashion, flawless make-up and hair. Rumors occasionally proliferate in the tabloids, but you rarely provide a response or acknowledgment. Your interviews and photos come at a price - the sale of your wedding and baby photos to popular magazines and tabloids draws top dollar. Overall, you prefer the glamour to the gossip. Your style is your brand.When you take on a role, you are a chameleon. The way you transform the various characters you portray, you completely nail them all, leaving the audience breathless. You are a good role model for young up and coming actors to follow by honing your craft to the max! None of the other actors want to be up against you in the best actress category because there is no chance. They are still honored to be in the same category as you and in your presence.In the end, you are the new generation of talent following in the footsteps of the great actors of all time and have starred in numerous Hollywood blockbusters. You lead a low key life and do interviews and talk shows when you are hyping a new film. The paparazzi does not focus on your social life and you stay away from Twitter, Facebook and MySpace and don't understand why someone would want to be tracked down 24 hours a day."
+      value_floor: 851
+      value_ceiling: 1300
+    quiz_recommendation_2:
+      name: You are like Tobey Maguire and Helen Mirren
+      recommendation: "You Prefer to Fly Under the Radar: You are most like Tobey Maguire, Sean Penn, Jennifer Garner and Helen Mirren wrapped up into one.When not filming or promoting a blockbuster movie, you rarely appear in the public eye or press. Your identity as a celebrity is tied only to your performances. You prefer to lead a quiet life with your family and react adversely to the intrusion of photographers. All in all, you tend to fly under the radar and raise little controversy.When pushed, you are fiercely private about your personal life and may become aggressive in your defense of it. You tend to lash out when your space is invaded. However, despite holding a close hand concerning your life behind the scenes, you tend to be quite outspoken about your political and/or social interests. A fine line is drawn-one often only clear to you--between the personal and the political.Though recognized everywhere you go, you generally avoid the press unless promoting a movie or appearing on the red carpet with your significant other. You strive to maintain your privacy and live a normal life, despite the hounding of photographers. Selling your personal photos to magazines or tabloids is not an option. Sometimes the paparazzi get too close, but you keep your poise and avoid confrontation.In the end you always show up at an awards show prepared and ready to take the best actor award home with you. The roles you prefer are period pieces where your character transforms back to another era, time and dress."
+      value_floor: 1301
+      value_ceiling: 2250
+      
+  facebook_quiz:
+    partner_site_id: 6
+    title: How Would You Handle Fame?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "When the paparazzi come calling how do you feel?"
+      description: "When the paparazzi come calling how do you feel?"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "When the paparazzi come calling how do you feel?"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "You want to fly under the radar"
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "You want the perks - but keep your ego in check"
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "You want more!  You want as much fame as possible"
+              value: 200
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "When invited to appear on various television shows to promote your new movie or single, you would:"
+      description: "When invited to appear on various television shows to promote your new movie or single, you would:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "When invited to appear on various television shows to promote your new movie or single, you would:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Make a quick solo trip to do the show. You like to bang out your promotional appearances as quickly and as professionally as possible. These interviews are just part of the job."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Arrive at the studio with an entourage - you can't go anywhere without your bodyguards, personal hairdresser, photographers, make-up artist, personal assistant, publicist, agent, and your kids' nanny. A big star comes with  a big staff."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Fly into town with your significant other and/or family to do the show and sneak in a vacation.  You don't travel anywhere without your loved ones."
+              value: 150
+              position: 3        
+    quiz_phase_02:
+      position: 2
+      name: "For relaxation you enjoy:"
+      description: "For relaxation you enjoy:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "For relaxation you enjoy:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Island get-away vacations, trips to the spa, massages, yoga.  When de-stressing, you like to take things down a notch.  Being pampered, soaking up the sun and moving at a slower pace makes you feel more centered and refreshed."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "A quiet night at home. You enjoy curling up with a good book or movie.  A glass of wine and your comfy couch melt away the stress of the day."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Shopping and lunch with your friends. You recharge while bonding with your friends over a champagne brunch and afternoon of browsing boutiques. Nothing is as fun as a day out with the girls."
+              value: 100
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "Paparazzi are mobbing your car as you try to pull out of your driveway. You:"
+      description: "Paparazzi are mobbing your car as you try to pull out of your driveway. You:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "Paparazzi are mobbing your car as you try to pull out of your driveway. You:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Try to stay calm and make a quick getaway - You can't avoid them.  Try not to lose your cool and you will get home before you know it."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Park and pose for a few photos - If they're there, why not? They'll print nicer things about you in the press if you cooperate. Besides, you don't want to earn the reputation of being difficult."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Politely decline, comment and continue on your way - Paparazzi are sometimes unavoidable. You choose to provide the least amount of ammunition for their tabloids. Creating a scene will only make them worse in the future."
+              value: 150
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "In addition to their Hollywood careers, celebrities often endorse products or launch their own brand.   You are most likely to market:"
+      description: "In addition to their Hollywood careers, celebrities often endorse products or launch their own brand.   You are most likely to market:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "In addition to their Hollywood careers, celebrities often endorse products or launch their own brand.   You are most likely to market:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Whatever your agent brings to the table - Satellite television, cellular phones, fast food, cosmetics, fashion houses, watches, sunglasses - provided it doesn't embarrass you."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Yourself. You ARE the brand. Far be it from a company owning you, you have created an empire based on your own image, style and publicity stunts. You started your own clothing line and look forward to the unexpected promotion of your wares."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Nothing. You aren't interested in being a brand and are happy to pass on such opportunities.  You let your work speak for itself."
+              value: 150
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "When it comes to political, social and/or environmental issues, you publicly support:"
+      description: "When it comes to political, social and/or environmental issues, you publicly support:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "When it comes to political, social and/or environmental issues, you publicly support:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "One focused issue that is important to you. Whether you are supporting your favorite political candidate, raising awareness about global warming or helping to fight AIDS in Africa, you have become an outspoken representative for your causes."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "You don't publicly comment on issues. You keep your opinions out of the press.  Someone will always find cause to disagree. You want as little drama as possible."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Whatever people seem to be talking about the most.  You don't discriminate if it will earn you ink.  Whether it's rocking the vote, the war in Darfur or saving the whales, you'll jump on the bandwagon if it keeps your name in the papers."
+              value: 225
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "An unflattering rumor is spreading about you in the tabloids and on the Internet. You:"
+      description: "An unflattering rumor is spreading about you in the tabloids and on the Internet. You:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "An unflattering rumor is spreading about you in the tabloids and on the Internet. You:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Feel stressed out. You call your publicist in a panic and ask her to perform damage control.  For the sake of your career, you must clear your name."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Play it up. Take advantage of the fact that you're getting press.  Again, bad publicity is still good publicity."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Don't read the tabloids or blogs and ignore it. Rumors mean nothing if you're not aware of them. They will disappear faster if you don't acknowledge them. Besides, you're not going to stoop to their level by answering to blatant lies."
+              value: 150
+              position: 3s
+    quiz_phase_07:
+      position: 7
+      name: "You are getting married. Do you:"
+      description: "You are getting married. Do you:"
+      active: true
+      quiz_questions:
+        quiz_question_0:
+          question: "You are getting married. Do you:"
+          position: 1
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Have the ceremony on a remote island away from prying eyes- though you might sell your photos afterward. Though you don't want photographers present on your special day, you still give the public what they want, on your own term."
+              value: 225
+              position: 1
+            quiz_answer_1:
+              answer: "Keep it hush-hush. Your private life is private.  Some things are to be kept sacred."
+              value: 150
+              position: 2
+            quiz_answer_2:
+              answer: "Hype it for months, invite the press to the ceremony and negotiate to sell your photos exclusively to the highest bidder.  Your wedding is the perfect opportunity to demonstrate your star power."
+              value: 100
+              position: 3
+  

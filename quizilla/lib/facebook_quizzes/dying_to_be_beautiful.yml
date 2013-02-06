@@ -1,0 +1,264 @@
+quiz:
+  quiz_category_id: 5
+  name: Are You Dying to be Beautiful?
+  quiz_photo_path: "Dying_Beautiful.jpg"
+  description: "Would you do anything to look good? Do you take risks when it comes to your beauty routine? Or is your health more important? Take this brief quiz to see if you might be putting your health in jeopardy all in the name of beauty."
+  partner_id: 3
+  active: true
+
+  quiz_recommendations:
+    quiz_recommendation_0:
+      name: "You're taking risks for beauty's sake"
+      recommendation: "Don't let your beauty turn beastly: You appear to be taking some risks when it comes to being beautiful that may be compromising your health. The most important way to prevent damaging your body is to thoroughly check out who performs your beauty procedures-whether it's tattooing, hair styling, cosmetic surgery, or skin care-before you do them. Never get an invasive medical procedure from anyone other than a licensed medical doctor. You are responsible for your health, and you look your best when you are healthy, well-rested, and maintain a well-balanced diet. No beauty procedure can take the place of those things."
+      value_floor: 1000
+      value_ceiling: 1666
+    quiz_recommendation_1:
+      name: "Don't cut corners when it comes to your beauty routines."
+      recommendation: "It is probably too good to be true: You may be taking unnecessary risks to be beautiful. Though you know enough not to get invasive procedures done by anyone other than a licensed physician is dangerous, you have been known to cut corners for some beauty procedures. When it comes to do it yourself beauty routines, never rely on claims made solely on the internet. Ask your dermatologist whether a certain item is safe to use on your hair, skin or nails. Though there are tons of websites selling fashion contact lenses, which can make your eyes look (temporarily) any color of the rainbow, improper use can lead to corneal abrasions and infections. Ask yourself, Is it worth the risk, just for one night of beauty?"
+      value_floor: 1667
+      value_ceiling: 2333
+    quiz_recommendation_2:
+      name: "Beauty comes from within"
+      recommendation: "You put your health before your looks: Good for you! You know that in order to look good, you have to feel good. And that includes not endangering your health all for the sake of beauty. You check out salons before getting your nails done, making sure the establishment is clean with equipment that is sterilized after each customer. Even better, you bring your own manicure tools. You don't allow any cutting of your cuticles, as this can introduce fungal infections. You check the expiration dates of your makeup, tossing old, expired products that may have picked up bacteria. You never share your makeup with anyone. As far as beauty procedures, you know to check references of anyone doing the work to make sure they are licensed. Finally, there is no such thing as a bargain when it comes to keeping you healthy and feeling good."
+      value_floor: 2334
+      value_ceiling: 3000
+
+  facebook_quiz:
+    partner_site_id: 6
+    title: Are You Dying to be Beautiful?
+    height: 1000
+    is_active: true
+    offer_url:
+
+  quiz_phases:
+    quiz_phase_00:
+      position: 0
+      name: "Are You Dying to be Beautiful?"
+      description: "Are You Dying to be Beautiful?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Are You Dying to be Beautiful?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "You may be putting your health (or even your life) at risk by doing some of these procedures to stay/get beautiful."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "You put your health before your looks."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "You take a few risks in the name of beauty but don't go over the line."
+              value: 200
+              position: 3
+    quiz_phase_01:
+      position: 1
+      name: "You hear the news that the effective diet pill you've been taking might not be safe to use and authority's looking into banning it in the U.S. You:"
+      description: "You hear the news that the effective diet pill you've been taking might not be safe to use and authority's looking into banning it in the U.S. You:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You hear the news that the effective diet pill you've been taking might not be safe to use and authority's looking into banning it in the U.S. You:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Think, \"I knew I shouldn't have taken it.\""
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Run out to the store and buy as much of the diet pills as possible so you won't run out."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Stop taking the pill and book an appointment immediately with your family doctor to see if there's been any damage done to your health."
+              value: 300
+              position: 3
+    quiz_phase_02:
+      position: 2
+      name: "You hear about a new product that allows you to do a do it yourself chemical peel that gives better result than most clinical procedures, you:"
+      description: "You hear about a new product that allows you to do a do it yourself chemical peel that gives better result than most clinical procedures, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You hear about a new product that allows you to do a do it yourself chemical peel that gives better result than most clinical procedures, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Think, \"that's a recipe for disaster! You leave that type of procedure to professionals.\""
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Ask your dermatologist for his opinion before you do anything."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Jump at the chance to look younger fast."
+              value: 100
+              position: 3
+    quiz_phase_03:
+      position: 3
+      name: "Your doctor tells you that wearing high heels throws off your center of balance and can lead to knee and other joint pain, you:"
+      description: "Your doctor tells you that wearing high heels throws off your center of balance and can lead to knee and other joint pain, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your doctor tells you that wearing high heels throws off your center of balance and can lead to knee and other joint pain, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Still wear them every day! They make your legs look a mile long and you get frequent compliments."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Have switched to dressy flats. There are so many styles and different fabrics and colors; you don't even miss your heels."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "Limit the wearing of heels to just a few hours at a time and special occasions."
+              value: 200
+              position: 3
+    quiz_phase_04:
+      position: 4
+      name: "Your friend is hosting an at-home Botox party and you are invited. Chips, dips and younger skin, what do you think?"
+      description: "Your friend is hosting an at-home Botox party and you are invited. Chips, dips and younger skin, what do you think?"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your friend is hosting an at-home Botox party and you are invited. Chips, dips and younger skin, what do you think?"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "I'll go to the party and ask the practitioner a thousand questions before I allow it."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "I'll be there! Botox is a routine activity for me and it's even better that I can get another session in with my friends."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "No thanks. There's no way to be able to check the credentials of the person doing the injections beforehand, so it's too risky."
+              value: 300
+              position: 3
+    quiz_phase_05:
+      position: 5
+      name: "It's the middle of February and you are enduring this winter's eighth snowstorm and 10-degree days. When you think of a visit to an indoor tanning bed to get a healthy bronze glow, you think:"
+      description: "It's the middle of February and you are enduring this winter's eighth snowstorm and 10-degree days. When you think of a visit to an indoor tanning bed to get a healthy bronze glow, you think:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "It's the middle of February and you are enduring this winter's eighth snowstorm and 10-degree days. When you think of a visit to an indoor tanning bed to get a healthy bronze glow, you think:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Is it safe? There's no such thing as healthy tan; it just means skin damage."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "I just might. I can't take this weather and what it does to my skin."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "I need it again soon! I've been going all winter to perk up my mood and make you look sunkissed."
+              value: 100
+              position: 3
+    quiz_phase_06:
+      position: 6
+      name: "Your 10th high school reunion is coming up in 2 weeks and you'dlike to look your best, so you:"
+      description: "Your 10th high school reunion is coming up in 2 weeks and you'dlike to look your best, so you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your 10th high school reunion is coming up in 2 weeks and you'dlike to look your best, so you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Go on an all-liquid diet, which you find is the quickest way to drop a few pounds."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Keep up your usual healthy eating regimen but go on a shopping trip to find the perfect outfit that would make you slim and sexy."
+              value: 300
+              position: 2
+            quiz_answer_2:
+              answer: "Increase your visits to the gym from 3 to 5 per week the 4 weeks prior to the reunion."
+              value: 200
+              position: 3
+    quiz_phase_07:
+      position: 7
+      name: "You'd love to have silky straight hair like you see on the models in magazine ads. You've researched a keratin treatment that ensures great results, but it contains formaldehyde, you:"
+      description: "You'd love to have silky straight hair like you see on the models in magazine ads. You've researched a keratin treatment that ensures great results, but it contains formaldehyde, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "You'd love to have silky straight hair like you see on the models in magazine ads. You've researched a keratin treatment that ensures great results, but it contains formaldehyde, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Research the negative effect of formaldehyde, including asking different hairdressers what they do to protect themselves, before deciding whether or not to take the plunge."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Make an appointment with your hairdresser. Silky hair has always been your dream."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Skip this one. You don't want to chemicals in your hair and getting into your bloodstream."
+              value: 300
+              position: 3
+    quiz_phase_08:
+      position: 8
+      name: "A friend recently had permanent eye makeup applied. It looks beautiful and the idea of taking time off your morning beauty routine is tempting, you:"
+      description: "A friend recently had permanent eye makeup applied. It looks beautiful and the idea of taking time off your morning beauty routine is tempting, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "A friend recently had permanent eye makeup applied. It looks beautiful and the idea of taking time off your morning beauty routine is tempting, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Say, no thanks. You think the idea of tattoos on your eyelids sounds positively barbaric."
+              value: 300
+              position: 1
+            quiz_answer_1:
+              answer: "Want to wait until the long-term effects, if any, come to light."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Make an appointment at your local MediSpa to get it done."
+              value: 100
+              position: 3
+    quiz_phase_09:
+      position: 9
+      name: "Color contact lenses are all the rage in beauty magazines. Your friend found a website that sells fashion contact lenses, you:"
+      description: "Color contact lenses are all the rage in beauty magazines. Your friend found a website that sells fashion contact lenses, you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Color contact lenses are all the rage in beauty magazines. Your friend found a website that sells fashion contact lenses, you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Tell her to go ahead and order them for you, because you think you'll have beautiful and exotic looking eyes."
+              value: 100
+              position: 1
+            quiz_answer_1:
+              answer: "Tell her that you don't trust a website that sells contacts without a prescription."
+              value: 200
+              position: 2
+            quiz_answer_2:
+              answer: "Talk to someone you see wearing them and ask if they've had any problems with them."
+              value: 100
+              position: 3
+    quiz_phase_10:
+      position: 10
+      name: "Your boyfriend cuts out a magazine picture of a model with a pierced tongue and says \"that's so sexy!\", so you:"
+      description: "Your boyfriend cuts out a magazine picture of a model with a pierced tongue and says \"that's so sexy!\", so you:"
+      quiz_questions:
+        quiz_question_0:
+          position: 1
+          question: "Your boyfriend cuts out a magazine picture of a model with a pierced tongue and says \"that's so sexy!\", so you:"
+          quiz_answers:
+            quiz_answer_0:
+              answer: "Buy some body jewelry to experiment with different looks."
+              value: 200
+              position: 1
+            quiz_answer_1:
+              answer: "Rush out to a tattoo parlor to check out different piercing options."
+              value: 100
+              position: 2
+            quiz_answer_2:
+              answer: "Say, no way because it can damage your teeth and gums."
+              value: 300
+              position: 3

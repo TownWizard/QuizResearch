@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quizzes>
+  <quiz_detail>
+    <quiz_metadata>
+      <category_identifier/>
+      <description/>
+      <start_date_time/>
+      <end_date_time/>
+      <start_quiz_uri>http://af-entertainment.synapsetest.com:3001/quizzes/open/new</start_quiz_uri>
+      <title>Do you feel physically attractive?</title>
+      <total_quiz_phases>8</total_quiz_phases>
+      <post_parameter>
+        <type>hidden</type>
+        <name>quiz_id</name>
+        <value>1</value>
+      </post_parameter>
+    </quiz_metadata>
+    <lead_question>
+      <quiz_question>
+        <question_text>Do you feel physically attractive?</question_text>
+        <answer_option>
+          <answer_option_text>Yes</answer_option_text>
+          <position>1</position>
+          <post_parameter>
+            <type>radio</type>
+            <name>lqa</name>
+            <value>105</value>
+          </post_parameter>
+        </answer_option>
+        <answer_option>
+          <answer_option_text>Somewhat</answer_option_text>
+          <position>2</position>
+          <post_parameter>
+            <type>radio</type>
+            <name>lqa</name>
+            <value>106</value>
+          </post_parameter>
+        </answer_option>
+      </quiz_question>
+    </lead_question>
+  </quiz_detail>
+  <quiz_detail>
+    <quiz_metadata>
+      <category_identifier/>
+      <description/>
+      <start_date_time/>
+      <end_date_time/>
+      <start_quiz_uri>http://af-entertainment.synapsetest.com:3001/quizzes/open/new</start_quiz_uri>
+      <title>How Happy Are You?</title>
+      <total_quiz_phases>3</total_quiz_phases>
+      <post_parameter>
+        <type>hidden</type>
+        <name>quiz_id</name>
+        <value>3</value>
+      </post_parameter>
+    </quiz_metadata>
+    <lead_question>
+      <quiz_question>
+        <question_text>How Happy are you?</question_text>
+        <answer_option>
+          <answer_option_text>I'm on a path to my dreams</answer_option_text>
+          <position>1</position>
+          <post_parameter>
+            <type>radio</type>
+            <name>lqa</name>
+            <value>107</value>
+          </post_parameter>
+        </answer_option>
+        <answer_option>
+          <answer_option_text>Somewhat happy</answer_option_text>
+          <position>2</position>
+          <post_parameter>
+            <type>radio</type>
+            <name>lqa</name>
+            <value>108</value>
+          </post_parameter>
+        </answer_option>
+        <answer_option>
+          <answer_option_text>Not really happy</answer_option_text>
+          <position>3</position>
+          <post_parameter>
+            <type>radio</type>
+            <name>lqa</name>
+            <value>109</value>
+          </post_parameter>
+        </answer_option>
+      </quiz_question>
+    </lead_question>
+  </quiz_detail>
+</quizzes>

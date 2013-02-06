@@ -1,0 +1,9 @@
+staging:
+  aws_access_key: AKIAIJA5H2JATKBRQEFQ
+  aws_secret_access_key: c1mQfFu7+u902ETZ2kC1hup4sNIDON3yzJ6hZODn
+  bucket_base_name: yourbucket
+
+production:
+  aws_access_key: AKIAIJA5H2JATKBRQEFQ
+  aws_secret_access_key: c1mQfFu7+u902ETZ2kC1hup4sNIDON3yzJ6hZODn
+  bucket_base_name: yourbucket

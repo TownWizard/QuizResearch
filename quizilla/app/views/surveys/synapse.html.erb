@@ -1,0 +1,27 @@
+<% content_for :bodycol do %>
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td style="border: 0;">&nbsp;</td>
+        <td style="text-align: center; border: 0;">
+          <strong style="color: #999; font-size: 1.2em;">Synapse Survey Demo</strong>
+          <br />
+          <img src="/images/surveys/synapse_arrow_down.gif" alt="Synapse Survey Demo" style="margin-top: 7px;" />
+        </td>
+      </tr>
+      <tr>
+        <td>Store Id</td>
+        <td><input type="text" name="store_id" /></td>
+      </tr>
+      <tr>
+        <td>Survey Code</td>
+        <td><input type="text" name="survey_id" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: right;">
+          <input type="button" onclick="window.location.href='/surveys/31'" value="Continue" />
+        </td>
+      </tr>
+    </table>
+  </form>
+<% end %>

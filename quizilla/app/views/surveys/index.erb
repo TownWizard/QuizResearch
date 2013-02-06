@@ -1,0 +1,62 @@
+<% content_for :bodycol do %>
+
+    <%#= debug @xml %>
+
+    <form action="<%= @base_request_uri %><%= ENV[ 'sport' ]%>/surveys/<%= @survey.id %> " method="post">
+      <input name="authenticity_token" type="hidden" value="<%= @token %>" />
+      <input type="hidden" name="qid" value="<%= @quiz.id %>" />
+
+      <% if session[ :user_id ] %>
+        <input type="hidden" name="user_id" value="<%= session[ :user_id ] %>" />
+      <% end %>
+
+    <% @xml.find( "/quiz/post_parameter" ).each do |pp| %>
+        <input type="hidden" name="<%= pp.find_first( "name" ).content %>" value="<%= pp.find_first( "value" ).content %>" />
+      <% end %>
+      <!--
+      <input type="hidden" name="qiid" value="<%= @qiid %>" />
+      <input type="hidden" name="qpid" value="<%= @qpid %>" />
+      -->
+
+      
+      <table style="width: 700px;">
+        <caption style="text-align: left;">
+          <div style="float:right;">
+            Your survey is
+            <%
+                if @xml.find_first("/quiz/post_parameter[name='quiz_page']/value")
+                    completion_percentage = ((@xml.find_first("/quiz/post_parameter[name='quiz_page']/value").inner_xml.to_f / @xml.find_first("total_quiz_phases").inner_xml.to_f) * 100).floor
+                else
+                    completion_percentage = 0
+                end
+            %>
+            <%= completion_percentage %>%
+            complete
+          </div>
+          <strong><%= @xml.find_first("name").inner_xml %></strong>
+        </caption>
+        <% questions = @xml.find("/quiz/quiz_phase/quiz_question").each do |q| %>
+            <tr>
+                <td><%= q.find_first("question_text").inner_xml %></td>
+                 <% q.find("answer_option").each do |a| %>
+                      <td>
+                          <%
+                              input_type = a.find_first("post_parameter/type").inner_xml
+                              input_name = a.find_first("post_parameter/name").inner_xml
+                              input_value = a.find_first("post_parameter/value").inner_xml
+                              answer_text = a.find_first("answer_option_text").inner_xml
+                          %>
+                          <input type="<%= input_type %>" name="<%= input_name %>" value="<%= input_value %>" />
+                          <%= answer_text %>
+                      </td>
+                 <% end %>
+           </tr>
+        <% end %>
+
+      </table>
+      
+      <input type="submit" value="Continue" />
+
+    </form>
+
+<% end %>

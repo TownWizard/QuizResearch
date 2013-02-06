@@ -1,0 +1,2 @@
+module Publishers::QuizCategoriesHelper
+end
