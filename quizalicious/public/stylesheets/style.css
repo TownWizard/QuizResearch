@@ -1,0 +1,454 @@
+/*-----------------------------------------------------------------------------------*/
+/*	Setup
+/*-----------------------------------------------------------------------------------*/
+.wrapper{
+  width: 740px;
+/*  height:200px;*/
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:20px;
+
+
+}
+.right{
+  float:right;	 /* A class I always add to float items right */
+}
+
+.right img {
+    vertical-align: top;
+}
+.left{
+  float:left;
+}
+
+.post-left{
+  float:left;
+  width: 106px;
+  margin-right: 10px;    /* To float items left*/
+  height: 74px;
+}
+
+.post-left img {
+    padding:1px;
+    border:1px groove black;
+}
+
+.post-right {
+  float: left;
+  width: 400px;
+}
+
+.post-right {
+    font-family: verdana;
+}
+
+.post-right h3 {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	Building Blocks
+/*-----------------------------------------------------------------------------------*/
+
+.maincontent{
+  width:525px;
+  float:left;
+  margin-top: 28px;
+}
+.sidebar{
+  width:230px;
+  float:right;
+}
+body, input{
+  background: white;
+  font-size: 11px;
+  font-family: verdana;
+  color: #333;
+  line-height: 1.28;
+  word-wrap:break-word;
+
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Typography
+/*-----------------------------------------------------------------------------------*/
+
+a{
+  cursor: pointer;
+  color: #3B5998;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+strong{
+  font-weight:bold;
+}
+em{
+  font-style:italic;
+}
+h3{
+  font-size: 16px;
+  font-weight:bold;
+  line-height: 1.1em;
+  margin-bottom:6px;
+}
+.postInfo{
+  display:block; /* Spans are inline element so needs to be changed to block in order for the margin to work */
+  color:#808080;
+  margin-top:5px;
+  margin-bottom:10px;
+}
+p{
+  font-family: verdana;
+  font-size: 11px;
+  line-height: 1.2em;
+  margin-bottom:18px;
+  text-align: justify;
+}
+.line{
+  display:block;
+  width:100%;
+  height:1px;
+  background-color:#E2E2E2;
+  margin-top:22px;
+  margin-bottom:5px;
+}
+.more{
+  color:#3B5998;
+  font-weight:bold;
+
+}
+.likesCount{
+  font-size:16px;
+  font-weight:bold;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	Tabs
+/*-----------------------------------------------------------------------------------*/
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+  height: 24px; /*--Set height of tabs--*/
+  border-bottom: 1px solid #E2E2E2;
+  border-left: 1px solid #E2E2E2;
+  width: 100%;
+  margin-bottom:20px;
+  /*        margin-left: 52px;*/
+}
+ul.tabs li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: 23px; /*--Minus 1px from the height of  ul--*/
+  line-height: 24px; /*--aligns text within the tab--*/
+  border: 1px solid #E2E2E2;
+  margin-bottom: -1px; /*--Pull the list item down 1px--*/
+  overflow: hidden;
+  position: relative;
+  background: #f2f2f2;
+  margin-right:5px;
+  min-width:73px;
+  text-align:center;
+
+}
+ul.tabs li:first-child{ /*--Removes the left border from the first child of the list--*/
+                        border-left:none;
+
+}
+ul.tabs li a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+  font-size: 11px;
+
+  padding-right:5px;
+  padding-left:5px;
+
+  outline: none;
+}
+ul.tabs li a:hover {
+  background: #fff;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+                                                          background: #fff;
+                                                          border-bottom: 1px solid #fff;
+                                                          color:#3B5998;
+}
+ul.tabs li.active a{
+  color:#3B5998;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Buttons
+/*-----------------------------------------------------------------------------------*/
+.button{
+  background-color:#ECEEF5;
+  border:1px solid #CAD4E7;
+  text-decoration:none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 2px 3px 2px 2px;
+  margin-right:5px;
+}
+.button:hover{
+  border:1px solid #9DACCE;
+  text-decoration:none;
+
+}
+.buttonimage{
+  background:url(../images/icon.png);
+  color: #3B5998;
+  display: block;
+  height:12px;
+  margin-right:3px;
+  margin-top:1px;
+  margin-bottom:1px;
+  margin-left:2px;
+
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Extra Components
+/*-----------------------------------------------------------------------------------*/
+.logo{
+  width:425px;
+  height:60px;
+  /*margin-left:auto;*/
+  margin-right:5px;
+  margin-bottom:26px;
+  position: relative;
+/*  -moz-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);
+  box-shadow: 0 14px 10px -12px rgba(0,0,0,0.7);*/
+}
+.search{
+  padding: 1px 5px 2px 0;
+  margin-bottom:20px;
+  width:160px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.like-share {
+  padding: 1px 5px 2px 0;
+  margin-top: 8px;
+  float: left;
+  margin-left: 80px;
+}
+.tabHeader{
+  background-color: #F2F2F2;
+  border-top: solid 1px #E2E2E2;
+  padding: 4px 5px 5px;
+  margin-top:28px;
+  margin-bottom:4px;
+}
+.profileimage{
+  float:left;
+  margin-right: 5px;
+}
+.post {
+  font-family: verdana;
+  display:block;
+  width:100%;
+  height: 94px;
+ /* border-bottom: 1px dotted; 
+  margin-right: 10px;*/
+}
+.post p {
+  font-size: 11px;
+  line-height: 1.3em;
+  margin-bottom: 18px;
+  color: #333333 !important;
+}
+
+.post .right-upper-corner {
+
+}
+
+.blue_quiz {
+  color: #3B5998 !important;
+}
+
+.main-blue-header {
+   width:740px;
+   height: 70px;
+   background: url('../images/quiz.gif') no-repeat;
+}
+
+.main-blue-header #sidebar {
+    width:205px;
+    float:right;
+    margin-right:0px;
+}
+
+.tab_container {
+    width: 525px;
+    clear: both;
+}
+
+h3.tab-header-text {
+    color: #2F477A;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom: 8px;
+}
+.share_quizilicious {
+    cursor: pointer;
+}
+
+.quizzes-line {
+    display:block;
+  width:100%;
+  height:1px;
+  background-color:#E2E2E2;
+  margin-top:0px;
+  margin-bottom:20px;
+}
+
+.quizzes-header-line {
+    display:block;
+  width:100%;
+  height:1px;
+  background-color:#E2E2E2;
+  margin-top:14px;
+  margin-bottom:15px;
+}
+
+.blue-number {
+    background-color: #254B82;
+    color: white;
+}
+
+.quiz-bottom-line {
+    display:block;
+  width:100%;
+  height:1px;
+  background-color:#E2E2E2;
+  margin-top:24px;
+  
+}
+
+.quiz {
+    width:100%;
+}
+
+.quiz .quiz-question {
+    font-family: verdana;
+    color: #3B5998;
+}
+
+.quiz .quiz-question .quiz-number {
+    background-color: #254B82;
+    color: white;
+    display: block;
+/*    height: 19px;*/
+    width: auto;
+    vertical-align: center;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    float: left;
+    margin-top: 2px;
+    margin-right: 5px;
+    padding: 2px;
+    letter-spacing: -1px;
+}
+
+.quiz .quiz-question .quiz-question-text {
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.right-bottom {
+    float: right;
+    margin-top: 5px;
+}
+
+.right-bottom img {
+    vertical-align: bottom;
+}
+
+.share_quiz, .like_quiz {cursor: pointer;}
+
+.result-thanks-share {
+     font-family: verdana;
+     display:block;
+     font-size: 12px;
+     width:503px;
+     height: 44px;
+     margin: 2px 0px 20px 0px;
+/*     border: 1px solid black;*/
+     padding: 10px;
+     background-color: #F0F0F0;
+}
+
+.result-thanks-share p.result-thanks-share-left {
+    width:390px;
+    float: left;
+}
+
+.result-thanks-share p.result-thanks-share-right {
+    width:54px;
+    float: right;
+}
+
+.result-recomadation {
+    font-family: verdana;
+     display:block;
+/*    border: 1px solid black;*/
+    background-color: #CCCCCC;
+    padding: 10px;
+    height: 300px;
+}
+
+.result-quizzes-line {
+    display:block;
+  width:100%;
+  height:1px;
+  background-color:black;
+  margin-top:0px;
+  margin-bottom:10px;
+}
+
+.share_result {
+    margin-top: 3px;
+}
+
+.see_friends_result_link {
+    margin-top: 3px;
+}
+
+.result-quiz-recommadation {
+    width: 520px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.result-quiz-recommadation .result-quiz-image {
+    float: left;
+}
+
+.result-quiz-recommadation .result-quiz-title {
+    width: 360px;
+    float: right;
+}
+
+.quiz-text {
+    float: left;
+    padding: 10px;
+    outline: none;
+}
+
+.no-thanks {
+    float:right;
+    font-size: 11px;
+    font-weight:bold;
+    padding: 8px;
+    text-decoration: none;
+}

@@ -1,0 +1,162 @@
+<%= javascript_include_tag 'tinybox'  %>
+<% x = "quiz_request/completed_quiz_result" %>
+<% quiz_id = @result_xml.xpath("#{x}/value").text %>
+<% quiz_image_path = @result_xml.xpath("#{x}/image_path").text %>
+<% facebook_quiz = FacebookQuiz.find(:first, :conditions => ['quiz_id =? AND partner_site_id =?', quiz_id, @partner_site.id])  %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    function postToFeed(ans_type) {
+      // calling the API ...
+      var quiz_result = "";
+      if(ans_type=='short') {quiz_result = "<%= @result_xml.xpath("#{x}/quiz_recommendation_title").text %>";}
+      else {
+        quiz_result = <%= @result_xml.xpath("#{x}/overall_recommendation_text").text.to_json %>;
+      }
+
+      var obj = {
+        method: 'feed',
+        name: "<%= @quiz.name %>",
+        caption: 'I just took this quiz',
+        link: "http://apps.facebook.com/quizalicious/quizzes/<%= @quiz.id %>/start",
+        picture: "http://quizalicious.facebook.quizresearch.com/images/<%= @quiz.quiz_photo_path %>",
+        description: quiz_result
+      };
+
+      function callback(response) {
+        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+      }
+
+      FB.ui(obj, callback);
+    }
+
+    function sendRequestViaMultiFriendSelector() {
+      FB.ui({method: 'apprequests',
+        message: 'My Great Request'
+      }, requestCallback);
+    }
+
+    // window.onload = function() {
+    //   TINY.box.show({html: "<br /><p style='float: left; font-family: verdana; font-size: 14px; font-weight:bold; padding: 8px;'>View a great offer from a trusted partner to<br /> see a full result.</p><a href='javascript:TINY.box.hide()' style='float:right; font-family: verdana; font-size: 11px; font-weight:bold; padding: 8px;'>No Thanks<img src='/images/cross.jpg' /></a>",iframe:'http://www.scriptiny.com/',boxid:'frameless',width:525,height:650,fixed:false,top:370,left:-7,close:false,closejs:function(){closeJS()}});
+    //                          TINY.box.show({url:'http://quizalicious.facebook.quizresearch.com:3003/quiz_offers',boxid:'frameless',width:525,height:0,fixed:false,top:370,left:-7,close:false,closejs:function(){closeJS()}});
+    //                         };
+    $(".wall_post").live("click", function(){
+      postToFeed("short");
+    });
+    $(".wall_post_long").live("click", function(){
+      postToFeed("long");
+    });
+    $(".see_friends_result_link").live("click", function(){
+      sendRequestViaMultiFriendSelector();
+    });
+  });
+</script>
+
+<% unless facebook_quiz.offer_url.blank? %>
+  <script type="text/javascript">
+    $(function(){
+      TINY.box.show({url:'http://quizalicious.facebook.quizresearch.com<%= ENV['fport'] %>/quizzes/<%= facebook_quiz.id %>/quiz_offers',boxid:'frameless',width:525,height:0,fixed:false,top:285,left:-7,close:false,closejs:function(){closeJS()}});
+      function closeJS() {
+        $(".share_result").removeClass("wall_post").addClass("wall_post_long");
+      }
+    })
+    <%#*window.onload = function() {%>
+      //TINY.box.show({url:'http://quizalicious.facebook.quizresearch.com<%= ENV['fport'] %>/quizzes/<%#= facebook_quiz.id %>/quiz_offers',boxid:'frameless',width:525,height:0,fixed:false,top:370,left:-7,close:false,closejs:function(){closeJS()}});
+    <%#*}%>
+  </script>
+<% end %>
+
+<h3>
+  <%= @result_xml.xpath("#{x}/name").text %>
+</h3>
+<div class="quizzes-line" style="margin-bottom: 10px;"></div>
+
+<div class="result-quiz-recommadation">
+  <div class="result-quiz-image">
+    <%# image_partition = quiz_image_path.split(".") %>
+    <%# image_name = "#{image_partition[0]}-140x120.#{image_partition[1]}" %>
+    <% unless quiz_image_path.blank? %>
+      <%= image_tag quiz_image_path %>
+    <% else %>
+      <%= image_tag("sampleLogo.jpg", :size => "140x120") %>
+    <% end %>
+  </div>
+  <div class="result-quiz-title">
+    <h3 class="tab-header-text"><%= @result_xml.xpath("#{x}/quiz_recommendation_title") %></h3><br />
+    <%= link_to image_tag("like.jpg", :class => "like_quiz"), "#" %>
+    <%= link_to image_tag("post-to-my-wall-blue.jpg", :class => "share_result #{facebook_quiz.offer_url.blank? ? 'wall_post_long' : 'wall_post'}"), "#" %>
+    <%#= link_to image_tag("see-friends-result-blue.jpg", :class => "see_friends_result_link"), "#" %>
+  </div>
+</div>
+
+<div>
+  <%= @result_xml.xpath("#{x}/overall_recommendation_text").text %>
+</div>
+
+<!--div class="post">
+  <div class="post-left"> </div>
+  <div class="post-right" style="margin-top: 5px">
+    <div class="left">
+      <p>
+<%#= image_tag("share.jpg", :class => "share_quiz") %>
+<%#= image_tag("like.jpg", :class => "like_quiz") %>
+      </p>
+    </div>
+    <div class="right"> </div>
+  </div>
+</div--><!--End Blog Post-->
+
+<!--<div class="result-recomadation">
+  <h3><%#= @result_xml.xpath("#{x}/name").text %></h3>
+  <div class="result-quizzes-line"></div>
+  <div class="post-left">
+<%# quiz_image_path = @result_xml.xpath("#{x}/image_path").text %>
+<%# if !quiz_image_path.eql?("") %>
+<%#= image_tag quiz_image_path %>
+<%# else %>
+<%#= image_tag("sample.png") %>
+<%# end %>
+  </div>
+  <div class="right" style="width: 358px;">
+    <h3><%#= @result_xml.xpath("#{x}/quiz_recommendation_title") %></h3>
+    <br />
+<%#= @result_xml.xpath("#{x}/overall_recommendation_text").text %>
+    <br />
+<%#= link_to image_tag("like-border.jpg", :class => "like_quiz"), "#" %>
+<%#= link_to image_tag("post-to-my-wall.jpg", :class => "post_to_my_wall_link"), "#" %>
+<%#= link_to image_tag("see-friends-result.jpg", :size => "148x24", :class => "see_friends_result_link"), "#" %>
+  </div>
+</div>-->
+<div style="margin: 20px;"></div>
+<div class="clear"></div>
+
+<div class="tab_container">
+  <div id="tab1" class="tab_content">
+    <h3 class="tab-header-text">Suggested Quizzes For You</h3>
+    <div class="quizzes-header-line"></div>
+    <% @catalog_xml.xpath("/quizzes/quiz_detail").each do |quiz_detail| %>
+      <% unless quiz_detail.xpath("quiz_metadata/post_parameter/value").text.to_i == @quiz.id.to_i %>
+        <div class="post">
+          <div class="post-left">
+            <% quiz_image_path = quiz_detail.xpath("quiz_metadata/image_path").text %>
+            <% image_partition = quiz_image_path.split(".") %>
+            <% image_name = "#{image_partition[0]}-thumb.#{image_partition[1]}" %>
+            <% if !quiz_image_path.eql?("") %>
+              <%= image_tag image_name %>
+            <% else %>
+              <%= image_tag("sample.png") %>
+            <% end %>
+          </div>
+          <div class="post-right">
+            <h3>
+              <%= link_to quiz_detail.xpath("quiz_metadata/title").text, "/quizzes/" + quiz_detail.xpath("quiz_metadata/post_parameter/value").text.to_s + "/start" %>
+            </h3>
+            <p><%= quiz_detail.xpath("quiz_metadata/description") %></p>
+          </div>
+        </div><!--End Blog Post-->
+        <div class="quizzes-line"></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="tab_container" style="width: 100%;">
+  <div id="tab1" class="tab_content">
+    <h3 class="tab-header-text">All Quizzes</h3>
+    <div class="quizzes-header-line"></div>
+    <% @xml.xpath("/quizzes/quiz_detail").each do |quiz_detail| %>
+      <div class="post">
+
+        <div class="post-left">
+          <% quiz_image_path = quiz_detail.xpath("quiz_metadata/image_path").text %>
+          <% image_partition = quiz_image_path.split(".") %>
+          <% image_name = "#{image_partition[0]}-thumb.#{image_partition[1]}" %>
+          <% if !quiz_image_path.eql?("") %>
+          <%= image_tag image_name %>
+          <% else %>
+          <%= image_tag("sample.png") %>
+          <% end %>
+        </div>
+        <div class="post-right" style="width: 75%;">
+          <h3>
+            <%#= link_to quiz_detail.xpath("quiz_metadata/title").text, quiz_path(quiz_detail.xpath("quiz_metadata/post_parameter/value").text), :target => '_top' %>
+            <%= link_to quiz_detail.xpath("quiz_metadata/title").text, "http://apps.facebook.com/quizalicious/quizzes/" +quiz_detail.xpath("quiz_metadata/post_parameter/value").text + "/start", :target => '_parent' %>
+          </h3>
+          <p><%= quiz_detail.xpath("quiz_metadata/description") %></p>
+        </div>
+      </div><!--End Blog Post-->
+      <div class="quizzes-line"></div>
+    <% end %>
+  </div>
+</div>

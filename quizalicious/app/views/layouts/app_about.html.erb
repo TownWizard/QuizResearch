@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Quizalicious - An Integrated Facebook App</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css" />
+    <%= stylesheet_link_tag 'style', 'tinybox' %>
+    <%= javascript_include_tag ['jquery-1.6.1', 'rails', 'myjava']   %>
+  </head>
+  <body style="overflow: hidden;">
+    <script>
+      var onload=[];
+
+      /** function to ensure FB.init has completed before executing some code
+       *
+       * Usage:
+       * fbEnsureInit(function() {
+       *		console.log("this will be run once FB is initialized");
+       *	});
+       * @param {Object} callback
+       */
+
+
+      function fbEnsureInit(callback) {
+        if(!window.fbApiInit) {
+          setTimeout(function() {fbEnsureInit(callback);}, 50);
+        } else {
+          if(callback) {
+            callback();
+          }
+        }
+      }
+
+      function postToFeed() {
+
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          name: 'Quizalicious App',
+          caption: 'The Facebook Survey Application',
+          link: 'http://apps.facebook.com/quizalicious/',
+          picture: 'https://fbcdn-photos-a.akamaihd.net/photos-ak-snc1/v43/107/195357823870463/app_1_195357823870463_824.gif',
+          description: 'Lorium Ipsum Lorium Ipsum Lorium Ipsum Lorium Ipsum Lorium Ipsum '
+        };
+
+        function callback(response) {
+          document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+
+      $(document).ready(function(){
+        $(".share_quizilicious").click(function(){
+          postToFeed();
+      });
+      });
+    </script>
+
+    <% fb_connect_async_js  do %>
+      <%= yield :fb_connect%>
+       FB.Canvas.setAutoResize();
+       fbApiInit = true; //init flag
+       FB.XD._origin = (window.location.protocol+'//'+window.location.host+'/'+FB.guid());
+
+      FB.getLoginStatus(function(response) {
+      if (response.session) {
+     // alert('the user is logged in');
+
+      }
+      else {
+     // alert('the user is not logged in');
+      }
+      });
+
+      FB.Event.subscribe('auth.sessionChange', function(response) {
+      if (response.session) {
+     // alert('user logged in');
+        var body = 'I have just use the quizalicious facebook application and enjoying quizzes provided over there.';
+        FB.api('/me/feed', 'post', { message: body }, function(response) {});
+      } else {
+     //  alert('user logged out.  redirecting');
+         logout();
+     }
+       });
+
+    <% end %>
+
+    <% if flash[:notice] %>
+      <p class="fbinfobox"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <p class="fberrorbox"><%= flash[:error] %></p>
+    <% end %>
+
+    <div class="wrapper" style="width: 100%;">
+
+      <div class="main-blue-header" style="width: 100%;">
+        <div id="quiz-logo"><%= image_tag("quiz_txt.jpg", :class => "quiz-text") %></div>
+        <div id="sidebar">
+          <div class="like-share">
+            <%= image_tag("share.jpg", :class => "share_quizilicious") %>
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fapps.facebook.com%2Fquizalicious%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21&amp;appId=181190478600032" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:21px;" allowTransparency="true"></iframe>
+          </div>
+
+
+<!--          <form action="/" method="get">
+            <input name="search" class="search" placeholder="Filter quizalicious posts" />
+
+            <input type="submit" name="Go" value="Go" />
+          </form> -->
+        </div>
+      </div>
+
+      <!--Main Content-->
+      <div class="maincontent" style="width: 100%;">
+        <%= yield %>
+      </div>
+      <!--End Main Content-->
+
+    </div>
+
+  </body>
+
+</html>

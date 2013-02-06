@@ -1,0 +1,162 @@
+<%
+if @xml.xpath("/quiz").size > 0
+  x = "quiz"
+  y = "/#{x}/quiz_request_metadata/"
+elsif @xml.xpath("/quiz_request/completed_quiz_result").size > 0
+  x = "quiz_request/completed_quiz_result"
+  y = "/#{x}/quiz_recommendation_title"
+else
+  x = "quiz_request"
+  y = "/#{x}/quiz_request_metadata/"
+end
+
+pd = @xml.xpath("/#{x}/quiz_phase/description")
+phase_description = pd[ 0 ].content if pd.size > 0
+%>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    function postToFeed() {
+
+      // calling the API ...
+      var obj = {
+        method: 'feed',
+        name: "<%= @xml.xpath("#{x}/quiz_request_metadata/name").text %>",
+        caption: 'Quizalicious App',
+        link: "http://apps.facebook.com/quizalicious/quizzes/<%= @quiz.id %>/start",
+        picture: "http://quizalicious.facebook.quizresearch.com/images/<%= @quiz.quiz_photo_path %>",
+        description: "<%= @quiz.description.gsub('"', '\"') %>"
+      };
+
+      function callback(response) {
+        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+      }
+
+      FB.ui(obj, callback);
+    }
+
+    $(".share_quiz").click(function(){
+      postToFeed();
+    });
+  });
+</script>
+
+<div class="post">
+  <div class="post-left">
+    <% quiz_image_path = @xml.xpath("#{x}/quiz_request_metadata/image_path").text %>
+    <% image_partition = quiz_image_path.split(".") %>
+    <% image_name = "#{image_partition[0]}-thumb.#{image_partition[1]}" %>
+    <% if !quiz_image_path.eql?("") %>
+      <%= image_tag image_name %>
+    <% else %>
+      <%= image_tag("sample.png") %>
+    <% end %>
+  </div>
+  <div class="post-right" style="margin-top: 5px">
+    <div class="left" style="margin: 0 2px 0 0;">
+      <h3 style="margin:0px 0px 12px 0px;">
+        <%= @xml.xpath("#{x}/quiz_request_metadata/name").text %>
+      </h3>
+      <p>
+        <%= image_tag("share.jpg", :class => "share_quiz") %>
+        <%= image_tag("like.jpg", :class => "like_quiz") %>
+      </p>
+    </div>
+    <div class="right">
+      <a href="/" align="right">Exit Quiz<%= image_tag("cross.jpg") %></a>
+    </div>
+  </div>
+</div><!--End Blog Post-->
+
+<div class="quizzes-line"></div>
+
+<% q = @xml.xpath( "/#{x}/quiz_phase/quiz_question" ) %>
+
+<div class="quiz">
+  <div class="quiz-question">
+    <div class="quiz-number">
+      <!-- It is a wrong logic below. To display total questions in '1 OF 8', it needs to have different logic which exclude lead phase also -->
+      <%= @xml.xpath( "/#{x}/quiz_phase/position").text.to_i %> OF <%= @xml.xpath( "/#{x}/quiz_request_metadata/total_quiz_phases").text.to_i-1 %>
+    </div>
+    <div class="quiz-question-text"><%= q.xpath("question_text") %></div>
+  </div>
+  <div class="answer-option">
+  </div>
+</div>
+
+<table cellspacing="10" style="width: 100%; margin-top: 0px;">
+  <%
+  table_test = false
+  @xml.xpath( "/#{x}/quiz_phase/quiz_question" ).each do |table|
+    if table.xpath("question_text")[ 0 ].content == phase_description
+      table_test = true
+    end
+  end
+%>
+
+  <% if !table_test %><td>&nbsp;</td><% end %>
+
+  <td>&nbsp;&nbsp;</td>
+
+  <% q = @xml.xpath( "/#{x}/quiz_phase/quiz_question" ) %>
+
+  <% q.xpath("answer_option").sort_by{|b| b.xpath('position')[ 0 ].content.to_i}.each do |a| %>
+    <%
+    input_type = a.xpath("post_parameter/type")[ 0 ].content
+    input_name = a.xpath("post_parameter/name")[ 0 ].content
+    input_value = a.xpath("post_parameter/value")[ 0 ].content
+    answer_text = a.xpath("answer_option_text")[ 0 ].content
+  %>
+
+    <tr style="font-weight: normal; font-size: 14px; text-align: left; line-height: 1.7em; ">
+      <td style="width: 2px; text-align: left; padding-right: 10px; vertical-align: top; padding-top: 4px;">
+        <input type="<%= input_type %>" name="<%= input_name %>[]" value="<%= input_value %>" />
+      </td>
+      <td style="text-align: left;"><%= answer_text %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="quiz-bottom-line"></div>
+
+<!--div class="right-bottom">
+  <a href="#">Show All Questions<%#= image_tag("arrow.jpg") %></a>
+</div-->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('td').children("input[@type=radio]").click(function(){
+      var id = '<%= @quiz.id %>'
+      var pos = '<%= @xml.xpath("/#{x}/quiz_phase/position").text %>'
+      var x_value = '<%= x %>'
+      var qiid = '<%= session[ :quiz_instance_uuid ] %>'
+      var question_id = '<%= @xml.xpath("/#{x}/quiz_phase/quiz_question/answer_option/post_parameter/name")[0].content %>';
+      var qid = question_id.substring(10, question_id.length-1)
+
+      if(pos != 0) {
+        var dest_url = '/quizzes/'+ id + '/' + pos;
+      } else {
+        var dest_url = '/quizzes/'+ id;
+      }
+
+      // alert("id = "+ id + "position = "+ pos + "qiid = "+ qiid + "question_id = "+ question_id + "quiz_phase = "+ pos);
+
+      var argument = {'x': x_value,
+        'quiz_page': pos,
+        'partner_site_id': '<%= @partner_site.id %>',
+        'qiid': qiid,
+        'question_id': qid,
+        'answer_id': this.value,
+        'quiz_id': id
+      };
+
+      var callback = function(data){
+        aler("Thanks You For Submit");
+      };
+
+      $.post(dest_url, argument);
+     
+    });
+  });
+</script>
