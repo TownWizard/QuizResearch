@@ -1,0 +1,43 @@
+<% form_tag( { :action => :start }, { :method => :post }) do %>
+<table>
+  <tr>
+    <td style="color: #660000">
+      <%= flash[:notice] %>
+    </td>
+  </tr>
+    <%#*<tr>%>
+      <%#*<td>Partner Site</td>%>
+      <%#*<td><input type="text" name="partner_site" size="50" /></td>%>
+    <%#*</tr>%>
+    <tr>
+      <td>API Version</td>
+      <td>
+        <select name="api_version">
+          <option value="">-- Current --</option>
+          <option value="15">1.5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= submit_tag %></td>
+    </tr>
+</table>
+
+<%  end %>
+<!--  <table>
+    <tr>
+      <td>API Version</td>
+      <td>
+        <select name="user_roles">
+          <option value="">-- Current --</option>
+          <option value="1.5">1.5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>< %  = f.label :partner_site, "Partner Site" %></td>
+      <td>< %= f.text_field :partner_site %></td>
+    </tr>
+  </table> -->
+
+
