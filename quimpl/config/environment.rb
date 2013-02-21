@@ -6,17 +6,17 @@
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-case RAILS_ENV
-when "development"
-  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../kindlerock_lib/trunk"
-  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../quizresearch_lib/trunk"
-when "staging"
-  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../../kindlerock_lib/tags/4.0"
-  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../../quizresearch_lib/tags/4.0"
-else
-  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../../kindlerock_lib/tags/4.0"
-  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../../quizresearch_lib/tags/4.0"
-end
+#case RAILS_ENV
+#when "development"
+#  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../kindlerock_lib/trunk"
+#  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../quizresearch_lib/trunk"
+#when "staging"
+#  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../../kindlerock_lib/tags/4.0"
+#  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../../quizresearch_lib/tags/4.0"
+#else
+  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../kindlerock_lib"
+  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../quizresearch_lib"
+#end
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
@@ -56,6 +56,9 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  require 'uuid'
+  require "ruport" 
+  require "ruport/acts_as_reportable"
 end
 
 require 'partner_system'

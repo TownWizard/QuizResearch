@@ -6,17 +6,17 @@
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-case RAILS_ENV
-when "development"
-  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../kindlerock_lib/trunk"
-  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../quizresearch_lib/trunk"
-when "staging"
-  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../../kindlerock_lib/tags/4.0.1"
-  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../../quizresearch_lib/tags/4.0.1"
-else
-  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../../kindlerock_lib/tags/4.0.1"
-  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../../quizresearch_lib/tags/4.0.1"
-end
+#case RAILS_ENV
+#when "development"
+#  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../kindlerock_lib/trunk"
+#  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../quizresearch_lib/trunk"
+#when "staging"
+#  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../../../kindlerock_lib/tags/4.0.1"
+#  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../../../quizresearch_lib/tags/4.0.1"
+#else
+  ENV["kindlerock_app_path"] = "#{RAILS_ROOT}/../kindlerock_lib"
+  ENV["quizresearch_app_path"] = "#{RAILS_ROOT}/../quizresearch_lib"
+#end
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
